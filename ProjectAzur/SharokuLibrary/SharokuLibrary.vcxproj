@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sl\Library\Debugger\slDebug.h" />
+    <ClInclude Include="sl\Library\Debugger\slDebugDefine.h" />
+    <ClInclude Include="sl\Library\Debugger\slDebugFunction.h" />
+    <ClInclude Include="sl\Library\EntryPoint\slEntryPoint.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXDeviceManager\slDXDeviceManager.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXDrawingCommander\slDXDrawingCommander.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGISwapChainManager\slDXGISwapChainManager.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXBlendStateManager.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXSamplerStateManager.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXRasterizerStateManager.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXConstantBuffer\slDXConstantBufferManager.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXInputLayout\slDXInputLayoutManager.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXPixelShader\slDXPixelShaderManager.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXVertexShader\slDXVertexShaderManager.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXTexture\slDXTextureManager.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXViewManager\slDXViewManager.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\slDX11Graphics.h" />
+    <ClInclude Include="sl\Library\Graphics\slGraphicsID.h" />
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\slIInputDevice.h" />
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\slIInputDeviceLibrary.h" />
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIDeviceManager.h" />
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIKeyboard.h" />
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIMouse.h" />
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\slWinInputDeviceLibrary.h" />
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\WinCustomizeInput\slWinCustomizeInputManager.h" />
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\XInput\slXInputDeviceManager.h" />
+    <ClInclude Include="sl\Library\InputDevice\slInputDevice.h" />
+    <ClInclude Include="sl\Library\InputDevice\slInputDeviceDeclaration.h" />
+    <ClInclude Include="sl\Library\Singleton\CreationPolicy\slStaticCreation.h" />
+    <ClInclude Include="sl\Library\Singleton\CreationPolicy\slUsingNewCreation.h" />
+    <ClInclude Include="sl\Library\Singleton\LifeTimePolicy\slDefaultLifeTime.h" />
+    <ClInclude Include="sl\Library\Singleton\LifeTimePolicy\slPhoenixSingleton.h" />
+    <ClInclude Include="sl\Library\Singleton\slBasicSingleton.h" />
+    <ClInclude Include="sl\Library\Singleton\slUserManualSingleton.h" />
+    <ClInclude Include="sl\Library\SmartPointer\Deleter\slDeleter.h" />
+    <ClInclude Include="sl\Library\SmartPointer\PtrBase\slPtrBase.h" />
+    <ClInclude Include="sl\Library\SmartPointer\PtrSharedInfo\PtrSharedInfo.h" />
+    <ClInclude Include="sl\Library\SmartPointer\PtrSharedInfo\PtrSharedInfoBase.h" />
+    <ClInclude Include="sl\Library\SmartPointer\SharedPtr\slSharedPtr.h" />
+    <ClInclude Include="sl\Library\SmartPointer\slSmartPointer.h" />
+    <ClInclude Include="sl\Library\SmartPointer\UniquePtr\slUniquePtr.h" />
+    <ClInclude Include="sl\Library\SmartPointer\WeakPtr\slWeakPtr.h" />
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\slISoundLibrary.h" />
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData\DirectSoundData\slDirectSoundData.h" />
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData\slISoundData.h" />
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice\DirectSoundDevice\slDirectSoundDevice.h" />
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice\slISoundDevice.h" />
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\slSoundLibrary.h" />
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\SoundDataStorage\slSoundDataStorage.h" />
+    <ClInclude Include="sl\Library\Sound\slSound.h" />
+    <ClInclude Include="sl\Library\Sound\slSoundDeclaration..h" />
+    <ClInclude Include="sl\Library\Utility\slCompressedPair.h" />
+    <ClInclude Include="sl\Library\Utility\slDefine.h" />
+    <ClInclude Include="sl\Library\Utility\slPoint.h" />
+    <ClInclude Include="sl\Library\Utility\slRect.h" />
+    <ClInclude Include="sl\Library\Utility\slTemplateFunction.h" />
+    <ClInclude Include="sl\Library\Utility\slTypes.h" />
+    <ClInclude Include="sl\Library\Utility\slTypeTraits.h" />
+    <ClInclude Include="sl\Library\Utility\slUtility.h" />
+    <ClInclude Include="sl\Library\Window\IWindow\DXWindow\slCreateDXWindowFunc.h" />
+    <ClInclude Include="sl\Library\Window\IWindow\DXWindow\slDXWindow.h" />
+    <ClInclude Include="sl\Library\Window\IWindow\slCreateIWindowFunc.h" />
+    <ClInclude Include="sl\Library\Window\IWindow\slIWindow.h" />
+    <ClInclude Include="sl\Library\Window\slWindow.h" />
+    <ClInclude Include="sl\Library\Window\slWindowDeclaration.h" />
+    <ClInclude Include="sl\sl.h" />
+    <ClInclude Include="sl\slBuild.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sl\Library\Debugger\slDebugFunction.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXDeviceManager\slDXDeviceManager.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXDrawingCommander\slDXDrawingCommander.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGISwapChainManager\slDXGISwapChainManager.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXBlendStateManager.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXSamplerStateManager.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXRasterizerStateManager.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXConstantBuffer\slDXConstantBufferManager.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXInputLayout\slDXInputLayoutManager.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXPixelShader\slDXPixelShaderManager.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXVertexShader\slDXVertexShaderManager.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXTexture\slDXTextureManager.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXViewManager\slDXViewManager.cpp" />
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\slIInputDeviceLibrary.cpp" />
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIDeviceManager.cpp" />
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIKeyboard.cpp" />
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIMouse.cpp" />
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\slWinInputDeviceLibrary.cpp" />
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\WinCustomizeInput\slWinCustomizeInputManager.cpp" />
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\XInput\slXInputDeviceManager.cpp" />
+    <ClCompile Include="sl\Library\SmartPointer\PtrSharedInfo\PtrSharedInfoBase.cpp" />
+    <ClCompile Include="sl\Library\Sound\ISoundLibrary\slISoundLibrary.cpp" />
+    <ClCompile Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData\DirectSoundData\slDirectSoundData.cpp" />
+    <ClCompile Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice\DirectSoundDevice\slDirectSoundDevice.cpp" />
+    <ClCompile Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\slSoundLibrary.cpp" />
+    <ClCompile Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\SoundDataStorage\slSoundDataStorage.cpp" />
+    <ClCompile Include="sl\Library\Window\IWindow\DXWindow\slCreateDXWindowFunc.cpp" />
+    <ClCompile Include="sl\Library\Window\IWindow\DXWindow\slDXWindow.cpp" />
+    <ClCompile Include="sl\Library\Window\IWindow\slCreateIWindowFunc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sl\Library\SmartPointer\PtrBase\slPtrBase_private.inl" />
+    <None Include="sl\Library\SmartPointer\SharedPtr\slSharedPtr_private.inl" />
+    <None Include="sl\Library\SmartPointer\UniquePtr\slUniquePtr_private.inl" />
+    <None Include="sl\Library\SmartPointer\WeakPtr\slWeakPtr_private.inl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A3AB129B-0E5A-442C-975B-196F3EF35FF3}</ProjectGuid>
+    <RootNamespace>SharokuLibrary</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(DXSDK_DIR)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

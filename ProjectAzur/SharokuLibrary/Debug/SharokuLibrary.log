@@ -1,0 +1,861 @@
+﻿  slCreateIWindowFunc.cpp
+  slDXWindow.cpp
+  slCreateDXWindowFunc.cpp
+  slSoundDataStorage.cpp
+d:\「マイどきゅめんと\検証\projectazur\sharokulibrary\sl\library\sound\isoundlibrary\soundlibrary\isounddata\slisounddata.h(20): warning C4099: 'sl::ISoundData': タイプ名は最初 'class' として使われていましたが 'struct' として使われています。
+  d:\「マイどきゅめんと\検証\projectazur\sharokulibrary\sl\library\sound\isoundlibrary\soundlibrary\isounddata\slisounddata.h(19): note: 'sl::ISoundData' の宣言を確認してください
+  slSoundLibrary.cpp
+d:\「マイどきゅめんと\検証\projectazur\sharokulibrary\sl\library\sound\isoundlibrary\soundlibrary\isounddevice\slisounddevice.h(24): warning C4099: 'sl::ISoundDevice': タイプ名は最初 'class' として使われていましたが 'struct' として使われています。
+  d:\「マイどきゅめんと\検証\projectazur\sharokulibrary\sl\library\sound\isoundlibrary\soundlibrary\isounddevice\slisounddevice.h(23): note: 'sl::ISoundDevice' の宣言を確認してください
+c:\program files (x86)\windows kits\8.1\include\um\combaseapi.h(188): warning C4005: 'interface': マクロが再定義されました。
+  d:\「マイどきゅめんと\検証\projectazur\sharokulibrary\sl\library\utility\sldefine.h(18): note: 'interface' の以前の定義を確認してください
+d:\「マイどきゅめんと\検証\projectazur\sharokulibrary\sl\library\sound\isoundlibrary\soundlibrary\isounddata\slisounddata.h(20): warning C4099: 'sl::ISoundData': タイプ名は最初 'class' として使われていましたが 'struct' として使われています。
+  d:\「マイどきゅめんと\検証\projectazur\sharokulibrary\sl\library\sound\isoundlibrary\soundlibrary\isounddata\slisounddata.h(19): note: 'sl::ISoundData' の宣言を確認してください
+  slDirectSoundDevice.cpp
+d:\「マイどきゅめんと\検証\projectazur\sharokulibrary\sl\library\sound\isoundlibrary\soundlibrary\isounddata\slisounddata.h(20): warning C4099: 'sl::ISoundData': タイプ名は最初 'class' として使われていましたが 'struct' として使われています。
+  d:\「マイどきゅめんと\検証\projectazur\sharokulibrary\sl\library\sound\isoundlibrary\soundlibrary\isounddata\slisounddata.h(19): note: 'sl::ISoundData' の宣言を確認してください
+  slDirectSoundData.cpp
+  slISoundLibrary.cpp
+  PtrSharedInfoBase.cpp
+  slXInputDeviceManager.cpp
+  slWinCustomizeInputManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slWinInputDeviceLibrary.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+d:\「マイどきゅめんと\検証\projectazur\sharokulibrary\sl\library\inputdevice\iinputdevicelibrary\wininputdevicelibrary\slwininputdevicelibrary.h(17): warning C4099: 'sl::IInputDevice': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
+  d:\「マイどきゅめんと\検証\projectazur\sharokulibrary\sl\library\inputdevice\iinputdevicelibrary\sliinputdevice.h(20): note: 'sl::IInputDevice' の宣言を確認してください
+  slDIMouse.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDIKeyboard.cpp
+  slDIDeviceManager.cpp
+  slIInputDeviceLibrary.cpp
+  slDXViewManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDXTextureManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDXVertexShaderManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDXPixelShaderManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  コードを生成中...
+  コンパイル中...
+  slDXInputLayoutManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDXConstantBufferManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDXRasterizerStateManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDXSamplerStateManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDXBlendStateManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDXGISwapChainManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDXDrawingCommander.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDXDeviceManager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50002): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50011): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50020): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50029): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50038): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50047): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50056): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50071): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50080): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50089): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50098): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50107): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50116): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50126): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50135): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50145): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50154): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50164): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50173): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50182): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50192): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50201): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50379): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50388): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50398): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50407): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50355): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50364): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+  slDebugFunction.cpp
+  コードを生成中...
+  SharokuLibrary.vcxproj -> D:\「マイどきゅめんと\検証\ProjectAzur\Debug\SharokuLibrary.lib

@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="sl">
+      <UniqueIdentifier>{5e5eb3a6-2b79-4525-b803-7fc3323c911b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library">
+      <UniqueIdentifier>{b4a07008-3815-4c71-8bd7-668c56c031d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Singleton">
+      <UniqueIdentifier>{70862028-3381-4df2-9e0d-409fb2b91075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Singleton\CreationPolicy">
+      <UniqueIdentifier>{75cd080e-3600-4a44-8ff2-153b6e049a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Singleton\LifeTimePolicy">
+      <UniqueIdentifier>{d59c32d4-5682-454a-a30b-90bd0e9f8f3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Window">
+      <UniqueIdentifier>{46171831-fd15-4e0c-9c6b-f49f035f80ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Window\IWindow">
+      <UniqueIdentifier>{fd9c2b95-7320-4876-8dac-9a99927b4515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Window\IWindow\DXWindow">
+      <UniqueIdentifier>{7f9033dc-3a30-4912-97a3-50bddd8d4e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\SmartPointer">
+      <UniqueIdentifier>{08cb99e7-b02d-4f2e-a337-921900b301f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\SmartPointer\UniquePtr">
+      <UniqueIdentifier>{3a4826ba-8ba4-4284-ace2-817fc33a622e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\SmartPointer\SharedPtr">
+      <UniqueIdentifier>{6203edbc-ee31-467e-ae97-ce1891198db6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\SmartPointer\WeakPtr">
+      <UniqueIdentifier>{b4c79877-dbfc-4301-8763-1c81c32ec133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\EntryPoint">
+      <UniqueIdentifier>{5e3c97ae-8196-4e40-8672-01d15716a326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\SmartPointer\Deleter">
+      <UniqueIdentifier>{1cc8c84d-0db6-493e-a017-7fdb31a2d684}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Utility">
+      <UniqueIdentifier>{93e6bb51-ae13-4a8e-ba15-f9e4c45f605c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\SmartPointer\PtrBase">
+      <UniqueIdentifier>{cd13a96c-5a08-4cca-9360-4d89dbed3767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\SmartPointer\PtrSharedInfo">
+      <UniqueIdentifier>{4c7432e3-3ed0-416e-a8d6-85059a5502c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Debugger">
+      <UniqueIdentifier>{85146789-b683-4c53-8dc9-0448a33e2b70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics">
+      <UniqueIdentifier>{e8783060-03a4-43b8-b632-90b36a5ef0f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary">
+      <UniqueIdentifier>{0d78b3b8-ce65-4571-bff4-80e4eacd6a80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXDeviceManager">
+      <UniqueIdentifier>{344132f4-c580-4de3-8bff-6991926aae88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGISwapChainManager">
+      <UniqueIdentifier>{8b491c53-9c7b-4f32-b46a-c04dc108d548}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXViewManager">
+      <UniqueIdentifier>{022a21ad-4a00-4323-996b-6abf09885ad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXDrawingCommander">
+      <UniqueIdentifier>{f809b77b-9971-42d7-88e0-f897bdf67c27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState">
+      <UniqueIdentifier>{f825a4c5-d95f-4530-96a7-bd0e82cbf34f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXTexture">
+      <UniqueIdentifier>{6ebe4536-9e15-402b-8dc8-dbacc2b9b2fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader">
+      <UniqueIdentifier>{de1db90e-23cc-4d10-8a2a-4aca742fad12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXPixelShader">
+      <UniqueIdentifier>{ba74e1e4-72c9-4b84-aa4a-a9f8889309f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXVertexShader">
+      <UniqueIdentifier>{e79dc49b-2d04-491e-b738-b6612207b2c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXConstantBuffer">
+      <UniqueIdentifier>{e000944f-ec6e-414c-abd6-77b2da9fde56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXInputLayout">
+      <UniqueIdentifier>{b59e4c47-22c9-44ef-a83b-d129f54d783c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\InputDevice">
+      <UniqueIdentifier>{4fcbfaca-9041-4b70-9e22-9fedf05966fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\InputDevice\IInputDeviceLibrary">
+      <UniqueIdentifier>{a65a2173-4a82-4e9b-a37c-a1f987604a52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary">
+      <UniqueIdentifier>{33e3578b-3c37-411a-80df-b490535381f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput">
+      <UniqueIdentifier>{10477056-7f97-47a9-851e-ae1f97e0e08c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\XInput">
+      <UniqueIdentifier>{ab471c94-068f-41be-b757-014892b6bf8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\WinCustomizeInput">
+      <UniqueIdentifier>{e2144cf0-2348-4760-8f39-b7a2002c3fb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Sound">
+      <UniqueIdentifier>{88d78301-fcb8-4679-b9e0-b1bbc6f04e56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Sound\ISoundLibrary">
+      <UniqueIdentifier>{dc192d9a-ec50-4c74-bf2e-cb1c7fe2499b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Sound\ISoundLibrary\SoundLibrary">
+      <UniqueIdentifier>{66d16c0e-f439-44f2-962f-e47c47fc3b55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData">
+      <UniqueIdentifier>{fb668b04-5a86-454a-8dff-28e30448a83d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData\DirectSoundData">
+      <UniqueIdentifier>{e35352e3-219c-4f95-b01c-91426338fdfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\SoundDataStorage">
+      <UniqueIdentifier>{116e2fd9-f1f0-4e7f-b454-d107d884fc40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice">
+      <UniqueIdentifier>{42c47def-182c-4728-a492-53de986c7ab2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice\DirectSoundDevice">
+      <UniqueIdentifier>{d59205f4-dbde-445a-ad2d-ad6e0cc747fd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sl\sl.h">
+      <Filter>sl</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\slBuild.h">
+      <Filter>sl</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Singleton\slBasicSingleton.h">
+      <Filter>sl\Library\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Singleton\LifeTimePolicy\slDefaultLifeTime.h">
+      <Filter>sl\Library\Singleton\LifeTimePolicy</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Singleton\slUserManualSingleton.h">
+      <Filter>sl\Library\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Singleton\CreationPolicy\slStaticCreation.h">
+      <Filter>sl\Library\Singleton\CreationPolicy</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Singleton\CreationPolicy\slUsingNewCreation.h">
+      <Filter>sl\Library\Singleton\CreationPolicy</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Singleton\LifeTimePolicy\slPhoenixSingleton.h">
+      <Filter>sl\Library\Singleton\LifeTimePolicy</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Window\slWindowDeclaration.h">
+      <Filter>sl\Library\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Window\IWindow\DXWindow\slDXWindow.h">
+      <Filter>sl\Library\Window\IWindow\DXWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Window\IWindow\slIWindow.h">
+      <Filter>sl\Library\Window\IWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Window\IWindow\DXWindow\slCreateDXWindowFunc.h">
+      <Filter>sl\Library\Window\IWindow\DXWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Window\IWindow\slCreateIWindowFunc.h">
+      <Filter>sl\Library\Window\IWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Window\slWindow.h">
+      <Filter>sl\Library\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\SmartPointer\slSmartPointer.h">
+      <Filter>sl\Library\SmartPointer</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\SmartPointer\UniquePtr\slUniquePtr.h">
+      <Filter>sl\Library\SmartPointer\UniquePtr</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\SmartPointer\SharedPtr\slSharedPtr.h">
+      <Filter>sl\Library\SmartPointer\SharedPtr</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\SmartPointer\WeakPtr\slWeakPtr.h">
+      <Filter>sl\Library\SmartPointer\WeakPtr</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\EntryPoint\slEntryPoint.h">
+      <Filter>sl\Library\EntryPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\SmartPointer\Deleter\slDeleter.h">
+      <Filter>sl\Library\SmartPointer\Deleter</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Utility\slDefine.h">
+      <Filter>sl\Library\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Utility\slRect.h">
+      <Filter>sl\Library\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Utility\slTypes.h">
+      <Filter>sl\Library\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Utility\slUtility.h">
+      <Filter>sl\Library\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Utility\slCompressedPair.h">
+      <Filter>sl\Library\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Utility\slTemplateFunction.h">
+      <Filter>sl\Library\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Utility\slTypeTraits.h">
+      <Filter>sl\Library\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\SmartPointer\PtrBase\slPtrBase.h">
+      <Filter>sl\Library\SmartPointer\PtrBase</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\SmartPointer\PtrSharedInfo\PtrSharedInfo.h">
+      <Filter>sl\Library\SmartPointer\PtrSharedInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\SmartPointer\PtrSharedInfo\PtrSharedInfoBase.h">
+      <Filter>sl\Library\SmartPointer\PtrSharedInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Debugger\slDebug.h">
+      <Filter>sl\Library\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Debugger\slDebugDefine.h">
+      <Filter>sl\Library\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Debugger\slDebugFunction.h">
+      <Filter>sl\Library\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXDeviceManager\slDXDeviceManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXDeviceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGISwapChainManager\slDXGISwapChainManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXGISwapChainManager</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXViewManager\slDXViewManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXViewManager</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXDrawingCommander\slDXDrawingCommander.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXDrawingCommander</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXTexture\slDXTextureManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\slGraphicsID.h">
+      <Filter>sl\Library\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXSamplerStateManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXRasterizerStateManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXBlendStateManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXPixelShader\slDXPixelShaderManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXPixelShader</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXVertexShader\slDXVertexShaderManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXVertexShader</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXInputLayout\slDXInputLayoutManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXInputLayout</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXConstantBuffer\slDXConstantBufferManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\slDX11Graphics.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\slIInputDeviceLibrary.h">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\slWinInputDeviceLibrary.h">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIDeviceManager.h">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIKeyboard.h">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIMouse.h">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Utility\slPoint.h">
+      <Filter>sl\Library\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\XInput\slXInputDeviceManager.h">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\XInput</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\slIInputDevice.h">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\WinCustomizeInput\slWinCustomizeInputManager.h">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\WinCustomizeInput</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\InputDevice\slInputDeviceDeclaration.h">
+      <Filter>sl\Library\InputDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\InputDevice\slInputDevice.h">
+      <Filter>sl\Library\InputDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Sound\slSound.h">
+      <Filter>sl\Library\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\slISoundLibrary.h">
+      <Filter>sl\Library\Sound\ISoundLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\slSoundLibrary.h">
+      <Filter>sl\Library\Sound\ISoundLibrary\SoundLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\SoundDataStorage\slSoundDataStorage.h">
+      <Filter>sl\Library\Sound\ISoundLibrary\SoundLibrary\SoundDataStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Sound\slSoundDeclaration..h">
+      <Filter>sl\Library\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice\slISoundDevice.h">
+      <Filter>sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice\DirectSoundDevice\slDirectSoundDevice.h">
+      <Filter>sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice\DirectSoundDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData\slISoundData.h">
+      <Filter>sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData\DirectSoundData\slDirectSoundData.h">
+      <Filter>sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData\DirectSoundData</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sl\Library\Window\IWindow\DXWindow\slDXWindow.cpp">
+      <Filter>sl\Library\Window\IWindow\DXWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Window\IWindow\DXWindow\slCreateDXWindowFunc.cpp">
+      <Filter>sl\Library\Window\IWindow\DXWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Window\IWindow\slCreateIWindowFunc.cpp">
+      <Filter>sl\Library\Window\IWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\SmartPointer\PtrSharedInfo\PtrSharedInfoBase.cpp">
+      <Filter>sl\Library\SmartPointer\PtrSharedInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Debugger\slDebugFunction.cpp">
+      <Filter>sl\Library\Debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXDeviceManager\slDXDeviceManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXDeviceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGISwapChainManager\slDXGISwapChainManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXGISwapChainManager</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXViewManager\slDXViewManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXViewManager</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXDrawingCommander\slDXDrawingCommander.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXDrawingCommander</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXTexture\slDXTextureManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXSamplerStateManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXRasterizerStateManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState\slDXBlendStateManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXGraphicsState</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXPixelShader\slDXPixelShaderManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXPixelShader</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXVertexShader\slDXVertexShaderManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXVertexShader</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXInputLayout\slDXInputLayoutManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXInputLayout</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXConstantBuffer\slDXConstantBufferManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXConstantBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\slWinInputDeviceLibrary.cpp">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIDeviceManager.cpp">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIKeyboard.cpp">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput\slDIMouse.cpp">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\DirectInput</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\slIInputDeviceLibrary.cpp">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\XInput\slXInputDeviceManager.cpp">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\XInput</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\WinCustomizeInput\slWinCustomizeInputManager.cpp">
+      <Filter>sl\Library\InputDevice\IInputDeviceLibrary\WinInputDeviceLibrary\WinCustomizeInput</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\slSoundLibrary.cpp">
+      <Filter>sl\Library\Sound\ISoundLibrary\SoundLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\SoundDataStorage\slSoundDataStorage.cpp">
+      <Filter>sl\Library\Sound\ISoundLibrary\SoundLibrary\SoundDataStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice\DirectSoundDevice\slDirectSoundDevice.cpp">
+      <Filter>sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice\DirectSoundDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData\DirectSoundData\slDirectSoundData.cpp">
+      <Filter>sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData\DirectSoundData</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Sound\ISoundLibrary\slISoundLibrary.cpp">
+      <Filter>sl\Library\Sound\ISoundLibrary</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sl\Library\SmartPointer\UniquePtr\slUniquePtr_private.inl">
+      <Filter>sl\Library\SmartPointer\UniquePtr</Filter>
+    </None>
+    <None Include="sl\Library\SmartPointer\PtrBase\slPtrBase_private.inl">
+      <Filter>sl\Library\SmartPointer\PtrBase</Filter>
+    </None>
+    <None Include="sl\Library\SmartPointer\SharedPtr\slSharedPtr_private.inl">
+      <Filter>sl\Library\SmartPointer\SharedPtr</Filter>
+    </None>
+    <None Include="sl\Library\SmartPointer\WeakPtr\slWeakPtr_private.inl">
+      <Filter>sl\Library\SmartPointer\WeakPtr</Filter>
+    </None>
+  </ItemGroup>
+</Project>
