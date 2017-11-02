@@ -28,6 +28,9 @@ SL_DECLARE_ID(InputLayoutID);
 /** コンスタントバッファーIDの構造体 */
 SL_DECLARE_ID(ConstantBufferID);
 
+/** モデルIDの構造体 */
+SL_DECLARE_ID(ModelID);
+
 }	// namespace sl
 
 
