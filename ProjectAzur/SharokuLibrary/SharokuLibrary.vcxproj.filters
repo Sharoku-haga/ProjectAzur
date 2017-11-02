@@ -136,6 +136,9 @@
     <Filter Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice\DirectSoundDevice">
       <UniqueIdentifier>{d59205f4-dbde-445a-ad2d-ad6e0cc747fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D">
+      <UniqueIdentifier>{d6069a26-90da-4fc9-8ede-844bc24bcdd1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sl\sl.h">
@@ -339,6 +342,12 @@
     <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData\DirectSoundData\slDirectSoundData.h">
       <Filter>sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundData\DirectSoundData</Filter>
     </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D\slDXModel2D.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D\slDXModel2DStorage.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sl\Library\Window\IWindow\DXWindow\slDXWindow.cpp">
@@ -427,6 +436,12 @@
     </ClCompile>
     <ClCompile Include="sl\Library\Sound\ISoundLibrary\slISoundLibrary.cpp">
       <Filter>sl\Library\Sound\ISoundLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D\slDXModel2D.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D\slDXModel2DStorage.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
