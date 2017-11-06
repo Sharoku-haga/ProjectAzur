@@ -25,10 +25,7 @@ typedef struct float_Rect
 	/** Constructor */
 	float_Rect() {}
 	float_Rect(float left, float top, float right, float bottom)
-		: m_Left()
-		, m_Top()
-		, m_Right()
-		, m_Bottom()
+		: m_Left(left), m_Top(top), m_Right(right), m_Bottom(bottom)
 	{}
 
 }fRect;

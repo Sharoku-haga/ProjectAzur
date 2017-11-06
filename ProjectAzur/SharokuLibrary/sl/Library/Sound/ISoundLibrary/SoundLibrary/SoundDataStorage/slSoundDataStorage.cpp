@@ -69,7 +69,7 @@ int SoundDataStorage::SearchAvailableIDNum()
 	/** @todo ここは少し見直しした方がいいかもしれない */
 	for(id = 0; id < INT_MAX; ++id)
 	{
-		if(m_pSoundDatas.find(id) == m_pSoundDatas.end())
+		if(m_pSoundDatas.find(id) != m_pSoundDatas.end())
 		{
 			break;
 		}
