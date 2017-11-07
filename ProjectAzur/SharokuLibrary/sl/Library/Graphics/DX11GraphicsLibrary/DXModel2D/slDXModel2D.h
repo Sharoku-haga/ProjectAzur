@@ -76,6 +76,12 @@ public:
 	*/
 	void InformUVData(fRect& rUVData);
 
+	/**
+	* Getter
+	* @return モデルの頂点数
+	*/
+	static inline int GetVertecCount(){ return m_VertexCount; }
+
 private:
 	/** 頂点データ */
 	struct VertexData

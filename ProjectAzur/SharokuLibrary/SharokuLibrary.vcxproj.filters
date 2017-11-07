@@ -360,6 +360,12 @@
     <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation\slUVAnimationManager.h">
       <Filter>sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation</Filter>
     </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\slGraphics.h">
+      <Filter>sl\Library\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\slDX11GraphicsLibrary.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sl\Library\Window\IWindow\DXWindow\slDXWindow.cpp">
@@ -460,6 +466,9 @@
     </ClCompile>
     <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation\slUVAnimationManager.cpp">
       <Filter>sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\slDX11GraphicsLibrary.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

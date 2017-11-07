@@ -32,6 +32,15 @@
 #include "DXShader/DXVertexShader/slDXVertexShaderManager.h"
 #include "DXShader/DXPixelShader/slDXPixelShaderManager.h"
 #include "DXShader/DXInputLayout/slDXInputLayoutManager.h"
+#include "DXShader/DXConstantBuffer/slDXConstantBufferManager.h"
+
+/** DirectX用2Dモデル関連 */
+#include "DXModel2D/slDXModel2D.h"
+#include "DXModel2D/slDXModel2DStorage.h"
+
+/** UVアニメーション関連 */
+#include "UVAnimation/slUVAnimationManager.h"
+#include "UVAnimation/slUVAnimation.h"
 
 
 #endif	// SL_DX11_GRAPHICS_H

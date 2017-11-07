@@ -50,7 +50,7 @@ public:
 	* @param[in] rID 取得したい2DモデルのID
 	* @return 引数で指定した2Dモデルのポインタ
 	*/
-	inline DXModel2D*const GetSoundData(const ModelID& rID) 
+	inline DXModel2D*const GetModel2DData(const ModelID& rID) 
 	{ 
 		return m_pModel2Ds[rID.m_Num];  
 	}

@@ -43,10 +43,7 @@ public:
 		return *m_pInstance;
 	}
 
-private:
-	static Ty*			m_pInstance;				//!< Ty型クラスのインスタンスへのポインタ
-	static bool			m_Destroyed;				//!< 破棄されたかどうかのフラグ ture→破棄された false→破棄されていない
-
+protected:
 	/** Constructor */
 	BasicSingleton() noexcept = default;
 
@@ -55,6 +52,10 @@ private:
 
 	/** コピー禁止 */
 	SL_DISALLOW_COPY_AND_ASSIGN(BasicSingleton);
+
+private:
+	static Ty*			m_pInstance;				//!< Ty型クラスのインスタンスへのポインタ
+	static bool			m_Destroyed;				//!< 破棄されたかどうかのフラグ ture→破棄された false→破棄されていない
 
 	/** インスタンスを作成する関数 */
 	static void MakeInstance()

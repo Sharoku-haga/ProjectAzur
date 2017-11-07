@@ -34,9 +34,9 @@ public:
 	* DXGIのスワップチェイン関連を生成する関数
 	* @param[in] rHandle			関連付けたいウィンドウハンドル
 	* @param[in] pDevice			DirectXデバイス
-	* @param[in] rBackbufferSize	設定したいバックバッファのサイズ
+	* @param[in] rBackBufferSize	設定したいバックバッファのサイズ
 	*/
-	bool CreateDXGISwapChain(const WindowHandle& rHandle, ID3D11Device* pDevice, const fRect& rBackbufferSize);
+	bool CreateDXGISwapChain(const WindowHandle& rHandle, ID3D11Device* pDevice, const fRect& rBackBufferSize);
 
 	/** 
 	* 出力スクリーンモードを変更する関数
@@ -50,11 +50,18 @@ public:
 	*/
 	inline IDXGISwapChain* GetDXGISwapChain() const { return m_pDXGISwapChain; }
 
+	/**
+	* Getter
+	* @return バックバッファのサイズ
+	*/
+	inline const fRect& GetBackBufferSize() const{ return m_BackBufferSize; }
+
 private:
 	IDXGISwapChain*					m_pDXGISwapChain;			//!< スワップチェイン
 	IDXGIDevice1*					m_pDXGI;					//!< DXGIオブジェクトを使用するためのインターフェイス
 	IDXGIAdapter*					m_pDXGIAdapter;				//!< ディスプレイサブシステムを扱うためのインターフェイス
 	IDXGIFactory*					m_pDXGIFactory;				//!< DXGIの各種インターフェイスを取得するためのインターフェイス
+	fRect							m_BackBufferSize;			//!< バックバッファのサイズ
 
 };	// class DXGISwapChainManager
 

@@ -34,6 +34,18 @@ SL_DECLARE_ID(ModelID);
 /** UVアニメーションIDの構造体 */
 SL_DECLARE_ID(UVAnimeID);
 
+/** 描画のIDをまとめた構造体 */
+struct DrawingID
+{
+	TextureID			m_TextureID;
+	VertexShaderID		m_VertexShaderID;
+	PixelShaderID		m_PixelShaderID;
+	InputLayoutID		m_InputLayoutID;
+	ConstantBufferID	m_ConstantBufferID;
+	ModelID				m_ModelID;
+	UVAnimeID			m_UVAnimeID;
+};	// struct DrawingID
+
 }	// namespace sl
 
 
