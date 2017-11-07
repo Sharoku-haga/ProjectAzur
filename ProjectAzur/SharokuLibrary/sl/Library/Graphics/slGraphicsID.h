@@ -31,6 +31,9 @@ SL_DECLARE_ID(ConstantBufferID);
 /** モデルIDの構造体 */
 SL_DECLARE_ID(ModelID);
 
+/** UVアニメーションIDの構造体 */
+SL_DECLARE_ID(UVAnimeID);
+
 }	// namespace sl
 
 

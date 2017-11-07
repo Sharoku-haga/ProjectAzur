@@ -68,7 +68,7 @@ int DXModel2DStorage::SearchAvailableIDNum()
 	/** @todo ここは少し見直しした方がいいかもしれない */
 	for(id = 0; id < INT_MAX; ++id)
 	{
-		if(m_pModel2Ds.find(id) == m_pModel2Ds.end())
+		if(m_pModel2Ds.find(id) != m_pModel2Ds.end())
 		{
 			break;
 		}

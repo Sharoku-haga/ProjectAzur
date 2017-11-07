@@ -139,6 +139,9 @@
     <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D">
       <UniqueIdentifier>{d6069a26-90da-4fc9-8ede-844bc24bcdd1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation">
+      <UniqueIdentifier>{4209c6b8-1319-4a23-840e-a048a68711ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sl\sl.h">
@@ -348,6 +351,15 @@
     <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D\slDXModel2DStorage.h">
       <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D</Filter>
     </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation\slUVAnimation.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\slGraphicsDeclaration.h">
+      <Filter>sl\Library\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation\slUVAnimationManager.h">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sl\Library\Window\IWindow\DXWindow\slDXWindow.cpp">
@@ -442,6 +454,12 @@
     </ClCompile>
     <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D\slDXModel2DStorage.cpp">
       <Filter>sl\Library\Graphics\DX11GraphicsLibrary\DXModel2D</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation\slUVAnimation.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation\slUVAnimationManager.cpp">
+      <Filter>sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
