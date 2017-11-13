@@ -13,6 +13,7 @@
 #include <d3dx11.h>
 #include <d3dx10.h>
 #include "../../../Utility/slRect.h"
+#include "../../slGraphicsDeclaration.h"
 
 namespace sl
 {
@@ -28,29 +29,23 @@ public:
 	* Constructor 
 	* @param[in] pDevice			Direct3Dのデバイス
 	* @param[in] pDeviceContext		Direct3Dのデバイスコンテキスト
+	* @param[in] rData				モデルを作成するためのデータ
 	*/
-	DXModel2D(ID3D11Device* pDevice, ID3D11DeviceContext*	pDeviceContext);
+	DXModel2D(ID3D11Device* pDevice, ID3D11DeviceContext*	pDeviceContext
+			, const Model2DCreationData& rData);
 	
 	/** Destructor */
 	~DXModel2D();
-
-	/** 
-	* モデルを作成する関数 
-	* @param[in] rSize	モデルサイズ
-	* @param[in] rUV	UV値
-	* @param[in] rColor	カラーの値
-	*/
-	bool Create(const fRect& rSize, const fRect& rUV
-				, const std::vector<D3DXCOLOR>& rColor);
 
 	/** 描画関数 */
 	void Draw();
 
 	/** 
 	* サイズデータを設定する関数
-	* @param[in] rSize	設定したいサイズ
+	* @param[in] width		設定したい横の大きさ
+	* @param[in] height		設定したい縦の大きさ
 	*/
-	void SetSizeData(const fRect& rSize);
+	void SetSizeData(float width, float height);
 
 	/**
 	* UVデータを設定する関数
@@ -100,6 +95,13 @@ private:
 	ID3D11DeviceContext*					m_pDeviceContext;			//!< Direct3Dのデバイスコンテキスト
 	ID3D11Buffer*							m_pVertexBuffer;			//!< 頂点バッファ
 	std::array<VertexData, m_VertexCount>	m_Vertexs;					//!< モデルの頂点データ
+	bool									m_IsCenterPos;				//!< モデルの位置座標が中心かどうか true→中心座標 false →左上座標
+
+	/** 
+	* モデルのデータを作成する関数 
+	* @param[in] rData	モデルを作成するためのデータ
+	*/
+	void CreateData(const Model2DCreationData& rData);
 
 	/** 
 	* 頂点バッファを作成する関数
@@ -115,6 +117,14 @@ private:
 
 	/** バッファを開放する関数 */
 	void ReleaseBuffer();
+
+	/**
+	* モデルの矩形サイズを計算する関数
+	* @param[out] pRect 計算した矩形データを格納する変数
+	* @param[in] width		横の大きさ
+	* @param[in] height		縦の大きさ
+	*/
+	void CalculateRectData(fRect* pRect, float width, float height);
 
 };	// class DXModel2D
 

@@ -192,18 +192,17 @@ int DX11GraphicsLibrary::GetModel2DVertexCount()
 	return DXModel2D::GetVertecCount();
 }
 
-ModelID DX11GraphicsLibrary::CreateDXModel2D(const fRect& rSize, const fRect& rUV
-							, const std::vector<D3DXCOLOR>& rColor)
+ModelID DX11GraphicsLibrary::CreateDXModel2D(const Model2DCreationData& rData)
 {
 	DXModel2D*	pModel = new DXModel2D(m_pImpl->m_pDeviceManager->GetDevice()
-										, m_pImpl->m_pDeviceManager->GetDeviceContext());
-	pModel->Create(rSize, rUV, rColor);
+										, m_pImpl->m_pDeviceManager->GetDeviceContext()
+										, rData);
 	return m_pImpl->m_pModel2DStorage->AddDXModel2D(pModel);
 }
 
-void DX11GraphicsLibrary::SetDXModel2DSizeData(const ModelID& rID, const fRect& rSize)
+void DX11GraphicsLibrary::SetDXModel2DSizeData(const ModelID& rID, float widthSize, float heightSize)
 {
-	m_pImpl->m_pModel2DStorage->GetModel2DData(rID)->SetSizeData(rSize);
+	m_pImpl->m_pModel2DStorage->GetModel2DData(rID)->SetSizeData(widthSize, heightSize);
 }
 
 void DX11GraphicsLibrary::SetDXModel2DUVData(const ModelID& rID, const fRect& rUv)
@@ -272,7 +271,7 @@ void DX11GraphicsLibrary::DrawModel2D(const DrawingID& rID, void* pConstantBuffe
 											, m_pImpl->m_pPixelShaderManager->GetPixelShader(rID.m_PixelShaderID));
 	m_pImpl->m_pDrawingCommander->SetUpInputLayout(m_pImpl->m_pInputLayoutManager->GetInputLayout(rID.m_InputLayoutID));
 	m_pImpl->m_pDrawingCommander->SetUpPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
-	m_pImpl->m_pConstantBufferManager->WriteConstantBuffer(rID.m_ConstantBufferID, pConstantBufferInfo, rPos, rScale, angle);
+	m_pImpl->m_pConstantBufferManager->WriteConstantBuffer(rID.m_ConstantBufferID, pConstantBufferInfo);
 	m_pImpl->m_pDrawingCommander->SetUpConstantBuffer(m_pImpl->m_pConstantBufferManager->GetConstantBuffer(rID.m_ConstantBufferID));
 	m_pImpl->m_pDrawingCommander->SetUpSamplerState(m_pImpl->m_pSampleStateManager->GetDefaultSamplerState());
 	m_pImpl->m_pDrawingCommander->SetUpTexture(m_pImpl->m_pTextureManager->GetTextureRV(rID.m_TextureID));

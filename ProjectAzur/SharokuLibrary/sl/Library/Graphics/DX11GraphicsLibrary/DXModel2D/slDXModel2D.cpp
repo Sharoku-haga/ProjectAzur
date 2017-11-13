@@ -16,47 +16,33 @@
 namespace sl
 {
 
+/* Unnamed Namespace ------------------------------------------------------------------------------------------ */
+
+namespace
+{
+
+const D3DXCOLOR  DefaultColor = 0xffffffff;				// デフォルトのカラーの値
+
+}
+
 /* Static Variable -------------------------------------------------------------------------------------------- */
 
 const int		DXModel2D::m_VertexCount;
 
 /* Public Functions ------------------------------------------------------------------------------------------- */
 
-DXModel2D::DXModel2D(ID3D11Device* pDevice, ID3D11DeviceContext*	pDeviceContext)
+DXModel2D::DXModel2D(ID3D11Device* pDevice, ID3D11DeviceContext*	pDeviceContext
+					, const Model2DCreationData& rData)
 	: m_pDevice(pDevice)
 	, m_pDeviceContext(pDeviceContext)
 	, m_pVertexBuffer(NULL)
-{}
+{
+	CreateData(rData);
+}
 
 DXModel2D::~DXModel2D()
 {
 	ReleaseBuffer();
-}
-
-bool DXModel2D::Create(const fRect& rSize, const fRect& rUV
-					, const std::vector<D3DXCOLOR>& rColor)
-{
-	if(rColor.size() != m_VertexCount)
-	{
-		slOutputDebugString("カラー値の設定数と頂点が異なっています");
-		return false;
-	}
-
-	std::array<VertexData, m_VertexCount>	vertexs{
-		VertexData(D3DXVECTOR3(rSize.m_Left,	rSize.m_Top,	0.0f), rColor[0], D3DXVECTOR2(rUV.m_Left,	rUV.m_Top)),
-		VertexData(D3DXVECTOR3(rSize.m_Right,	rSize.m_Top,	0.0f), rColor[1], D3DXVECTOR2(rUV.m_Right,	rUV.m_Top)),
-		VertexData(D3DXVECTOR3(rSize.m_Left,	rSize.m_Bottom, 0.0f), rColor[2], D3DXVECTOR2(rUV.m_Left,	rUV.m_Bottom)),
-		VertexData(D3DXVECTOR3(rSize.m_Right,	rSize.m_Bottom, 0.0f), rColor[3], D3DXVECTOR2(rUV.m_Right,	rUV.m_Bottom))
-	};
-
-	for(int i = 0; i < m_VertexCount; ++i)
-	{
-		m_Vertexs[i].m_Pos		= vertexs[i].m_Pos;
-		m_Vertexs[i].m_Color	= vertexs[i].m_Color;
-		m_Vertexs[i].m_UV		= vertexs[i].m_UV;
-	}
-
-	return (CreateBuffer());
 }
 
 void DXModel2D::Draw()
@@ -67,12 +53,15 @@ void DXModel2D::Draw()
 	m_pDeviceContext->Draw(m_VertexCount, 0);
 }
 
-void DXModel2D::SetSizeData(const fRect& rSize)
+void DXModel2D::SetSizeData(float width, float height)
 {
-	m_Vertexs[0].m_Pos = D3DXVECTOR3( rSize.m_Left,		rSize.m_Top, 0.0f);
-	m_Vertexs[1].m_Pos = D3DXVECTOR3( rSize.m_Right,	rSize.m_Top, 0.0f);
-	m_Vertexs[2].m_Pos = D3DXVECTOR3( rSize.m_Left,		rSize.m_Bottom, 0.0f);
-	m_Vertexs[3].m_Pos = D3DXVECTOR3( rSize.m_Right,	rSize.m_Bottom, 0.0f);
+	fRect size;							//!< サイズを格納する変数
+	CalculateRectData(&size, width, height);
+
+	m_Vertexs[0].m_Pos = D3DXVECTOR3( size.m_Left,		size.m_Top, 0.0f);
+	m_Vertexs[1].m_Pos = D3DXVECTOR3( size.m_Right,		size.m_Top, 0.0f);
+	m_Vertexs[2].m_Pos = D3DXVECTOR3( size.m_Left,		size.m_Bottom, 0.0f);
+	m_Vertexs[3].m_Pos = D3DXVECTOR3( size.m_Right,		size.m_Bottom, 0.0f);
 
 	if(RESULT_FALSE(RewriteVertexBuffer()))
 	{
@@ -124,6 +113,46 @@ void DXModel2D::InformUVData(fRect& rUVData)
 
 /* Private Functions ------------------------------------------------------------------------------------------ */
 
+void DXModel2D::CreateData(const Model2DCreationData& rData)
+{
+	m_IsCenterPos = rData.m_IsCenterPos;
+
+	std::vector<D3DXCOLOR>	color;			//!< カラー値を格納するvector
+	if(rData.m_Color.size() == 0)
+	{
+		for(int i = 0; i < m_VertexCount; ++i)
+		{
+			color.emplace_back(DefaultColor);
+		}
+	}
+	else
+	{
+		color = rData.m_Color;
+	}
+
+	fRect size;							//!< サイズを格納する変数
+	CalculateRectData(&size, rData.m_Width, rData.m_Height);
+
+	std::array<VertexData, m_VertexCount>	vertexs{
+		VertexData(D3DXVECTOR3(size.m_Left,		size.m_Top,		0.0f),	color[0], D3DXVECTOR2(rData.m_UV.m_Left,	rData.m_UV.m_Top)),
+		VertexData(D3DXVECTOR3(size.m_Right,	size.m_Top,		0.0f),	color[1], D3DXVECTOR2(rData.m_UV.m_Right,	rData.m_UV.m_Top)),
+		VertexData(D3DXVECTOR3(size.m_Left,		size.m_Bottom,	0.0f),	color[2], D3DXVECTOR2(rData.m_UV.m_Left,	rData.m_UV.m_Bottom)),
+		VertexData(D3DXVECTOR3(size.m_Right,	size.m_Bottom,	0.0f),	color[3], D3DXVECTOR2(rData.m_UV.m_Right,	rData.m_UV.m_Bottom))
+	};
+
+	for(int i = 0; i < m_VertexCount; ++i)
+	{
+		m_Vertexs[i].m_Pos		= vertexs[i].m_Pos;
+		m_Vertexs[i].m_Color	= vertexs[i].m_Color;
+		m_Vertexs[i].m_UV		= vertexs[i].m_UV;
+	}
+
+	if(RESULT_FALSE(CreateBuffer()))
+	{
+		slOutputDebugString("モデルのバッファ作成に失敗しました");
+	}
+}
+
 bool DXModel2D::CreateBuffer()
 {
 	D3D11_BUFFER_DESC bufferDesc;
@@ -169,6 +198,24 @@ bool DXModel2D::RewriteVertexBuffer()
 void DXModel2D::ReleaseBuffer()
 {
 	SafeReleaseDX(m_pVertexBuffer);
+}
+
+void DXModel2D::CalculateRectData(fRect* pRect, float width, float height)
+{
+	if(m_IsCenterPos)
+	{
+		pRect->m_Left		= -(width / 2);
+		pRect->m_Top		= -(height / 2);
+		pRect->m_Right		= (width / 2);
+		pRect->m_Bottom		= (height / 2);
+	}
+	else
+	{
+		pRect->m_Left		= 0.0f;
+		pRect->m_Top		= 0.0f;
+		pRect->m_Right		= width;
+		pRect->m_Bottom		= height;
+	}
 }
 
 }	// namespace sl
