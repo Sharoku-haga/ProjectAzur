@@ -14,7 +14,7 @@ namespace sl
 {
 
 /** サウンドデータIDの構造体 */
-SL_DECLARE_ID(SOUND_DATA_ID);
+SL_DECLARE_ID(SoundDataID);
 
 /** 音の再生モードの列挙型 */
 enum class PLAYBACK_MODE

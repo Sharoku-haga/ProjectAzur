@@ -42,26 +42,26 @@ public:
 	* @param[in] pFileName サウンドファイル名
 	* @return サウンドデータの登録ID.エラーの場合はERROR_ID_NUMBER
 	*/
-	virtual SOUND_DATA_ID CreateSoundData(t_char* pFileName)override;
+	virtual SoundDataID CreateSoundData(t_char* pFileName)override;
 
 	/**
 	* サウンドを再生する関数
 	* @param[in] rID	再生したいサウンドのデータ 
 	* @param[in] rMode	再生モード
 	*/
-	virtual void PlaybackSound(const SOUND_DATA_ID& rID, const PLAYBACK_MODE& rMode)override;
+	virtual void PlaybackSound(const SoundDataID& rID, const PLAYBACK_MODE& rMode)override;
 
 	/**
 	* サウンドを停止する関数
 	* @param[in] rID	停止したいサウンドのデータ 
 	*/
-	virtual void StopSound(const SOUND_DATA_ID& rID)override;
+	virtual void StopSound(const SoundDataID& rID)override;
 
 	/**
 	* 指定したサウンドデータを停止する関数
 	* @param[in] rID	再生したいサウンドのデータ 
 	*/
-	virtual void ReleaseSoundData(const SOUND_DATA_ID& rID)override;
+	virtual void ReleaseSoundData(const SoundDataID& rID)override;
 
 	/** 保管しているサウンドデータをすべて解放する関数 */
 	virtual void ReleaseSoundDataALL()override;

@@ -25,9 +25,9 @@ SoundDataStorage::~SoundDataStorage()
 	ReleaseALL();
 }
 
-SOUND_DATA_ID SoundDataStorage::AddSoundData(ISoundData* pData)
+SoundDataID SoundDataStorage::AddSoundData(ISoundData* pData)
 {
-	SOUND_DATA_ID id;		// 戻り値のID
+	SoundDataID id;		// 戻り値のID
 
 	if(m_IDNumCount == INT_MAX)
 	{	// IDの値がMAX値なら空いているIDを検索してそこにデータ格納
@@ -44,7 +44,7 @@ SOUND_DATA_ID SoundDataStorage::AddSoundData(ISoundData* pData)
 	return id;
 }
 
-void SoundDataStorage::ReleaseSoundData(const SOUND_DATA_ID& rID)
+void SoundDataStorage::ReleaseSoundData(const SoundDataID& rID)
 {
 	SafeDelete(m_pSoundDatas[rID.m_Num]);
 	m_pSoundDatas.erase(rID.m_Num);

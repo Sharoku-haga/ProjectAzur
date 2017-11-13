@@ -34,13 +34,13 @@ public:
 	* @param[in] pData	サウンドデータ	
 	* @return サウンドのID
 	*/
-	SOUND_DATA_ID AddSoundData(ISoundData* pData);
+	SoundDataID AddSoundData(ISoundData* pData);
 
 	/**
 	* 指定したサウンドデータを解放する関数
 	* @param[in] rID	解放したいサウンドデータのID
 	*/
-	void ReleaseSoundData(const SOUND_DATA_ID& rID);
+	void ReleaseSoundData(const SoundDataID& rID);
 
 	/** サウンドデータを全て解放する関数 */
 	void ReleaseALL();
@@ -50,7 +50,7 @@ public:
 	* @param[in] rID 取得したいサウンドデータのID
 	* @return サウンドデータへのポインタ
 	*/
-	inline ISoundData*const GetSoundData(const SOUND_DATA_ID& rID) 
+	inline ISoundData*const GetSoundData(const SoundDataID& rID) 
 	{ 
 		return m_pSoundDatas[rID.m_Num];  
 	}
