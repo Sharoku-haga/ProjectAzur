@@ -77,6 +77,7 @@
     <ClInclude Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\SoundDataStorage\slSoundDataStorage.h" />
     <ClInclude Include="sl\Library\Sound\slSound.h" />
     <ClInclude Include="sl\Library\Sound\slSoundDeclaration..h" />
+    <ClInclude Include="sl\Library\Utility\Calculation\slCalculationFunc.h" />
     <ClInclude Include="sl\Library\Utility\slCompressedPair.h" />
     <ClInclude Include="sl\Library\Utility\slDefine.h" />
     <ClInclude Include="sl\Library\Utility\slPoint.h" />
@@ -126,6 +127,7 @@
     <ClCompile Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\ISoundDevice\DirectSoundDevice\slDirectSoundDevice.cpp" />
     <ClCompile Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\slSoundLibrary.cpp" />
     <ClCompile Include="sl\Library\Sound\ISoundLibrary\SoundLibrary\SoundDataStorage\slSoundDataStorage.cpp" />
+    <ClCompile Include="sl\Library\Utility\Calculation\slCalculationFunc.cpp" />
     <ClCompile Include="sl\Library\Window\IWindow\DXWindow\slCreateDXWindowFunc.cpp" />
     <ClCompile Include="sl\Library\Window\IWindow\DXWindow\slDXWindow.cpp" />
     <ClCompile Include="sl\Library\Window\IWindow\slCreateIWindowFunc.cpp" />
