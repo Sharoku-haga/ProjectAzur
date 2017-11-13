@@ -3,7 +3,7 @@
 //!< @file		slDXDrawingCommander.cpp
 //!< @brief		sl::DXDrawingCommanderクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/09/30	更新履歴：
+//!< @data		作成日時：2017/09/30	更新履歴：2017/11/12
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -56,6 +56,39 @@ void DXDrawingCommander::StartRender(void)
 {
 	m_pDeviceContext->ClearRenderTargetView(m_pRenderTargetView, ClearColor);						// 画面をクリア
 	m_pDeviceContext->ClearDepthStencilView(m_pDepthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0);		// ステンシルバッファをクリア
+}
+
+void DXDrawingCommander::SetUpShader(ID3D11VertexShader* pVertexShader
+									, ID3D11PixelShader* pPixelShader)
+{
+	m_pDeviceContext->VSSetShader(pVertexShader, NULL, 0);
+	m_pDeviceContext->PSSetShader(pPixelShader, NULL, 0);
+}
+
+void DXDrawingCommander::SetUpInputLayout(ID3D11InputLayout* pLayout)
+{
+	m_pDeviceContext->IASetInputLayout(pLayout);
+}
+
+void DXDrawingCommander::SetUpPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY primitiveTopology)
+{
+	m_pDeviceContext->IASetPrimitiveTopology(primitiveTopology);
+}
+
+void DXDrawingCommander::SetUpConstantBuffer(ID3D11Buffer* pConstantBuffer)
+{
+	m_pDeviceContext->VSSetConstantBuffers(0, 1, &pConstantBuffer);
+	m_pDeviceContext->PSSetConstantBuffers(0, 1, &pConstantBuffer);
+}
+
+void DXDrawingCommander::SetUpSamplerState(ID3D11SamplerState* pSamplerState)
+{
+	m_pDeviceContext->PSSetSamplers(0, 1, &pSamplerState);
+}
+
+void DXDrawingCommander::SetUpTexture(ID3D11ShaderResourceView* pTexture)
+{
+	m_pDeviceContext->PSSetShaderResources(0, 1, &pTexture);
 }
 
 void DXDrawingCommander::EndRender(void)

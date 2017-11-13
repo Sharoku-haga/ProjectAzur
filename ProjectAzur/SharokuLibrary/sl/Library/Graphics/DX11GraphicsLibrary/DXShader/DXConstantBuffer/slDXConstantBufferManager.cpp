@@ -16,8 +16,9 @@ namespace sl
 
 /* Public Functions ------------------------------------------------------------------------------------------- */
 
-DXConstantBufferManager::DXConstantBufferManager(ID3D11Device*	pDevice)
+DXConstantBufferManager::DXConstantBufferManager(ID3D11Device*	pDevice, ID3D11DeviceContext*		pDeviceContext)
 	: m_pDevice(pDevice)
+	, m_pDeviceContext(pDeviceContext)
 {}
 
 DXConstantBufferManager::~DXConstantBufferManager()
@@ -44,24 +45,37 @@ ConstantBufferID DXConstantBufferManager::CreateConstantBuffer(unsigned int cons
 		return ConstantBufferID(bufferID);
 	}
 
-	bufferID = m_pConstantBuffer.size();
-	m_pConstantBuffer.push_back(pConstantBuffer);
+	bufferID = m_pConstantBufferData.size();
+	m_pConstantBufferData.emplace_back(new ConstantBufferData(pConstantBuffer, constantBufferSize));
 
 	return ConstantBufferID(bufferID);
 }
 
+void DXConstantBufferManager::WriteConstantBuffer(const ConstantBufferID& rID, void*	pConstantBufferInfo)
+{
+	D3D11_MAPPED_SUBRESOURCE mappedResource;
+
+	if (SUCCEEDED(m_pDeviceContext->Map(m_pConstantBufferData[rID.m_Num]->m_pBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource)))
+	{
+		memcpy_s(mappedResource.pData, mappedResource.RowPitch, pConstantBufferInfo, m_pConstantBufferData[rID.m_Num]->m_BufferSize);
+		m_pDeviceContext->Unmap(m_pConstantBufferData[rID.m_Num]->m_pBuffer, 0);
+	}
+}
+
 void DXConstantBufferManager::Release(const ConstantBufferID& rID)
 {
-	SafeReleaseDX(m_pConstantBuffer[rID.m_Num]);
+	SafeReleaseDX(m_pConstantBufferData[rID.m_Num]->m_pBuffer);
+	SafeDelete(m_pConstantBufferData[rID.m_Num]);
 }
 
 void DXConstantBufferManager::ReleaseALL()
 {
-	for(auto& pConstantBuffer : m_pConstantBuffer)
+	for(auto& pConstantBufferData : m_pConstantBufferData)
 	{
-		SafeReleaseDX(pConstantBuffer);
+		SafeReleaseDX(pConstantBufferData->m_pBuffer);
+		SafeDelete(pConstantBufferData);
 	}
-	std::vector<ID3D11Buffer*>().swap(m_pConstantBuffer);
+	std::vector<ConstantBufferData*>().swap(m_pConstantBufferData);
 }
 
 

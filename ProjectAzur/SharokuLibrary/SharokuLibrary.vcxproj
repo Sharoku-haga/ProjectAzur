@@ -38,8 +38,10 @@
     <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXTexture\slDXTextureManager.h" />
     <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\DXViewManager\slDXViewManager.h" />
     <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\slDX11Graphics.h" />
+    <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\slDX11GraphicsLibrary.h" />
     <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation\slUVAnimation.h" />
     <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation\slUVAnimationManager.h" />
+    <ClInclude Include="sl\Library\Graphics\slGraphics.h" />
     <ClInclude Include="sl\Library\Graphics\slGraphicsDeclaration.h" />
     <ClInclude Include="sl\Library\Graphics\slGraphicsID.h" />
     <ClInclude Include="sl\Library\InputDevice\IInputDeviceLibrary\slIInputDevice.h" />
@@ -108,6 +110,7 @@
     <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXShader\DXVertexShader\slDXVertexShaderManager.cpp" />
     <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXTexture\slDXTextureManager.cpp" />
     <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\DXViewManager\slDXViewManager.cpp" />
+    <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\slDX11GraphicsLibrary.cpp" />
     <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation\slUVAnimation.cpp" />
     <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation\slUVAnimationManager.cpp" />
     <ClCompile Include="sl\Library\InputDevice\IInputDeviceLibrary\slIInputDeviceLibrary.cpp" />

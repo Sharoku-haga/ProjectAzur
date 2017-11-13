@@ -2,7 +2,7 @@
 //!< @file		slDXDrawingCommander.h		
 //!< @brief		sl::DXDrawingCommanderクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/09/30	更新履歴：
+//!< @data		作成日時：2017/09/30	更新履歴：2017/11/12
 //==================================================================================================================================//
 
 #ifndef SL_DX_DRAWING_COMMANDER_H
@@ -41,6 +41,44 @@ public:
 
 	/** 描画開始処理 */
 	void StartRender(void);
+
+	/** 
+	* 描画に使用するシェーダーを設定する関数
+	* @param[in] pVertexShader	使用したいVertexShader
+	* @param[in] pPixelShader	使用したいPixelShader
+	*/
+	void SetUpShader(ID3D11VertexShader* pVertexShader
+					, ID3D11PixelShader* pPixelShader);
+
+	/**
+	* 描画に使用するインプットレイアウトを設定する関数
+	* @param[in] pLayout	使用したいInputLayout
+	*/
+	void SetUpInputLayout(ID3D11InputLayout* pLayout);
+
+	/**
+	* 描画に使用するPrimitiveTopologyを設定する関数
+	* @param[in] primitiveTopology
+	*/
+	void SetUpPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY primitiveTopology);
+
+	/**
+	* 描画に使用するコンスタントバッファを設定する関数
+	* @param[in] pConstantBuffer コンスタントバッファのポインタ
+	*/
+	void SetUpConstantBuffer(ID3D11Buffer* pConstantBuffer);
+
+	/**
+	* 描画に使用するテクスチャーに設定したいサンプラーを設定する関数
+	* @param[in] pSamplerState 設定したいサンプラーステート
+	*/
+	void SetUpSamplerState(ID3D11SamplerState* pSamplerState);
+
+	/**
+	* 描画に使用するテクスチャーを設定する関数
+	* @param[in] pTexture	テクスチャーへのポインタ
+	*/
+	void SetUpTexture(ID3D11ShaderResourceView* pTexture);
 
 	/** 描画終了処理 */
 	void EndRender(void);

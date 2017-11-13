@@ -8,11 +8,23 @@
 #ifndef SL_GRAPHICS_DECLARATION_H
 #define SL_GRAPHICS_DECLARATION_H
 
+#include <d3dx11.h>
+#include <d3dx10.h>
 #include <vector>
 #include "../Utility/slRect.h"
 
 namespace sl
 {
+
+//===================================================================================//
+//!< 基本的な2Dにおけるコンスタントバッファの構造体
+//===================================================================================//
+
+struct Basic2DConstantBuffer
+{
+	D3DXMATRIX  m_MatWorld;			//!< ワールド変換行列
+	D3DXVECTOR4 m_WindowSize;		//!< ウィンドウの縦横サイズ
+};	// Basic2DConstantBuffer
 
 //===================================================================================//
 //!< UVアニメーションを作成するためのデータ構造体

@@ -41,7 +41,7 @@ DXGISwapChainManager::~DXGISwapChainManager()
 	sl::SafeReleaseDX(m_pDXGI);
 }
 
-bool DXGISwapChainManager::CreateDXGISwapChain(const WindowHandle& rHandle, ID3D11Device* pDevice, const fRect& rBackbufferSize)
+bool DXGISwapChainManager::CreateDXGISwapChain(const WindowHandle& rHandle, ID3D11Device* pDevice, const fRect& rBackBufferSize)
 {
 	HWND hWnd = static_cast<HWND>(rHandle.m_pAdress);
 
@@ -74,9 +74,10 @@ bool DXGISwapChainManager::CreateDXGISwapChain(const WindowHandle& rHandle, ID3D
 
 	// スワップチェーンを作成する
 	{
+		m_BackBufferSize = rBackBufferSize;
 		// 設定したいバックバッファの幅と高さを求める
-		int backBufferWidth = static_cast<int>((rBackbufferSize.m_Right - rBackbufferSize.m_Left));
-		int backBufferHeight = static_cast<int>((rBackbufferSize.m_Bottom - rBackbufferSize.m_Top));
+		int backBufferWidth = static_cast<int>((rBackBufferSize.m_Right - rBackBufferSize.m_Left));
+		int backBufferHeight = static_cast<int>((rBackBufferSize.m_Bottom - rBackBufferSize.m_Top));
 
 		// スワップチェーンの設定
 		/** @todo 現在は数値はほぼ固定してるが、後で設定できるように作り直したい */
