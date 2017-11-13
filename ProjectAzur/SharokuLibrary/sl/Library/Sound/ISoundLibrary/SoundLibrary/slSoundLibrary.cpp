@@ -60,13 +60,13 @@ bool SoundLibrary::Initialize(const WindowHandle& handle)
 	return true;
 }
 
-SOUND_DATA_ID SoundLibrary::CreateSoundData(t_char* pFileName)
+SoundDataID SoundLibrary::CreateSoundData(t_char* pFileName)
 {
 	UniquePtr<ISoundData> pData;
 
 	if(RESULT_FALSE(m_pDevice->CreateSoundData(pFileName, pData)))
 	{
-		SOUND_DATA_ID id;
+		SoundDataID id;
 		id = ERROR_ID_NUMBER;
 		return id;
 	}
@@ -74,7 +74,7 @@ SOUND_DATA_ID SoundLibrary::CreateSoundData(t_char* pFileName)
 	return m_pStorage->AddSoundData(pData.Release());
 }
 
-void SoundLibrary::PlaybackSound(const SOUND_DATA_ID& rID, const PLAYBACK_MODE& rMode)
+void SoundLibrary::PlaybackSound(const SoundDataID& rID, const PLAYBACK_MODE& rMode)
 {
 	ISoundData*	pData = m_pStorage->GetSoundData(rID);
 	switch(rMode)
@@ -99,12 +99,12 @@ void SoundLibrary::PlaybackSound(const SOUND_DATA_ID& rID, const PLAYBACK_MODE& 
 	}
 }
 
-void SoundLibrary::StopSound(const SOUND_DATA_ID& rID)
+void SoundLibrary::StopSound(const SoundDataID& rID)
 {
 	m_pStorage->GetSoundData(rID)->Stop();
 }
 
-void SoundLibrary::ReleaseSoundData(const SOUND_DATA_ID& rID)
+void SoundLibrary::ReleaseSoundData(const SoundDataID& rID)
 {
 	m_pStorage->ReleaseSoundData(rID);
 }
