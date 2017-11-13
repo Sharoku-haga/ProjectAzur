@@ -161,19 +161,17 @@ public:
 
 	/**
 	* 2Dモデルを生成する関数
-	* @param[in] rSize	モデルサイズ
-	* @param[in] rUV	UV値
-	* @param[in] rColor	カラーの値(配列サイズは４)
+	* @param[in] rData				モデルを作成するためのデータ
 	* @return モデルID
 	*/
-	ModelID CreateDXModel2D(const fRect& rSize, const fRect& rUV
-							, const std::vector<D3DXCOLOR>& rColor);
+	ModelID CreateDXModel2D(const Model2DCreationData& rData);
 	/** 
 	* 2Dモデルのサイズデータを設定する関数
-	* @param[in] rID	モデルデータのID
-	* @param[in] rSize	設定したいサイズ
+	* @param[in] rID			モデルデータのID
+	* @param[in] widthSize		設定したい横の大きさ
+	* @param[in] heightSize		設定したい縦の大きさ
 	*/
-	void SetDXModel2DSizeData(const ModelID& rID, const fRect& rSize);
+	void SetDXModel2DSizeData(const ModelID& rID, float widthSize, float heightSize);
 
 	/**
 	* 2DモデルのUVデータを設定する関数

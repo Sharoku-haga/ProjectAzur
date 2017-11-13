@@ -27,6 +27,32 @@ struct Basic2DConstantBuffer
 };	// Basic2DConstantBuffer
 
 //===================================================================================//
+//!< 2Dモデルを作成するためのデータ構造体 
+//===================================================================================//
+struct Model2DCreationData
+{
+	float					m_Width;			//!< 横の大きさ
+	float					m_Height;			//!< 縦の大きさ
+	fRect					m_UV;				//!< UV値(矩形)
+	std::vector<D3DXCOLOR>	m_Color;			//!< カラー値
+	bool					m_IsCenterPos;		//!< モデルの位置座標が中心かどうか true→中心座標 false →左上座標
+	Model2DCreationData() {}
+	Model2DCreationData(float width, float height, bool	isCenterPos)
+		: m_Width(width), m_Height(height), m_UV(0.0f, 0.0f, 1.0f, 1.0f), m_IsCenterPos(isCenterPos)
+	{}
+	Model2DCreationData(float width, float height, const fRect& rUV, bool isCenterPos)
+		: m_Width(width), m_Height(height), m_UV(rUV), m_IsCenterPos(isCenterPos)
+	{}
+	Model2DCreationData(float width
+						, float height
+						, const fRect& rUV
+						, const std::vector<D3DXCOLOR>& rColor
+						, bool isCenterPos)
+		: m_Width(width), m_Height(height), m_UV(rUV), m_Color(rColor), m_IsCenterPos(isCenterPos)
+	{}
+};	// struct Model2DCreationData
+
+//===================================================================================//
 //!< UVアニメーションを作成するためのデータ構造体
 //===================================================================================//
 struct UVAnimeCreationData
