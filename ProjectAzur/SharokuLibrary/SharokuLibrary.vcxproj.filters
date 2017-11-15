@@ -142,6 +142,9 @@
     <Filter Include="sl\Library\Graphics\DX11GraphicsLibrary\UVAnimation">
       <UniqueIdentifier>{4209c6b8-1319-4a23-840e-a048a68711ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sl\Library\Utility\Calculation">
+      <UniqueIdentifier>{63cc762d-96b7-4aaf-aa37-f5dbb51a1aaf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sl\sl.h">
@@ -366,6 +369,9 @@
     <ClInclude Include="sl\Library\Graphics\DX11GraphicsLibrary\slDX11GraphicsLibrary.h">
       <Filter>sl\Library\Graphics\DX11GraphicsLibrary</Filter>
     </ClInclude>
+    <ClInclude Include="sl\Library\Utility\Calculation\slCalculationFunc.h">
+      <Filter>sl\Library\Utility\Calculation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sl\Library\Window\IWindow\DXWindow\slDXWindow.cpp">
@@ -469,6 +475,9 @@
     </ClCompile>
     <ClCompile Include="sl\Library\Graphics\DX11GraphicsLibrary\slDX11GraphicsLibrary.cpp">
       <Filter>sl\Library\Graphics\DX11GraphicsLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Utility\Calculation\slCalculationFunc.cpp">
+      <Filter>sl\Library\Utility\Calculation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
