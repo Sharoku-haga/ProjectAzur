@@ -4,10 +4,21 @@
     <Filter Include="Main">
       <UniqueIdentifier>{1e4466d2-dfc5-4845-86e5-f9c90bd61648}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame">
+      <UniqueIdentifier>{c0f2a056-b0d6-4328-8a38-124b775784e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="MainGame\paMainGame.cpp">
+      <Filter>Main\MainGame</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainGame\paMainGame.h">
+      <Filter>Main\MainGame</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
