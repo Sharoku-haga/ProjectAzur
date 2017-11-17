@@ -7,12 +7,17 @@
 
 #include "sl/Library/Debugger/slDebug.h"
 #include "sl/Library/EntryPoint/slEntryPoint.h"
+#include "sl/library/SmartPointer/slSmartPointer.h"
+#include "MainGame/paMainGame.h"
 
 /* Entry Point ---------------------------------------------------------------------------------------- */
 
 ENTRY_FUNCTION()
 {
 	sl::CheckMemoryLeak();
+	sl::UniquePtr<pa::MainGame> pMainGame(new pa::MainGame());
+	pMainGame->Initialize();
+	pMainGame->Loop();
 	return 0;
 }
 
