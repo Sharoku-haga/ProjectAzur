@@ -145,6 +145,9 @@
     <Filter Include="sl\Library\Utility\Calculation">
       <UniqueIdentifier>{63cc762d-96b7-4aaf-aa37-f5dbb51a1aaf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sl\Library\Scene">
+      <UniqueIdentifier>{2022ad7e-1b94-4ead-a69a-3c3c481943ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sl\sl.h">
@@ -372,6 +375,21 @@
     <ClInclude Include="sl\Library\Utility\Calculation\slCalculationFunc.h">
       <Filter>sl\Library\Utility\Calculation</Filter>
     </ClInclude>
+    <ClInclude Include="sl\Library\Scene\slISceneDeletor.h">
+      <Filter>sl\Library\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Scene\slISceneFactory.h">
+      <Filter>sl\Library\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Scene\slScene.h">
+      <Filter>sl\Library\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Scene\slSceneBase.h">
+      <Filter>sl\Library\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="sl\Library\Scene\slSceneManager.h">
+      <Filter>sl\Library\Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sl\Library\Window\IWindow\DXWindow\slDXWindow.cpp">
@@ -478,6 +496,12 @@
     </ClCompile>
     <ClCompile Include="sl\Library\Utility\Calculation\slCalculationFunc.cpp">
       <Filter>sl\Library\Utility\Calculation</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Scene\slSceneBase.cpp">
+      <Filter>sl\Library\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="sl\Library\Scene\slSceneManager.cpp">
+      <Filter>sl\Library\Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
