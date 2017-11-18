@@ -124,10 +124,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainGame\GameScene\paGameScene.cpp" />
     <ClCompile Include="MainGame\paMainGame.cpp" />
+    <ClCompile Include="MainGame\ResultScene\paResultScene.cpp" />
+    <ClCompile Include="MainGame\SceneDeletor\paSceneDeletor.cpp" />
+    <ClCompile Include="MainGame\SceneFactory\paSceneFactory.cpp" />
+    <ClCompile Include="MainGame\TitleScene\paTitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MainGame\GameScene\paGameScene.h" />
     <ClInclude Include="MainGame\paMainGame.h" />
+    <ClInclude Include="MainGame\ResultScene\paResultScene.h" />
+    <ClInclude Include="MainGame\SceneDeletor\paSceneDeletor.h" />
+    <ClInclude Include="MainGame\SceneFactory\paSceneFactory.h" />
+    <ClInclude Include="MainGame\TitleScene\paTitleScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

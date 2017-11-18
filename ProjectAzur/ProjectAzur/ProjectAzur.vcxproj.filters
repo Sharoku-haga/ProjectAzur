@@ -7,6 +7,21 @@
     <Filter Include="Main\MainGame">
       <UniqueIdentifier>{c0f2a056-b0d6-4328-8a38-124b775784e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\TitleScene">
+      <UniqueIdentifier>{a95d5119-d669-46f8-bed6-e2b0c1af6009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\MainGame\GameScene">
+      <UniqueIdentifier>{c4be06b9-017a-41f4-8a4e-34cee148b064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\MainGame\ResultScene">
+      <UniqueIdentifier>{95ce81b5-c464-48f9-ad68-9ad3d4486757}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\MainGame\SceneFactory">
+      <UniqueIdentifier>{1cf2f87a-9da4-4599-9603-350b5d67ba9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\MainGame\SceneDeletor">
+      <UniqueIdentifier>{3b178c38-57ad-402b-89f5-fef51d2834bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -15,10 +30,40 @@
     <ClCompile Include="MainGame\paMainGame.cpp">
       <Filter>Main\MainGame</Filter>
     </ClCompile>
+    <ClCompile Include="MainGame\TitleScene\paTitleScene.cpp">
+      <Filter>Main\MainGame\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\paGameScene.cpp">
+      <Filter>Main\MainGame\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\ResultScene\paResultScene.cpp">
+      <Filter>Main\MainGame\ResultScene</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\SceneDeletor\paSceneDeletor.cpp">
+      <Filter>Main\MainGame\SceneDeletor</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\SceneFactory\paSceneFactory.cpp">
+      <Filter>Main\MainGame\SceneFactory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\paMainGame.h">
       <Filter>Main\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\TitleScene\paTitleScene.h">
+      <Filter>Main\MainGame\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\paGameScene.h">
+      <Filter>Main\MainGame\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\ResultScene\paResultScene.h">
+      <Filter>Main\MainGame\ResultScene</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\SceneDeletor\paSceneDeletor.h">
+      <Filter>Main\MainGame\SceneDeletor</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\SceneFactory\paSceneFactory.h">
+      <Filter>Main\MainGame\SceneFactory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

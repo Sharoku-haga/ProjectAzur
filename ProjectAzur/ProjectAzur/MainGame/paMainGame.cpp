@@ -1,8 +1,8 @@
 ﻿//==================================================================================================================================//
-//!< @file		paMainGame.h	
-//!< @brief		pa::MainGameクラスのヘッダ
+//!< @file		paMainGame.cpp	
+//!< @brief		pa::MainGameクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017//11/17	更新履歴：
+//!< @data		作成日時：2017//11/17	更新履歴：2017/11/18
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -12,9 +12,33 @@
 #include "sl/Library/Graphics/slGraphics.h"
 #include "sl/Library/InputDevice/slInputDevice.h"
 #include "sl/Library/Sound/slSound.h"
+#include "sl/Library/Scene/slScene.h"
+#include "SceneFactory/paSceneFactory.h"
+#include "SceneDeletor/paSceneDeletor.h"
+
+/* Define ----------------------------------------------------------------------------------------------------- */
+
+#define WIN_TITLE "ProjectAzur"
+#define WIN_WIDTH 1920
+#define WIN_HEGHT 1080
 
 namespace pa
 {
+
+/* Unnamed Namespace ------------------------------------------------------------------------------------------ */
+
+namespace
+{
+
+const sl::fRect			BackBufferSize = {0.0f, 0.0f, 1920.f, 1080.f};		// バックバッファのサイズ
+
+#ifdef _DEBUG
+	const	std::string StartSceneName = "TitleScene";						// 開始シーンネーム
+#else
+	const	std::string StartSceneName = "TitleScene";						// 開始シーンネーム
+#endif
+
+}
 
 /* Public Functions ------------------------------------------------------------------------------------------- */
 
@@ -24,14 +48,13 @@ bool MainGame::Initialize()
 
 	// ウィンドウの作成
 	sl::WindowCreationData data;
-	data.m_pTitle = "ProjectAzur";
-	data.m_Width = 1920;
-	data.m_Height = 1080;
+	data.m_pTitle	= WIN_TITLE;
+	data.m_Width	= WIN_WIDTH;
+	data.m_Height	= WIN_HEGHT;
 	m_pWindow = sl::CreateMainWindow(data);
 
 	// グラフィックスライブラリの初期化
-	sl::fRect backBufferSize = {0.0f, 0.0f, 1920.f, 1020.f};
-	sl::DX11GraphicsLibrary::Instance().Init(m_pWindow->GetWindowHandle(), backBufferSize);
+	sl::DX11GraphicsLibrary::Instance().Init(m_pWindow->GetWindowHandle(), BackBufferSize);
 
 	// インプットデバイスライブラリの初期化
 	result = sl::IInputDeviceLibrary::Instance().Initialize(m_pWindow->GetWindowHandle());
@@ -48,7 +71,9 @@ bool MainGame::Initialize()
 	}
 
 	//シーンマネージャー関連処理
-
+	sl::SceneManager::Instance().Initialize(sl::UniquePtr<sl::ISceneFactory>(new SceneFactory())
+											, sl::UniquePtr<sl::ISceneDeletor>(new SceneDeletor())
+											, StartSceneName);
 
 	// カスタマイズインプット処理
 
@@ -59,7 +84,10 @@ void MainGame::Loop()
 {
 	while(RESULT_FALSE(m_pWindow->Update()))
 	{
-
+		if(sl::SceneManager::Instance().Update())
+		{
+			break;
+		}
 	}
 }
 
