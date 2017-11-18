@@ -28,7 +28,7 @@ public:
 	virtual void Enter() = 0;
 
 	/** シーンの実行処理関数 */
-	void Execute();
+	virtual void Execute();
 
 	/** シーンの最後に行う処理関数 */
 	virtual void Exit() = 0;
@@ -39,6 +39,7 @@ protected:
 
 	/** 描画関数 */
 	virtual void Draw() = 0;
+
 };	// class SceneBase
 
 }	// namespace sl

@@ -82,7 +82,10 @@ void SceneManager::End()
 
 SceneManager::~SceneManager()
 {
-	m_pDeletor->DestroyScene(m_pScene.Release());
+	if(m_pScene.Get() != nullptr)
+	{
+		m_pDeletor->DestroyScene(m_pScene.Release());
+	}
 }
 
 }	// namespace sl
