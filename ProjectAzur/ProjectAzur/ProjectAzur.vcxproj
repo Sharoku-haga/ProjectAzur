@@ -124,6 +124,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainGame\DrawTask\paDrawTask.cpp" />
+    <ClCompile Include="MainGame\DrawTask\paDrawTaskManager.cpp" />
     <ClCompile Include="MainGame\GameScene\paGameScene.cpp" />
     <ClCompile Include="MainGame\paMainGame.cpp" />
     <ClCompile Include="MainGame\ResultScene\paResultScene.cpp" />
@@ -132,6 +134,8 @@
     <ClCompile Include="MainGame\TitleScene\paTitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MainGame\DrawTask\paDrawTask.h" />
+    <ClInclude Include="MainGame\DrawTask\paDrawTaskManager.h" />
     <ClInclude Include="MainGame\GameScene\paGameScene.h" />
     <ClInclude Include="MainGame\paMainGame.h" />
     <ClInclude Include="MainGame\ResultScene\paResultScene.h" />
