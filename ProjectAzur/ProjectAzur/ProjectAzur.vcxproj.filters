@@ -22,6 +22,9 @@
     <Filter Include="Main\MainGame\SceneDeletor">
       <UniqueIdentifier>{3b178c38-57ad-402b-89f5-fef51d2834bc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\DrawTask">
+      <UniqueIdentifier>{b56fe71b-bd8a-423a-ab15-ef3bda7ef03f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -45,6 +48,12 @@
     <ClCompile Include="MainGame\SceneFactory\paSceneFactory.cpp">
       <Filter>Main\MainGame\SceneFactory</Filter>
     </ClCompile>
+    <ClCompile Include="MainGame\DrawTask\paDrawTask.cpp">
+      <Filter>Main\MainGame\DrawTask</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\DrawTask\paDrawTaskManager.cpp">
+      <Filter>Main\MainGame\DrawTask</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\paMainGame.h">
@@ -64,6 +73,12 @@
     </ClInclude>
     <ClInclude Include="MainGame\SceneFactory\paSceneFactory.h">
       <Filter>Main\MainGame\SceneFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\DrawTask\paDrawTask.h">
+      <Filter>Main\MainGame\DrawTask</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\DrawTask\paDrawTaskManager.h">
+      <Filter>Main\MainGame\DrawTask</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

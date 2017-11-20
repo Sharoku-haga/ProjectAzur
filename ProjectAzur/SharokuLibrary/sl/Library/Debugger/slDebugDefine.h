@@ -12,6 +12,8 @@
 
 #ifdef _DEBUG
 
+#include <windows.h>
+
 /** 強制ブレーク */	
 #define slDebugBreak()	DebugBreak()	
 
