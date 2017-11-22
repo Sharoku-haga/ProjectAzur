@@ -25,6 +25,9 @@
     <Filter Include="Main\MainGame\DrawTask">
       <UniqueIdentifier>{b56fe71b-bd8a-423a-ab15-ef3bda7ef03f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\EventManager">
+      <UniqueIdentifier>{dcb3adfa-58b6-4107-a277-f121f05ccea7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -54,6 +57,12 @@
     <ClCompile Include="MainGame\DrawTask\paDrawTaskManager.cpp">
       <Filter>Main\MainGame\DrawTask</Filter>
     </ClCompile>
+    <ClCompile Include="MainGame\EventManager\paEventListener.cpp">
+      <Filter>Main\MainGame\EventManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\EventManager\paEventManager.cpp">
+      <Filter>Main\MainGame\EventManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\paMainGame.h">
@@ -79,6 +88,12 @@
     </ClInclude>
     <ClInclude Include="MainGame\DrawTask\paDrawTaskManager.h">
       <Filter>Main\MainGame\DrawTask</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\EventManager\paEventListener.h">
+      <Filter>Main\MainGame\EventManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\EventManager\paEventManager.h">
+      <Filter>Main\MainGame\EventManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
