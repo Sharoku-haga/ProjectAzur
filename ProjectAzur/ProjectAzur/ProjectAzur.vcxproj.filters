@@ -95,5 +95,8 @@
     <ClInclude Include="MainGame\EventManager\paEventManager.h">
       <Filter>Main\MainGame\EventManager</Filter>
     </ClInclude>
+    <ClInclude Include="MainGame\paCustomizeInput.h">
+      <Filter>Main\MainGame</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
