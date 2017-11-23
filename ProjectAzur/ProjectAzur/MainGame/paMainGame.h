@@ -37,6 +37,18 @@ public:
 private:
 	sl::UniquePtr<sl::IWindow>		m_pWindow;		//!< sl::IWindowクラスのインスタンスへのポインタ
 
+	/** XBoxコントローラーを準備する関数 */
+	void SetUpXInput();
+
+	/** キーインプットを準備する関数 */
+	void SetUpInputKey();
+
+#ifdef _DEBUG
+	/** デバック用インプットをカスタマイズする関数 */
+	void SetUpDebugInput();
+
+#endif // _DEBUG
+
 };	// class MainGame
 
 }	// namespace pa

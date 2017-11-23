@@ -15,6 +15,7 @@
 #include "sl/Library/Scene/slScene.h"
 #include "SceneFactory/paSceneFactory.h"
 #include "SceneDeletor/paSceneDeletor.h"
+#include "paCustomizeInput.h"
 
 /* Define ----------------------------------------------------------------------------------------------------- */
 
@@ -75,7 +76,12 @@ bool MainGame::Initialize()
 											, sl::UniquePtr<sl::ISceneDeletor>(new SceneDeletor())
 											, StartSceneName);
 
-	// カスタマイズインプット処理
+	// インプット処理設定
+	SetUpInputKey();
+	SetUpXInput();
+#ifdef _DEBUG
+	SetUpDebugInput();
+#endif // _DEBUG
 
 	return true;
 }
@@ -90,6 +96,150 @@ void MainGame::Loop()
 		}
 	}
 }
+
+/* Private Functions ------------------------------------------------------------------------------------------ */
+
+void MainGame::SetUpXInput()
+{
+	sl::IInputDeviceLibrary& rLibrary = sl::IInputDeviceLibrary::Instance();
+	rLibrary.CreateInputDevice(sl::XINPUT_DEVICE);
+
+	// UP	
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::UP
+											, sl::XIDEVICE_DPAD_UP);
+	// DOWN		
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::DOWN
+											, sl::XIDEVICE_DPAD_DOWN);
+	// RIGHT		
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::RIGHT
+											, sl::XIDEVICE_DPAD_RIGHT);
+	// LEFT					
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::LEFT
+											, sl::XIDEVICE_DPAD_LEFT);
+	// DECISION_BTN			
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::DECISION_BTN
+											, sl::XIDEVICE_A);
+	// BACK_BTN				
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::BACK_BTN	
+											, sl::XIDEVICE_B);
+	// PAUSE_BTN				
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::PAUSE_BTN
+											, sl::XIDEVICE_START);
+	// RIGHT_MOVE
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::RIGHT_MOVE
+											, sl::XIDEVICE_LSTICK_RIGHT);
+	// LEFT_MOVE	
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::LEFT_MOVE
+											, sl::XIDEVICE_LSTICK_LEFT);
+	// UP_MOVE				
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::UP_MOVE	
+											, sl::XIDEVICE_LSTICK_UP);
+	// DOWN_MOVE					
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::DOWN_MOVE
+											, sl::XIDEVICE_LSTICK_DOWN);
+	// RIGHT_ROTATION	
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::RIGHT_ROTATION	
+											, sl::XIDEVICE_X);
+	// LEFT_ROTATION	
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::LEFT_ROTATION
+											, sl::XIDEVICE_Y);
+	// SCOUTING_MODE_BTN			
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::SCOUTING_MODE_BTN	
+											, sl::XIDEVICE_RTRIGGER);
+	// SCOUTING_UP				
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::SCOUTING_UP
+											, sl::XIDEVICE_RSTICK_UP);
+	// SCOUTING_DOWN				
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::SCOUTING_DOWN
+											, sl::XIDEVICE_RSTICK_DOWN);
+	// SCOUTING_RIGHT				
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::SCOUTING_RIGHT
+											, sl::XIDEVICE_RSTICK_RIGHT);
+	// SCOUTING_LEFT				
+	rLibrary.RegisterCustomizeXInputAction(CUSTOMIZE_INPUT_ACTION::DECISION_BTN
+											, sl::XIDEVICE_RSTICK_LEFT);
+}
+
+void MainGame::SetUpInputKey()
+{
+	sl::IInputDeviceLibrary& rLibrary = sl::IInputDeviceLibrary::Instance();
+	rLibrary.CreateInputDevice(sl::KEYBOARD);
+
+	// 使用するキーを登録する
+	rLibrary.RegisterUsingKey(sl::K_UP);
+	rLibrary.RegisterUsingKey(sl::K_DOWN);
+	rLibrary.RegisterUsingKey(sl::K_RIGHT);
+	rLibrary.RegisterUsingKey(sl::K_LEFT);
+	rLibrary.RegisterUsingKey(sl::K_RETURN);
+	rLibrary.RegisterUsingKey(sl::K_R);
+	rLibrary.RegisterUsingKey(sl::K_W);
+	rLibrary.RegisterUsingKey(sl::K_S);
+	rLibrary.RegisterUsingKey(sl::K_D);
+	rLibrary.RegisterUsingKey(sl::K_A);
+	rLibrary.RegisterUsingKey(sl::K_P);
+	rLibrary.RegisterUsingKey(sl::K_LSHIFT);
+
+	// UP	
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::UP
+								 , sl::K_UP);
+	// DOWN		
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::DOWN
+								 , sl::K_DOWN);
+	// RIGHT
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::RIGHT
+								 , sl::K_RIGHT);
+	// LEFT					
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::LEFT
+								 , sl::K_LEFT);
+	// DECISION_BTN			
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::DECISION_BTN
+								 , sl::K_RETURN);
+	// BACK_BTN				
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::BACK_BTN
+								 , sl::K_R);
+	// PAUSE_BTN	
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::PAUSE_BTN
+								 , sl::K_P);
+	// RIGHT_MOVE
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::RIGHT_MOVE
+								 , sl::K_D);
+	// LEFT_MOVE	
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::LEFT_MOVE
+								 , sl::K_A);
+	// UP_MOVE				
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::UP_MOVE
+								 , sl::K_W);
+	// DOWN_MOVE					
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::DOWN_MOVE
+								 , sl::K_S);
+	// RIGHT_ROTATION					
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::RIGHT_ROTATION
+								 , sl::K_RIGHT);
+	// LEFT_ROTATION					
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::LEFT_ROTATION
+								 , sl::K_LEFT);
+	// SCOUTING_MODE_BTN			
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::SCOUTING_MODE_BTN
+								 , sl::K_LSHIFT);
+	// SCOUTING_UP				
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::SCOUTING_UP
+								 , sl::K_W);
+	// SCOUTING_DOWN				
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::SCOUTING_DOWN
+								 , sl::K_S);
+	// SCOUTING_RIGHT				
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::SCOUTING_RIGHT
+								 , sl::K_D);
+	// SCOUTING_LEFT				
+	rLibrary.RegisterCustomizeKey(CUSTOMIZE_INPUT_ACTION::SCOUTING_LEFT
+								 , sl::K_A);
+}
+
+#ifdef _DEBUG
+	void MainGame::SetUpDebugInput()
+	{}
+
+#endif // _DEBUG
 
 }	// namespace pa
 
