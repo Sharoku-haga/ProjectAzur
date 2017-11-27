@@ -28,6 +28,9 @@
     <Filter Include="Main\MainGame\EventManager">
       <UniqueIdentifier>{dcb3adfa-58b6-4107-a277-f121f05ccea7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\DrawingDataFile">
+      <UniqueIdentifier>{352c8f0b-9cd9-437d-9ce0-3736087fc78e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -63,6 +66,9 @@
     <ClCompile Include="MainGame\EventManager\paEventManager.cpp">
       <Filter>Main\MainGame\EventManager</Filter>
     </ClCompile>
+    <ClCompile Include="MainGame\DrawingDataFile\paDrawingDataFile.cpp">
+      <Filter>Main\MainGame\DrawingDataFile</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\paMainGame.h">
@@ -97,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="MainGame\paCustomizeInput.h">
       <Filter>Main\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\DrawingDataFile\paDrawingDataFile.h">
+      <Filter>Main\MainGame\DrawingDataFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
