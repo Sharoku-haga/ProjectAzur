@@ -134,6 +134,7 @@
     <ClCompile Include="MainGame\SceneDeletor\paSceneDeletor.cpp" />
     <ClCompile Include="MainGame\SceneFactory\paSceneFactory.cpp" />
     <ClCompile Include="MainGame\TitleScene\paTitleScene.cpp" />
+    <ClCompile Include="MainGame\VertexDataFile\paVertexDataFile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\DrawTask\paDrawTask.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="MainGame\SceneDeletor\paSceneDeletor.h" />
     <ClInclude Include="MainGame\SceneFactory\paSceneFactory.h" />
     <ClInclude Include="MainGame\TitleScene\paTitleScene.h" />
+    <ClInclude Include="MainGame\VertexDataFile\paVertexDataFile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
