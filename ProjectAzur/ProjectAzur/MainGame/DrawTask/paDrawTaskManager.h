@@ -2,13 +2,13 @@
 //!< @file		paDrawTaskManager.h
 //!< @brief		pa::DrawTaskManagerクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/11/20	更新履歴：
+//!< @data		作成日時：2017/11/20	更新履歴：2017/11/29
 //==================================================================================================================================//
 
 #ifndef PA_DRAW_TASK_MANAGER_H
 #define PA_DRAW_TASK_MANAGER_H
 
-#include <map>
+#include <unordered_map>    
 #include <vector>
 #include "sl/Library/Singleton/slBasicSingleton.h"
 #include "sl/Library/Utility/slDefine.h"
@@ -20,7 +20,6 @@ class DrawTask;
 
 //===================================================================================//
 //!< 描画タスクを管理するクラス
-//!< 毎フレーム 登録→実行→クリアを行う @todo 毎フレームはなんとかしたい
 //===================================================================================//
 class DrawTaskManager final : public sl::BasicSingleton<DrawTaskManager>
 {
@@ -41,14 +40,20 @@ public:
 	/** 登録している描画タスクを実行する関数 */
 	void Run();
 
-	/** 登録している描画タスクをクリアする関数 */
-	void Clear();
+	/**
+	* 指定した描画タスクを削除する関数
+	* @param[in] pTask	削除したい描画タスク
+	*/
+	void DeleteTask(DrawTask* pTask);
+
+	/** 登録している描画タスクを全て削除する関数 */
+	void DeleteALL();
 
 private:
 	friend class sl::StaticCreation<DrawTaskManager>;
 
-	std::map<int, std::vector<DrawTask*>>	m_DrawTasks;			//!< 登録している描画タスクmap
-	int										m_PriorityNumMax;		//!< 優先度番号の最大値
+	std::unordered_map<int, std::vector<DrawTask*>>	m_DrawTasks;			//!< 登録している描画タスクmap
+	int												m_PriorityNumMax;		//!< 優先度番号の最大値
 
 	/** Constructor */
 	DrawTaskManager() = default;

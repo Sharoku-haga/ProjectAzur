@@ -2,7 +2,7 @@
 //!< @file		paDrawTaskManager.cpp
 //!< @brief		pa::DrawTaskManagerクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/11/20	更新履歴：
+//!< @data		作成日時：2017/11/20	更新履歴：2017/11/29
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -45,7 +45,21 @@ void DrawTaskManager::Run()
 	}
 }
 
-void DrawTaskManager::Clear()
+void DrawTaskManager::DeleteTask(DrawTask* pTask)
+{
+	std::vector<DrawTask*>& pDrawTasks = m_DrawTasks[pTask->GetCurrentPriority()];
+
+	for(auto& itr = pDrawTasks.begin(); itr != pDrawTasks.end(); ++itr)
+	{
+		if((*itr) == pTask)
+		{
+			pDrawTasks.erase(itr);
+			break;
+		}
+	}
+}
+
+void DrawTaskManager::DeleteALL()
 {
 	for(int i = PriorityNumMin; i <= m_PriorityNumMax; ++i)
 	{
