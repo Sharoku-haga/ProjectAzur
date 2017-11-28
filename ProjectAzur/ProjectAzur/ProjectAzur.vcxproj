@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainGame\DrawingDataFile\paDrawingDataFile.cpp" />
     <ClCompile Include="MainGame\DrawTask\paDrawTask.cpp" />
     <ClCompile Include="MainGame\DrawTask\paDrawTaskManager.cpp" />
     <ClCompile Include="MainGame\EventManager\paEventListener.cpp" />
@@ -136,6 +137,7 @@
     <ClCompile Include="MainGame\TitleScene\paTitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MainGame\DrawingDataFile\paDrawingDataFile.h" />
     <ClInclude Include="MainGame\DrawTask\paDrawTask.h" />
     <ClInclude Include="MainGame\DrawTask\paDrawTaskManager.h" />
     <ClInclude Include="MainGame\EventManager\paEventListener.h" />
