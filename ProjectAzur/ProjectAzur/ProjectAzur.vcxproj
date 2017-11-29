@@ -144,6 +144,7 @@
     <ClInclude Include="MainGame\EventManager\paEventManager.h" />
     <ClInclude Include="MainGame\GameScene\paGameScene.h" />
     <ClInclude Include="MainGame\paCustomizeInput.h" />
+    <ClInclude Include="MainGame\paObjDrawingData.h" />
     <ClInclude Include="MainGame\paMainGame.h" />
     <ClInclude Include="MainGame\ResultScene\paResultScene.h" />
     <ClInclude Include="MainGame\SceneDeletor\paSceneDeletor.h" />
