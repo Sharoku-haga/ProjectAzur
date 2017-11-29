@@ -1,6 +1,6 @@
 ﻿//==================================================================================================================================//
-//!< @file		paDrawingDataFile.cpp
-//!< @brief		pa::DrawingDataFileクラスの実装
+//!< @file		paDrawingResrcDataFile.cpp
+//!< @brief		pa::DrawingResrcDataFileクラスの実装
 //!< @author	T.Haga
 //!< @data		作成日時：2017/11/28	更新履歴：2017/11/29
 //==================================================================================================================================//
@@ -8,24 +8,24 @@
 /* Includes --------------------------------------------------------------------------------------------------- */
 
 #include <iostream>
-#include "paDrawingDataFile.h"
+#include "paDrawingResrcDataFile.h"
 
 namespace pa
 {
 
 /* Public Functions ------------------------------------------------------------------------------------------- */
 
-void DrawingDataFile::Initialize(const std::string& rFileDirectoryPath)
+void DrawingResrcDataFile::Initialize(const std::string& rFileDirectoryPath)
 {
 	m_FileDirectoryPath = rFileDirectoryPath;
 	ReleaseDataALL();						// ここでデータを全て解放しておく
 }
 
-bool DrawingDataFile::LoadDataFile(const std::string& rFileName)
+bool DrawingResrcDataFile::LoadDataFile(const std::string& rFileName)
 {
 	using namespace std;
 
-	if(m_DrawingDatas.find(rFileName) != m_DrawingDatas.end())
+	if(m_DrawingResrcDatas.find(rFileName) != m_DrawingResrcDatas.end())
 	{	// すでにファイルをロードしているならtrueを返す
 		return true;
 	}
@@ -50,13 +50,13 @@ bool DrawingDataFile::LoadDataFile(const std::string& rFileName)
 		return false;
 	}
 
-	map<int, DrawingData> &rDatas = m_DrawingDatas[rFileName];
+	map<int, DrawingResrcData> &rDatas = m_DrawingResrcDatas[rFileName];
 
 	int drawingDataID = 0;			// 描画データIDを格納する変数
 	for(int count = 0; count < dataCount; ++count)
 	{
 		std::fread(&drawingDataID, sizeof(int), 1, fp);
-		std::fread(&rDatas[drawingDataID], sizeof(DrawingData), 1, fp);
+		std::fread(&rDatas[drawingDataID], sizeof(DrawingResrcData), 1, fp);
 	}
 
 	std::fclose(fp);
@@ -64,20 +64,20 @@ bool DrawingDataFile::LoadDataFile(const std::string& rFileName)
 	return true;
 }
 
-void DrawingDataFile::ReleaseData(const std::string& rFileName)
+void DrawingResrcDataFile::ReleaseData(const std::string& rFileName)
 {
-	m_DrawingDatas[rFileName].clear();
-	m_DrawingDatas.erase(rFileName);
+	m_DrawingResrcDatas[rFileName].clear();
+	m_DrawingResrcDatas.erase(rFileName);
 }
 
-void DrawingDataFile::ReleaseDataALL()
+void DrawingResrcDataFile::ReleaseDataALL()
 {
-	for(auto& datas : m_DrawingDatas)
+	for(auto& datas : m_DrawingResrcDatas)
 	{
 		datas.second.clear();
 	}
 	
-	m_DrawingDatas.clear();
+	m_DrawingResrcDatas.clear();
 }
 
 }	// namespace pa
