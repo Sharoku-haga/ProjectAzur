@@ -1,6 +1,6 @@
 ﻿//==================================================================================================================================//
-//!< @file		paDrawingDataFile.h
-//!< @brief		pa::DrawingDataFileクラスのヘッダ
+//!< @file		paDrawingResrcDataFile.h
+//!< @brief		pa::DrawingResrcDataFileクラスのヘッダ
 //!< @author	T.Haga
 //!< @data		作成日時：2017/11/28	更新履歴：2017/11/29
 //==================================================================================================================================//
@@ -18,19 +18,19 @@ namespace pa
 {
 
 //===================================================================================//
-//!< 描画に関するデータ構造体
+//!< 描画に関するリソースデータ構造体
 //===================================================================================//
-struct DrawingData
+struct DrawingResrcData
 {
 	float		m_Width;		//!< 横の長さ
 	float		m_Height;		//!< 高さ
 	sl::fRect	m_UVRect;		//!< UV値(左上UV値と右下のUV値)
-};	// struct DrawingData
+};	// struct DrawingResrcData
 
 //===================================================================================//
-//!< ツールが作成する描画に関するデータファイルを管理するクラス 
+//!< ツールが作成する描画に関するリソースデータファイルを管理するクラス 
 //===================================================================================//
-class DrawingDataFile final : public sl::BasicSingleton<DrawingDataFile>
+class DrawingResrcDataFile final : public sl::BasicSingleton<DrawingResrcDataFile>
 {
 
 public:
@@ -48,14 +48,14 @@ public:
 	bool LoadDataFile(const std::string& rFileName);
 
 	/**
-	* DrawingDataを取得する関数
+	* DrawingResrcDataを取得する関数
 	* @param[in] rFileName		ファイル名
 	* @param[in] id				データのID
-	* @return 指定したDrawingDataの参照
+	* @return 指定したDrawingResrcDataの参照
 	*/
-	inline DrawingData& GetDrawingData(const std::string& rFileName, int id)
+	inline DrawingResrcData& GetDrawingData(const std::string& rFileName, int id)
 	{
-		return m_DrawingDatas[rFileName][id];
+		return m_DrawingResrcDatas[rFileName][id];
 	}
 
 	/**
@@ -68,20 +68,20 @@ public:
 	void ReleaseDataALL();
 
 private:
-	friend class sl::StaticCreation<DrawingDataFile>;
+	friend class sl::StaticCreation<DrawingResrcDataFile>;
 
-	std::string											m_FileDirectoryPath;		//!< データファイルを格納しているディレクトリのパス
-	std::map< std::string, std::map<int, DrawingData> > m_DrawingDatas;			//!< DrawingDataを格納しているmap.intはID
+	std::string														m_FileDirectoryPath;			//!< データファイルを格納しているディレクトリのパス
+	std::map< std::string, std::map<int, DrawingResrcData> >		m_DrawingResrcDatas;			//!< DrawingDataを格納しているmap.intはID
 
 	/** Contructor */
-	DrawingDataFile() = default;
+	DrawingResrcDataFile() = default;
 
 	/** Destructor */
-	~DrawingDataFile() = default;
+	~DrawingResrcDataFile() = default;
 
-	SL_DISALLOW_COPY_AND_ASSIGN(DrawingDataFile);
+	SL_DISALLOW_COPY_AND_ASSIGN(DrawingResrcDataFile);
 
-};	// class DrawingDataFile
+};	// class DrawingResrcDataFile
 
 }	// namespace pa
 
