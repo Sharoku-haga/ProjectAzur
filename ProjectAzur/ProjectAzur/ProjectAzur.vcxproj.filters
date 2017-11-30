@@ -31,6 +31,9 @@
     <Filter Include="Main\MainGame\DrawingResrcDataFile">
       <UniqueIdentifier>{352c8f0b-9cd9-437d-9ce0-3736087fc78e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\TitleScene\TitleBackground">
+      <UniqueIdentifier>{1fec74fa-0820-4af3-9abe-29f8f514f191}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -68,6 +71,12 @@
     </ClCompile>
     <ClCompile Include="MainGame\DrawingResrcDataFile\paDrawingResrcDataFile.cpp">
       <Filter>Main\MainGame\DrawingResrcDataFile</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\TitleScene\TitleBackground\paTitleBackground.cpp">
+      <Filter>Main\MainGame\TitleScene\TitleBackground</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\TitleScene\TitleBackground\paTitleBackgroundAnime.cpp">
+      <Filter>Main\MainGame\TitleScene\TitleBackground</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +121,12 @@
     </ClInclude>
     <ClInclude Include="MainGame\paIObjectBase.h">
       <Filter>Main\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\TitleScene\TitleBackground\paTitleBackground.h">
+      <Filter>Main\MainGame\TitleScene\TitleBackground</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\TitleScene\TitleBackground\paTitleBackgroundAnime.h">
+      <Filter>Main\MainGame\TitleScene\TitleBackground</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
