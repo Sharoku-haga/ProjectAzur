@@ -110,5 +110,8 @@
     <ClInclude Include="MainGame\DrawingResrcDataFile\paDrawingResrcDataFile.h">
       <Filter>Main\MainGame\DrawingResrcDataFile</Filter>
     </ClInclude>
+    <ClInclude Include="MainGame\paIObjectBase.h">
+      <Filter>Main\MainGame</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
