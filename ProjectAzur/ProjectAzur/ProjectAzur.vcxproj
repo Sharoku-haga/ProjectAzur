@@ -135,6 +135,8 @@
     <ClCompile Include="MainGame\SceneDeletor\paSceneDeletor.cpp" />
     <ClCompile Include="MainGame\SceneFactory\paSceneFactory.cpp" />
     <ClCompile Include="MainGame\TitleScene\paTitleScene.cpp" />
+    <ClCompile Include="MainGame\TitleScene\TitleBackground\paTitleBackground.cpp" />
+    <ClCompile Include="MainGame\TitleScene\TitleBackground\paTitleBackgroundAnime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\DrawingResrcDataFile\paDrawingResrcDataFile.h" />
@@ -151,6 +153,8 @@
     <ClInclude Include="MainGame\SceneDeletor\paSceneDeletor.h" />
     <ClInclude Include="MainGame\SceneFactory\paSceneFactory.h" />
     <ClInclude Include="MainGame\TitleScene\paTitleScene.h" />
+    <ClInclude Include="MainGame\TitleScene\TitleBackground\paTitleBackground.h" />
+    <ClInclude Include="MainGame\TitleScene\TitleBackground\paTitleBackgroundAnime.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
