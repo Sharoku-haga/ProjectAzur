@@ -2,7 +2,7 @@
 //!< @file		slUserManualSingleton.h
 //!< @brief		sl::UserManualSingletonクラスヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/09/04	更新履歴：2017/09/24
+//!< @data		作成日時：2017/09/04	更新履歴：2017/12/02
 //==================================================================================================================================//
 
 #ifndef SL_USER_MANUAL_SINGLETON_H
@@ -47,7 +47,7 @@ public:
 		return *m_pInstance;
 	}
 
-private:
+protected:
 	static Ty*	m_pInstance;		//!< Ty型クラスのインスタンスへのポインタ
 
 	/** Constructor */

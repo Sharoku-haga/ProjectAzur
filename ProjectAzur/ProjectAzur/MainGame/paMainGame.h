@@ -34,6 +34,9 @@ public:
 	/** ループ関数 */
 	void Loop();
 
+	/** 破棄関数 */
+	void Finalize();
+
 private:
 	sl::UniquePtr<sl::IWindow>		m_pWindow;		//!< sl::IWindowクラスのインスタンスへのポインタ
 

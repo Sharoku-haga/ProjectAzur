@@ -18,6 +18,7 @@ ENTRY_FUNCTION()
 	sl::UniquePtr<pa::MainGame> pMainGame(new pa::MainGame());
 	pMainGame->Initialize();
 	pMainGame->Loop();
+	pMainGame->Finalize();
 	return 0;
 }
 

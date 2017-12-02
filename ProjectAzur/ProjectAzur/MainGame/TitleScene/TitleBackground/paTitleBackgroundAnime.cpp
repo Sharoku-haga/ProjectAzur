@@ -20,7 +20,7 @@ namespace
 {
 
 const int	AnimeindexMax = 90;				// アニメーションのインデックス
-const int	AnimeWaitingTime = 30;			// アニメーションの待機時間
+const int	AnimeWaitingTime = 1;			// アニメーションの待機時間
 
 }
 
@@ -44,7 +44,7 @@ void TitleBackgroundAnime::Initialize()
 
 	sl::DX11GraphicsLibrary& library = sl::DX11GraphicsLibrary::Instance();
 
-	string fileDirectory = "../Resource/Texture/Title/TitleBG/title_";
+	string fileDirectory = "../Resource/Texture/Title/TitleBG/titile_";
 	string fileFormat = ".png";
 
 	string filePath;

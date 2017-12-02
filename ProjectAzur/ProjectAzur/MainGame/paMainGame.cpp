@@ -7,14 +7,17 @@
 
 /* Includes --------------------------------------------------------------------------------------------------- */
 
-#include "paMainGame.h"
 #include "sl/Library/Utility/slDefine.h"
 #include "sl/Library/Graphics/slGraphics.h"
 #include "sl/Library/InputDevice/slInputDevice.h"
 #include "sl/Library/Sound/slSound.h"
 #include "sl/Library/Scene/slScene.h"
+#include "paMainGame.h"
 #include "SceneFactory/paSceneFactory.h"
 #include "SceneDeletor/paSceneDeletor.h"
+#include "DrawingResrcDataFile/paDrawingResrcDataFile.h"
+#include "DrawTask/paDrawTaskManager.h"
+#include "EventManager\paEventManager.h"
 #include "paCustomizeInput.h"
 
 /* Define ----------------------------------------------------------------------------------------------------- */
@@ -64,17 +67,12 @@ bool MainGame::Initialize()
 		return false;
 	}
 
-	// サウンドライブラリの初期化
+	//// サウンドライブラリの初期化
 	result = sl::ISoundLibrary::Instance().Initialize(m_pWindow->GetWindowHandle());
 	if(RESULT_FALSE(result))
 	{
 		return false;
 	}
-
-	//シーンマネージャー関連処理
-	sl::SceneManager::Instance().Initialize(sl::UniquePtr<sl::ISceneFactory>(new SceneFactory())
-											, sl::UniquePtr<sl::ISceneDeletor>(new SceneDeletor())
-											, StartSceneName);
 
 	// インプット処理設定
 	SetUpInputKey();
@@ -83,6 +81,13 @@ bool MainGame::Initialize()
 	SetUpDebugInput();
 #endif // _DEBUG
 
+	// リソースデータマネージャーの初期化
+	DrawingResrcDataFile::Instance().Initialize("../Resource/Data");
+
+	//シーンマネージャー関連処理
+	sl::SceneManager::Instance().Initialize(sl::UniquePtr<sl::ISceneFactory>(new SceneFactory())
+											, sl::UniquePtr<sl::ISceneDeletor>(new SceneDeletor())
+											, StartSceneName);
 	return true;
 }
 
@@ -95,6 +100,11 @@ void MainGame::Loop()
 			break;
 		}
 	}
+}
+
+void MainGame::Finalize()
+{
+	sl::SceneManager::Instance().Finalize();
 }
 
 /* Private Functions ------------------------------------------------------------------------------------------ */

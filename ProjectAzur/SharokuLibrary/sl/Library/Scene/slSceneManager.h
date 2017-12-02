@@ -2,7 +2,7 @@
 //!< @file		slSceneManager.h		
 //!< @brief		sl::SceneManagerクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/11/15	更新履歴：2017/11/17
+//!< @data		作成日時：2017/11/15	更新履歴：2017/12/02
 //==================================================================================================================================//
 
 #ifndef SL_SCENE_MANAGER_H
@@ -50,6 +50,9 @@ public:
 
 	/** シーン管理を終了する関数 */
 	void End();
+
+	/** 破棄関数 */
+	void Finalize();
 
 private:
 	friend class StaticCreation<SceneManager>;

@@ -12,7 +12,7 @@
 #include <map>
 #include "sl/Library/Utility/slRect.h"
 #include "sl/Library/Utility/slDefine.h"
-#include "sl/Library/Singleton/slBasicSingleton.h"
+#include <sl/Library/Singleton/slBasicSingleton.h>
 
 namespace pa
 {

@@ -2,7 +2,7 @@
 //!< @file		slStaticCreation.h
 //!< @brief		sl::StaticCreationクラスヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/09/04	更新履歴：2017/09/24
+//!< @data		作成日時：2017/09/04	更新履歴：2017/12/02
 //==================================================================================================================================//
 
 #ifndef SL_STATIC_CREATION_H
@@ -34,13 +34,10 @@ public:
 
 	/** 
 	* 破棄関数.
-	* デストラクタをよぶ
 	* @param[out] pInstance 破棄したいインスタンスへのポインタ
 	*/
 	static void Destroy(Ty* pInstance)
-	{
-		pInstance->~Ty();
-	}
+	{}
 
 private:
 	/** Constructor */
