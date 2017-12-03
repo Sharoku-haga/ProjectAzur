@@ -71,7 +71,7 @@ public:
 	* @param[in] rEventType 発生したイベント名
 	*/
 	void ReceiveEvent(const std::string& rEventName);  
-   
+  
 private:
 	friend class sl::StaticCreation<EventManager>;
 

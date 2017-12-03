@@ -2,7 +2,7 @@
 //!< @file		slSceneManager.cpp		
 //!< @brief		sl::SceneManagerクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/11/15	更新履歴：2017/11/17
+//!< @data		作成日時：2017/11/15	更新履歴：2017/12/02
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -78,14 +78,20 @@ void SceneManager::End()
 	m_NextSceneName = "End";
 }
 
+void SceneManager::Finalize()
+{
+	if(m_pScene.Get() != nullptr)
+	{
+		m_pScene->Exit();
+		m_pDeletor->DestroyScene(m_pScene.Release());
+	}
+}
+
 /* Private Functions------------------------------------------------------------------------------------------- */
 
 SceneManager::~SceneManager()
 {
-	if(m_pScene.Get() != nullptr)
-	{
-		m_pDeletor->DestroyScene(m_pScene.Release());
-	}
+	Finalize();
 }
 
 }	// namespace sl

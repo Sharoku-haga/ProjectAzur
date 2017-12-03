@@ -61,7 +61,7 @@ void TitleBackground::Update()
 void TitleBackground::Finalize()
 {
 	m_pBackgroundAnime->Finalize();
-	sl::DX11GraphicsLibrary::Instance().ReleaseDXModel2D(m_pDrawingData->m_IDs.m_ModelID);
+	//sl::DX11GraphicsLibrary::Instance().ReleaseDXModel2D(m_pDrawingData->m_IDs.m_ModelID);
 	DrawingResrcDataFile::Instance().ReleaseData("TitleBG.vtxd");
 }
 

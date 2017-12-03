@@ -47,6 +47,7 @@ bool DrawingResrcDataFile::LoadDataFile(const std::string& rFileName)
 	std::fread(&dataCount, sizeof(short), 1, fp);
 	if(dataCount == 0)
 	{	// データ数が0なら失敗
+		std::fclose(fp);
 		return false;
 	}
 
