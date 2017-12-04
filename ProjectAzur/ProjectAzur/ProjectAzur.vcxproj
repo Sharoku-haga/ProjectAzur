@@ -130,6 +130,9 @@
     <ClCompile Include="MainGame\EventManager\paEventListener.cpp" />
     <ClCompile Include="MainGame\EventManager\paEventManager.cpp" />
     <ClCompile Include="MainGame\GameScene\paGameScene.cpp" />
+    <ClCompile Include="MainGame\GameScene\Player\paPlayer.cpp" />
+    <ClCompile Include="MainGame\GameScene\Player\paPlayerAction.cpp" />
+    <ClCompile Include="MainGame\GameScene\Player\paPlayerForm.cpp" />
     <ClCompile Include="MainGame\paMainGame.cpp" />
     <ClCompile Include="MainGame\ResultScene\paResultScene.cpp" />
     <ClCompile Include="MainGame\SceneDeletor\paSceneDeletor.cpp" />
@@ -145,6 +148,9 @@
     <ClInclude Include="MainGame\EventManager\paEventListener.h" />
     <ClInclude Include="MainGame\EventManager\paEventManager.h" />
     <ClInclude Include="MainGame\GameScene\paGameScene.h" />
+    <ClInclude Include="MainGame\GameScene\Player\paPlayer.h" />
+    <ClInclude Include="MainGame\GameScene\Player\paPlayerAction.h" />
+    <ClInclude Include="MainGame\GameScene\Player\paPlayerForm.h" />
     <ClInclude Include="MainGame\paCustomizeInput.h" />
     <ClInclude Include="MainGame\paIObjectBase.h" />
     <ClInclude Include="MainGame\paObjDrawingData.h" />
