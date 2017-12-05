@@ -150,6 +150,7 @@
     <ClInclude Include="MainGame\GameScene\paGameScene.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayer.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayerAction.h" />
+    <ClInclude Include="MainGame\GameScene\Player\paPlayerCommonDeclaration.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayerShape.h" />
     <ClInclude Include="MainGame\paCustomizeInput.h" />
     <ClInclude Include="MainGame\paIObjectBase.h" />
