@@ -87,7 +87,7 @@
     <ClCompile Include="MainGame\GameScene\Player\paPlayerAction.cpp">
       <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClCompile>
-    <ClCompile Include="MainGame\GameScene\Player\paPlayerForm.cpp">
+    <ClCompile Include="MainGame\GameScene\Player\paPlayerShape.cpp">
       <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClCompile>
   </ItemGroup>
@@ -146,7 +146,7 @@
     <ClInclude Include="MainGame\GameScene\Player\paPlayerAction.h">
       <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClInclude>
-    <ClInclude Include="MainGame\GameScene\Player\paPlayerForm.h">
+    <ClInclude Include="MainGame\GameScene\Player\paPlayerShape.h">
       <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClInclude>
   </ItemGroup>
