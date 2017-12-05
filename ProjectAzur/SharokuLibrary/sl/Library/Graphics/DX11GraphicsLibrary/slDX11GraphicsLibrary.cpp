@@ -200,6 +200,16 @@ ModelID DX11GraphicsLibrary::CreateDXModel2D(const Model2DCreationData& rData)
 	return m_pImpl->m_pModel2DStorage->AddDXModel2D(pModel);
 }
 
+void DX11GraphicsLibrary::InformSizeData(const ModelID& rID, fRect& rSizeData)
+{
+	m_pImpl->m_pModel2DStorage->GetModel2DData(rID)->InformSizeData(rSizeData);
+}
+
+void DX11GraphicsLibrary::InformUVData(const ModelID& rID, fRect& rUVData)
+{
+	m_pImpl->m_pModel2DStorage->GetModel2DData(rID)->InformUVData(rUVData);
+}
+
 void DX11GraphicsLibrary::SetDXModel2DSizeData(const ModelID& rID, float widthSize, float heightSize)
 {
 	m_pImpl->m_pModel2DStorage->GetModel2DData(rID)->SetSizeData(widthSize, heightSize);
