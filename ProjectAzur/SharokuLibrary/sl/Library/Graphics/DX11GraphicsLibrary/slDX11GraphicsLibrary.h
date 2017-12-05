@@ -165,6 +165,21 @@ public:
 	* @return モデルID
 	*/
 	ModelID CreateDXModel2D(const Model2DCreationData& rData);
+
+	/**
+	* 指定したモデルのサイズデータを知らせる（取得する）関数 
+	* @param[in] rID			指定したいモデルデータのID
+	* @param[out] rSizeData		指定したモデルのサイズデータを格納する変数
+	*/
+	void InformSizeData(const ModelID& rID, fRect& rSizeData);
+
+	/**
+	* 指定したモデルのUVデータを知らせる（取得する）関数
+	* @param[in] rID			指定したいモデルデータのID
+	* @param[out] rUVData		指定したモデルのUVデータを格納する変数
+	*/
+	void InformUVData(const ModelID& rID, fRect& rUVData);
+
 	/** 
 	* 2Dモデルのサイズデータを設定する関数
 	* @param[in] rID			モデルデータのID
