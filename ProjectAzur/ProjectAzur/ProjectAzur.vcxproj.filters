@@ -149,5 +149,8 @@
     <ClInclude Include="MainGame\GameScene\Player\paPlayerShape.h">
       <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Player\paPlayerCommonDeclaration.h">
+      <Filter>Main\MainGame\GameScene\Player</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
