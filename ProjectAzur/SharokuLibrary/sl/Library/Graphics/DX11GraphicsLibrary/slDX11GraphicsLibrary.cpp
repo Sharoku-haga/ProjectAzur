@@ -240,9 +240,15 @@ UVAnimeID DX11GraphicsLibrary::CreateAnimatoin(const UVAnimeCreationData& rData)
 	return m_pImpl->m_pUVAnimationManager->CreateAnimatoin(rData);
 }
 
-bool DX11GraphicsLibrary::UpdateUVAnime(const UVAnimeID& rID, bool isLoop)
+bool DX11GraphicsLibrary::UpdateUVAnime(const ModelID& rModelID, const UVAnimeID& rUVAnimeID, bool isLoop)
 {
-	return m_pImpl->m_pUVAnimationManager->UpdateUVAnime(rID, isLoop);
+	if(m_pImpl->m_pUVAnimationManager->UpdateUVAnime(rUVAnimeID, isLoop))
+	{
+		DXModel2D* const pModel = m_pImpl->m_pModel2DStorage->GetModel2DData(rModelID);
+		pModel->SetUVData(m_pImpl->m_pUVAnimationManager->.GetCurrentUVData(rUVAnimeID));
+		return true;
+	}
+	return false;
 }
 
 void DX11GraphicsLibrary::InitUVAnime(const UVAnimeID& rID)

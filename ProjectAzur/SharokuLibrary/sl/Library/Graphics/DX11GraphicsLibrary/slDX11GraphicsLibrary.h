@@ -224,11 +224,12 @@ public:
 
 	/**
 	* UVアニメーションを行う関数
-	* @param[in] rID UVアニメーションのID
-	* @param[in] isLoop	アニメーションループフラグ true→ループする false→ループしない
+	* @param[in] rModelID		UVアニメーションに対応したモデルのID
+	* @param[in] rUVAnimeID		UVアニメーションのID
+	* @param[in] isLoop			アニメーションループフラグ true→ループする false→ループしない
 	* @return true→アニメーションが更新した false→更新していない
 	*/
-	bool UpdateUVAnime(const UVAnimeID& rID, bool isLoop);
+	bool UpdateUVAnime(const ModelID& rModelID, const UVAnimeID& rUVAnimeID, bool isLoop);
 
 	/**
 	* UVアニメーションを初期化する関数 
