@@ -233,9 +233,10 @@ public:
 
 	/**
 	* UVアニメーションを初期化する関数 
-	* @param[in] rID 初期化したいUVアニメーションのID
+	* @param[in] rModelID		UVアニメーションに対応したモデルのID
+	* @param[in] rUVAnimeID		初期化したいUVアニメーションのID
 	*/
-	void InitUVAnime(const UVAnimeID& rID);
+	void InitUVAnime(const ModelID& rModelID, const UVAnimeID& rUVAnimeID);
 
 	/**
 	* 指定したアニメーションが終了しているかどうかを確認する関数
