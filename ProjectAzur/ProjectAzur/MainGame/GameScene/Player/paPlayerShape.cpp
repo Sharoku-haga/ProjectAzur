@@ -7,6 +7,7 @@
 
 /* Includes --------------------------------------------------------------------------------------------------- */
 
+#include <vector>
 #include "sl/Library/Utility/Calculation/slCalculationFunc.h"
 #include "sl/Library/Utility/slTemplateFunction.h"
 #include "sl/Library/Utility/slDefine.h"
@@ -17,21 +18,31 @@
 namespace pa
 {
 
+/* Unnamed Namespace ------------------------------------------------------------------------------------------ */
+
+namespace
+{
+
+const	D3DXCOLOR	NormalStateColorVal		= 0xffffffff;		// 通常状態のときのカラー値
+const	D3DXCOLOR	InvisibleStateColorVal	= 0x55ffffff;		// 透明状態のときのカラー値 
+
+}
+
 /* Public Functions ------------------------------------------------------------------------------------------- */
 
-PlayerShape::PlayerShape()
+PlayerShape::PlayerShape(const sl::DrawingID&	rIDs
+						, const char*	pResrcDataFilePath)
 	: m_rLibrary(sl::DX11GraphicsLibrary::Instance())
+	, m_InitialShapeID(rIDs)
+	, m_pResrcDataFilePath(pResrcDataFilePath)
+	, m_IsInvisible(false)
 {}
 
-void PlayerShape::Initialize(const PlayerParam&	rParam
-							, const char*	pResrcDataFilePath
-							, const sl::DrawingID&	rIDs)
+void PlayerShape::Initialize(const PlayerParam&	rParam)
 {
-	m_InitialShapeID = rIDs;
-	
 	// 2Dモデル作成
-	DrawingResrcDataFile::Instance().LoadDataFile(pResrcDataFilePath);
-	DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(pResrcDataFilePath, 0);
+	DrawingResrcDataFile::Instance().LoadDataFile(m_pResrcDataFilePath);
+	DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(m_pResrcDataFilePath, 0);
 	sl::Model2DCreationData data(rResrc.m_Width, rResrc.m_Height, rResrc.m_UVRect, true);
 	m_pDrawingData->m_IDs.m_ModelID = m_rLibrary.CreateDXModel2D(data);
 
@@ -68,6 +79,8 @@ void PlayerShape::Update(const PlayerParam&	rParam)
 		{
 			m_IsFacingRight = rParam.m_IsFacingRight;
 		}
+
+		ProcessTransparent(rParam);
 		return;
 	}
 
@@ -77,20 +90,28 @@ void PlayerShape::Update(const PlayerParam&	rParam)
 		ProcessImageReversal(rParam);
 		m_IsFacingRight = rParam.m_IsFacingRight;
 	}
+
+	ProcessTransparent(rParam);
 }
 
 void PlayerShape::ChangeShape(const sl::DrawingID&	rIDs)
 {
 	m_pDrawingData->m_IDs = rIDs;
-	m_rLibrary.InitUVAnime(m_pDrawingData->m_IDs.m_UVAnimeID);
+	m_rLibrary.InitUVAnime(m_pDrawingData->m_IDs.m_ModelID, m_pDrawingData->m_IDs.m_UVAnimeID);
 	m_rLibrary.InformSizeData(m_pDrawingData->m_IDs.m_ModelID, m_CurrentRectSize);
+	m_IsInvisible = false;		// 透明は初期形状のみの動作なので、ここでfalseにしておく
 }
 
 void PlayerShape::ChangeInitialShape()
 {
 	m_pDrawingData->m_IDs = m_InitialShapeID;
-	m_rLibrary.InitUVAnime(m_pDrawingData->m_IDs.m_UVAnimeID);
+	m_rLibrary.InitUVAnime(m_pDrawingData->m_IDs.m_ModelID, m_pDrawingData->m_IDs.m_UVAnimeID);
 	m_rLibrary.InformSizeData(m_pDrawingData->m_IDs.m_ModelID, m_CurrentRectSize);
+
+	// 念の為、透明処理をきっておく
+	std::vector<D3DXCOLOR> color(m_rLibrary.GetModel2DVertexCount(), NormalStateColorVal);
+	m_rLibrary.SetDXModel2DColorData(m_pDrawingData->m_IDs.m_ModelID, color);
+	m_IsInvisible = false;
 }
 
 const sl::fRect& PlayerShape::InformShapeSize()
@@ -132,7 +153,7 @@ void PlayerShape::ProcessImageReversal(const PlayerParam&	rParam)
 	
 	if(rParam.m_IsFacingRight
 		&& currentUVRect.m_Left > currentUVRect.m_Right)
-	{	
+	{	// 左向きにする
 		sl::SwapTemplate(currentUVRect.m_Left, currentUVRect.m_Right);
 		m_rLibrary.SetDXModel2DUVData(m_pDrawingData->m_IDs.m_ModelID, currentUVRect);
 		return;
@@ -140,9 +161,32 @@ void PlayerShape::ProcessImageReversal(const PlayerParam&	rParam)
 
 	if(RESULT_FALSE(rParam.m_IsFacingRight)
 		&& currentUVRect.m_Left < currentUVRect.m_Right)
-	{
+	{	// 右向きにする
 		sl::SwapTemplate(currentUVRect.m_Left, currentUVRect.m_Right);
 		m_rLibrary.SetDXModel2DUVData(m_pDrawingData->m_IDs.m_ModelID, currentUVRect);
+	}
+}
+
+void PlayerShape::ProcessTransparent(const PlayerParam&	rParam)
+{
+	if(rParam.m_CurrentState != PLAYER_STATE::WAITING
+		|| m_pDrawingData->m_IDs.m_ModelID.m_Num != m_InitialShapeID.m_ModelID.m_Num)
+	{
+		if(m_IsInvisible)
+		{	// 透明処理を元に戻す
+			std::vector<D3DXCOLOR> color(m_rLibrary.GetModel2DVertexCount(), NormalStateColorVal);
+			m_rLibrary.SetDXModel2DColorData(m_pDrawingData->m_IDs.m_ModelID, color);
+			m_IsInvisible = false;
+		}
+
+		return;
+	}
+
+	if(RESULT_FALSE(m_IsInvisible))
+	{
+		std::vector<D3DXCOLOR> color(m_rLibrary.GetModel2DVertexCount(), InvisibleStateColorVal);
+		m_rLibrary.SetDXModel2DColorData(m_pDrawingData->m_IDs.m_ModelID, color);
+		m_IsInvisible = true;
 	}
 }
 

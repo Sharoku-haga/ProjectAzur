@@ -30,25 +30,26 @@ class PlayerShape final
 {
 
 public:
-	/** Constructor */
-	PlayerShape();
+	/** 
+	* Constructor
+	* @param[in] rIDs					描画のID群
+	* @param[in] pResrcDataFilePath		リソースデータのファイルパス
+	*/
+	PlayerShape(const sl::DrawingID&	rIDs
+				, const char*	pResrcDataFilePath);
 
 	/** Destrcutor */
 	~PlayerShape() = default;
 
 	/**
 	* 初期化関数
-	* @param[in] rParam					プレイヤーのパラメータ
-	* @param[in] pResrcDataFilePath		リソースデータのファイルパス番号
-	* @param[in] rIDs					描画のID群
+	* @param[in] rParam			プレイヤーのパラメータ
 	*/
-	void Initialize(const PlayerParam&	rParam
-					, const char*	pResrcDataFilePath
-					, const sl::DrawingID&	rIDs);
+	void Initialize(const PlayerParam&	rParam);
 
 	/** 
 	* 更新関数
-	* @param[in] rParam					プレイヤーのパラメータ
+	* @param[in] rParam			プレイヤーのパラメータ
 	*/
 	void Update(const PlayerParam&	rParam);
 
@@ -67,6 +68,13 @@ public:
 	*/
 	const sl::fRect& InformShapeSize();
 
+	/**
+	* 形状が透明(ゲーム中の表現は半透明)かどうか
+	* @attention この透明という状態は初期形状のみの状態である
+	* @retrun true→ 透明である false→透明でない
+	*/
+	bool IsInvisible() { return m_IsInvisible; }
+
 	/** 
 	* 描画するデータを調整する関数.
 	* 主に衝突判定処理後にdデータが変わったらよぶ
@@ -82,7 +90,9 @@ private:
 	sl::UniquePtr<ObjDrawingData>		m_pDrawingData;			//!< 描画する為のデータ
 	sl::DrawingID						m_InitialShapeID;		//!< プレイヤーの初期形状の描画ID
 	sl::fRect							m_CurrentRectSize;		//!< 現在の矩形サイズ
-	bool								m_IsFacingRight;		//!< 右を向いているかどうか
+	const char*							m_pResrcDataFilePath;	//!< リソースデータファイルへのパス
+	bool								m_IsInvisible;			//!< 透明(ゲーム中の表現は半透明)どうか true→ 透明である false→透明でない
+	bool								m_IsFacingRight;		//!< 右を向いているかどうか true→ 右を向いている false→向いていない
 
 	/** 描画関数 */
 	void Draw();
@@ -92,6 +102,13 @@ private:
 	* @param[in] rParam					プレイヤーのパラメータ
 	*/
 	void ProcessImageReversal(const PlayerParam&	rParam);
+
+	/**
+	* 透明化処理を行う関数
+	* 初期形状の場合のみ待機中透明となるため、その処理を行う
+	* @param[in] rParam					プレイヤーのパラメータ
+	*/
+	void ProcessTransparent(const PlayerParam&	rParam);
 
 };	// class PlayerShape
 

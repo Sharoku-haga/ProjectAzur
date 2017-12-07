@@ -245,15 +245,17 @@ bool DX11GraphicsLibrary::UpdateUVAnime(const ModelID& rModelID, const UVAnimeID
 	if(m_pImpl->m_pUVAnimationManager->UpdateUVAnime(rUVAnimeID, isLoop))
 	{
 		DXModel2D* const pModel = m_pImpl->m_pModel2DStorage->GetModel2DData(rModelID);
-		pModel->SetUVData(m_pImpl->m_pUVAnimationManager->.GetCurrentUVData(rUVAnimeID));
+		pModel->SetUVData(m_pImpl->m_pUVAnimationManager->GetCurrentUVData(rUVAnimeID));
 		return true;
 	}
 	return false;
 }
 
-void DX11GraphicsLibrary::InitUVAnime(const UVAnimeID& rID)
+void DX11GraphicsLibrary::InitUVAnime(const ModelID& rModelID, const UVAnimeID& rUVAnimeID)
 {
-	m_pImpl->m_pUVAnimationManager->InitUVAnime(rID);
+	m_pImpl->m_pUVAnimationManager->InitUVAnime(rUVAnimeID);
+	DXModel2D* const pModel = m_pImpl->m_pModel2DStorage->GetModel2DData(rModelID);
+	pModel->SetUVData(m_pImpl->m_pUVAnimationManager->GetCurrentUVData(rUVAnimeID));
 }
 
 bool DX11GraphicsLibrary::IsEndUVAnimation(const UVAnimeID& rID)
