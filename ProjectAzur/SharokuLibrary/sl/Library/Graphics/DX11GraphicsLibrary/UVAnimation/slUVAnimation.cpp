@@ -2,7 +2,7 @@
 //!< @file		slUVAnimation.cpp
 //!< @brief		sl::UVAnimationクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/11/06	更新履歴：
+//!< @data		作成日時：2017/11/06	更新履歴：2017/12/09
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -114,7 +114,7 @@ void UVAnimation::CreateData(const UVAnimeCreationData& rData)
 	}
 	else
 	{
-		for(int i = 1; i < rData.m_AnimePatternCount ; ++i)
+		for(int i = 1; i < (rData.m_AnimePatternCount + 1) ; ++i)
 		{
 			m_AnimeOrder.emplace_back(i);
 		}
