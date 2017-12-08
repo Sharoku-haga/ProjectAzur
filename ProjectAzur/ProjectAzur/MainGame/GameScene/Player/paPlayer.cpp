@@ -21,7 +21,7 @@ namespace
 {
 
 const D3DXVECTOR2	InitialPos				= { 100.0f, 100.0f};		// 初期座標
-const float			Acceleration			= 0.7f;						// 加速度
+const float			Acceleration			= 0.07f;					// 加速度
 
 }
 

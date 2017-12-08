@@ -74,6 +74,7 @@ void TitleBackground::Draw()
 
 	sl::Basic2DConstantBuffer constantBuffer;
 	constantBuffer.m_MatWorld = matWorld;
+	D3DXMatrixTranspose(&constantBuffer.m_MatWorld, &constantBuffer.m_MatWorld);
 
 	sl::fRect bufferSize = sl::DX11GraphicsLibrary::Instance().GetBackBufferSize();
 	constantBuffer.m_WindowSize.x = bufferSize.m_Right - bufferSize.m_Left;

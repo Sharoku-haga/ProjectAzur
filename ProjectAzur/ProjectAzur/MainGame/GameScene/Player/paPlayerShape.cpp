@@ -2,7 +2,7 @@
 //!< @file		paPlayerShape.cpp
 //!< @brief		pa::PlayerShapeクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/07
+//!< @data		作成日時：2017/12/05	更新履歴：2017/12/09
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -42,9 +42,9 @@ void PlayerShape::Initialize(const PlayerParam&	rParam)
 {
 	// 2Dモデル作成
 	DrawingResrcDataFile::Instance().LoadDataFile(m_pResrcDataFilePath);
-	DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(m_pResrcDataFilePath, 0);
+	DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(m_pResrcDataFilePath, 1);
 	sl::Model2DCreationData data(rResrc.m_Width, rResrc.m_Height, rResrc.m_UVRect, true);
-	m_pDrawingData->m_IDs.m_ModelID = m_rLibrary.CreateDXModel2D(data);
+	m_InitialShapeID.m_ModelID = m_rLibrary.CreateDXModel2D(data);
 
 	// アニメーション作成
 	sl::UVAnimeCreationData animeData;
@@ -79,7 +79,7 @@ void PlayerShape::Update(const PlayerParam&	rParam)
 		{
 			m_IsFacingRight = rParam.m_IsFacingRight;
 		}
-
+	
 		ProcessTransparent(rParam);
 		return;
 	}
@@ -139,6 +139,7 @@ void PlayerShape::Draw()
 
 	sl::Basic2DConstantBuffer constantBuffer;
 	constantBuffer.m_MatWorld = matWorld;
+	D3DXMatrixTranspose(&constantBuffer.m_MatWorld, &constantBuffer.m_MatWorld);
 
 	sl::fRect bufferSize = m_rLibrary.GetBackBufferSize();
 	constantBuffer.m_WindowSize.x = bufferSize.m_Right - bufferSize.m_Left;
