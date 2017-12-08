@@ -36,7 +36,7 @@ void TitleBackground::Initialize()
 
 	// 2Dモデルを生成
 	DrawingResrcDataFile::Instance().LoadDataFile("TitleBG.vtxd");
-	DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData("TitleBG.vtxd", 0);
+	DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData("TitleBG.vtxd", 1);
 	sl::Model2DCreationData data(rResrc.m_Width, rResrc.m_Height, rResrc.m_UVRect, false);
 	m_pDrawingData->m_IDs.m_ModelID = sl::DX11GraphicsLibrary::Instance().CreateDXModel2D(data);
 

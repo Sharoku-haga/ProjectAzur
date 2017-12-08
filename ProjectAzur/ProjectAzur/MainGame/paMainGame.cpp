@@ -37,8 +37,8 @@ namespace
 const sl::fRect			BackBufferSize = {0.0f, 0.0f, 1920.f, 1080.f};		// バックバッファのサイズ
 
 #ifdef _DEBUG
-	//const	std::string StartSceneName = "TitleScene";						// 開始シーンネーム
-	const	std::string StartSceneName = "GameScene";						// 開始シーンネーム
+	const	std::string StartSceneName = "TitleScene";						// 開始シーンネーム
+	//const	std::string StartSceneName = "GameScene";						// 開始シーンネーム
 #else
 	const	std::string StartSceneName = "TitleScene";						// 開始シーンネーム
 #endif
