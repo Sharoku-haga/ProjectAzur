@@ -2,13 +2,16 @@
 //!< @file		paIStageObjManager.h		
 //!< @brief		pa;;IStageObjManagerインターフェースのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/09	更新履歴：2017/12/10
+//!< @data		作成日時：2017/12/09	更新履歴：2017/12/11
 //==================================================================================================================================//
 
 #ifndef PA_ISTAGE_OBJ_MANAGER_H
 #define PA_ISTAGE_OBJ_MANAGER_H
 
 #include "sl/Library/Utility/slDefine.h"
+
+namespace pa
+{
 
 //===================================================================================//
 //!< StageObjBaseを継承したクラスを管理するManagerクラスのインターフェース
@@ -33,6 +36,8 @@ public:
 	virtual void Finalize() = 0;
 
 };	// interface IStageObjManager
+
+}	// namespace pa
 
 #endif	// PA_ISTAGE_OBJ_MANAGER_H
 
