@@ -53,18 +53,17 @@ void BasePoint::Move()
 		return;
 	}
 	sl::SharedPtr<Player> pPlayer = m_pPlayer.Lock();
-	D3DXVECTOR2	currnetPlayerPos = {0.0f, 0.0f};
-	// D3DXVECTOR2 currnetPlayerPos = m_pPlayer=>GetPos();
+	const D3DXVECTOR2& rCurrnetPlayerPos = pPlayer->GetPos();
 
 	/** @todo 縦移動も横移動も基本的なアルゴリズムは一緒なので、まとめてみるのあり */
-	MoveHorizontally(currnetPlayerPos);
-	MoveVertically(currnetPlayerPos);
+	MoveHorizontally(rCurrnetPlayerPos);
+	MoveVertically(rCurrnetPlayerPos);
 
 	// StageObjBaseのベースポイントの座標を更新する 
 	StageObjBase::SetBasePointPos(m_Pos);
 
 	// プレイヤーの座標を更新する
-	m_OldPlayerPos = currnetPlayerPos;
+	m_OldPlayerPos = rCurrnetPlayerPos;
 }
 
 void BasePoint::MoveHorizontally(const D3DXVECTOR2& rCurrnetPlayerPos)

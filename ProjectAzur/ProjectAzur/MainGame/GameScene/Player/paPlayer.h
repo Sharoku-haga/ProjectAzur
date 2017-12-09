@@ -2,12 +2,14 @@
 //!< @file		paPlayer.h
 //!< @brief		pa::Playerクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/07
+//!< @data		作成日時：2017/12/05	更新履歴：2017/12/09
 //==================================================================================================================================//
 
 #ifndef PA_PLAYER_H
 #define PA_PLAYER_H
 
+#include <D3DX11.h>
+#include <D3DX10.h>
 #include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
 #include "sl/Library/Graphics/slGraphicsID.h"
 #include "../../paIObjectBase.h"
@@ -45,6 +47,12 @@ public:
 
 	/** 破棄関数 */
 	virtual void Finalize()override;
+
+	/**
+	* 座標を取得する関数
+	* @return プレイヤーの座標 
+	*/
+	const D3DXVECTOR2& GetPos();
 
 private:
 	sl::UniquePtr<PlayerParam, sl::DefaultDeleter<PlayerParam>>			m_pPlayerParam;		//!< PlayerParam構造体のインスタンスへのポインタ
