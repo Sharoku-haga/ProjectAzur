@@ -14,6 +14,7 @@
 #include <deque>
 #include "sl/Library/Singleton/slBasicSingleton.h"
 #include "sl/Library/Utility/slDefine.h"
+#include "sl/Library/SmartPointer/slSmartPointer.h"
 
 namespace pa
 {
@@ -45,7 +46,7 @@ public:
 	* @param[in] rEventName		登録したいイベントor リスナーが登録したいイベントタイプ
 	* @param[in] pListener		上記のイベントタイプに登録したいEventListenerクラスのインスタンスへのポインタ
 	*/
-	void RegisterEventListener(const std::string& rEventName, EventListener* pListener); 
+	void RegisterEventListener(const std::string& rEventName, sl::SharedPtr<EventListener> pListener); 
 
 	/*
 	* 現在登録しているイベントを削除する関数
@@ -58,7 +59,7 @@ public:
 	* @param[in] rEventName		登録したいイベントor リスナーが登録したいイベントタイプ
 	* @param[in] pListener		削除したいリスナー
 	*/
-	void DeleteEventListener(const std::string& rEventName, EventListener* pListener);
+	void DeleteEventListener(const std::string& rEventName, sl::SharedPtr<EventListener> pListener);
 	
 	/**
 	* 同期的なイベントをLisnerに発信する関数
@@ -75,8 +76,8 @@ public:
 private:
 	friend class sl::StaticCreation<EventManager>;
 
-	std::map<std::string, std::list<EventListener*>>	m_pEventListener;		//!< 登録している通常イベントとそれに対応するリスナーのポインタmap
-	std::deque<std::string>								m_CurrentEvent;			//!< 現在ゲーム中で発生したイベントを格納しておくdeque
+	std::map<std::string, std::list<sl::WeakPtr<EventListener>>>	m_pEventListener;		//!< 登録している通常イベントとそれに対応するリスナーのポインタmap
+	std::deque<std::string>											m_CurrentEvent;			//!< 現在ゲーム中で発生したイベントを格納しておくdeque
 
 	/** Constructor */
 	EventManager() = default;

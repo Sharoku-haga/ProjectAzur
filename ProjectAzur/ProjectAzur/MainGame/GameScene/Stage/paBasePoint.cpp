@@ -31,8 +31,7 @@ void BasePoint::Initialize()
 {	
 	// 同期イベントの登録
 	m_pEventListener->RegisterSynEventFunc("player_move", std::bind(&pa::BasePoint::Move, this));
-	EventManager::Instance().RegisterEventListener("player_move", m_pEventListener.Get());
-	//EventManager::Instance().RegisterEventListener("player_move", m_pEventListener);
+	EventManager::Instance().RegisterEventListener("player_move", m_pEventListener);
 
 	// 追跡間隔の設定
 	sl::fRect buckBufferSize = sl::DX11GraphicsLibrary::Instance().GetBackBufferSize();

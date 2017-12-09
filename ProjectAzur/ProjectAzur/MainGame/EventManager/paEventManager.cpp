@@ -23,7 +23,7 @@ void EventManager::Initialize()
 	for(auto& pListener : m_pEventListener)
 	{
 		pListener.second.clear();
-		std::list<EventListener*>().swap(pListener.second);
+		std::list<sl::WeakPtr<EventListener>>().swap(pListener.second);
 	}
 
 	m_pEventListener.clear();
@@ -39,11 +39,13 @@ void EventManager::Update()
 	{	// イベントがある場合はそれそれ対応するリスナーに通知する
 		for(auto& currentEvent : m_CurrentEvent)
 		{
-			std::list<EventListener*>& pListeners = m_pEventListener[currentEvent];
+			std::list<sl::WeakPtr<EventListener>>& pListeners = m_pEventListener[currentEvent];
 
-			for(auto& plistener : pListeners)
+			sl::SharedPtr<EventListener> pTmp;
+			for(auto& pListener : pListeners)
 			{
-				plistener->ReceiveEvent(currentEvent);
+				pTmp = pListener.Lock();
+				pTmp->ReceiveEvent(currentEvent);
 			}
 		}
 
@@ -52,25 +54,25 @@ void EventManager::Update()
 	}
 }
 
-void EventManager::RegisterEventListener(const std::string& rEventName, EventListener* pListener)
+void EventManager::RegisterEventListener(const std::string& rEventName, sl::SharedPtr<EventListener> pListener)
 {
-	m_pEventListener[rEventName].push_back(pListener);
+	m_pEventListener[rEventName].emplace_back(pListener);
 }
 
 void EventManager::DeleteEvent(const std::string& rEventName)
 {
 	m_pEventListener[rEventName].clear();
-	std::list<EventListener*>().swap(m_pEventListener[rEventName]);
+	std::list<sl::WeakPtr<EventListener>>().swap(m_pEventListener[rEventName]);
 	m_pEventListener.erase(rEventName);
 }
 
-void EventManager::DeleteEventListener(const std::string& rEventName, EventListener* pListener)
+void EventManager::DeleteEventListener(const std::string& rEventName, sl::SharedPtr<EventListener> pListener)
 {
-	std::list<EventListener*>& pListeners = m_pEventListener[rEventName];
+	std::list<sl::WeakPtr<EventListener>>& pListeners = m_pEventListener[rEventName];
 	
 	for(auto& itr = pListeners.begin(); itr != pListeners.end(); ++itr )
 	{
-		if((*itr) == pListener)
+		if((*itr).Get() == pListener.Get())
 		{
 			pListeners.erase(itr);
 			break;
@@ -80,11 +82,13 @@ void EventManager::DeleteEventListener(const std::string& rEventName, EventListe
 
 void EventManager::TriggerSynEvent(const std::string& rEventName)
 {
-	std::list<EventListener*>& pListeners = m_pEventListener[rEventName];
+	std::list<sl::WeakPtr<EventListener>>& pListeners = m_pEventListener[rEventName];
 
+	sl::SharedPtr<EventListener> pTmp;		// WeakPtrのLockを受けるための入れ物
 	for(auto& pListener: pListeners)
 	{
-		pListener->CallSynEventFunc(rEventName);
+		pTmp = pListener.Lock();
+		pTmp->CallSynEventFunc(rEventName);
 	}
 }
 
