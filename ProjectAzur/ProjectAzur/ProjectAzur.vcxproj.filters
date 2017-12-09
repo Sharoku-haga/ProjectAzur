@@ -37,6 +37,9 @@
     <Filter Include="Main\MainGame\GameScene\Player">
       <UniqueIdentifier>{920df922-e100-4922-84fe-777cdd450d51}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\GameScene\Stage">
+      <UniqueIdentifier>{1bef85e8-5464-4fcf-a5ac-9a6efd00a545}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -89,6 +92,15 @@
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\Player\paPlayerShape.cpp">
       <Filter>Main\MainGame\GameScene\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\paBasePoint.cpp">
+      <Filter>Main\MainGame\GameScene\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\paStage.cpp">
+      <Filter>Main\MainGame\GameScene\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\paStageObjBase.cpp">
+      <Filter>Main\MainGame\GameScene\Stage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +163,18 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Player\paPlayerCommonDeclaration.h">
       <Filter>Main\MainGame\GameScene\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\paBasePoint.h">
+      <Filter>Main\MainGame\GameScene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\paStage.h">
+      <Filter>Main\MainGame\GameScene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\paStageObjBase.h">
+      <Filter>Main\MainGame\GameScene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\paIStageObjManager.h">
+      <Filter>Main\MainGame\GameScene\Stage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

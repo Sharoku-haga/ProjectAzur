@@ -133,6 +133,9 @@
     <ClCompile Include="MainGame\GameScene\Player\paPlayer.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\paPlayerAction.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\paPlayerShape.cpp" />
+    <ClCompile Include="MainGame\GameScene\Stage\paBasePoint.cpp" />
+    <ClCompile Include="MainGame\GameScene\Stage\paStage.cpp" />
+    <ClCompile Include="MainGame\GameScene\Stage\paStageObjBase.cpp" />
     <ClCompile Include="MainGame\paMainGame.cpp" />
     <ClCompile Include="MainGame\ResultScene\paResultScene.cpp" />
     <ClCompile Include="MainGame\SceneDeletor\paSceneDeletor.cpp" />
@@ -152,6 +155,10 @@
     <ClInclude Include="MainGame\GameScene\Player\paPlayerAction.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayerCommonDeclaration.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayerShape.h" />
+    <ClInclude Include="MainGame\GameScene\Stage\paIStageObjManager.h" />
+    <ClInclude Include="MainGame\GameScene\Stage\paBasePoint.h" />
+    <ClInclude Include="MainGame\GameScene\Stage\paStage.h" />
+    <ClInclude Include="MainGame\GameScene\Stage\paStageObjBase.h" />
     <ClInclude Include="MainGame\paCustomizeInput.h" />
     <ClInclude Include="MainGame\paIObjectBase.h" />
     <ClInclude Include="MainGame\paObjDrawingData.h" />
