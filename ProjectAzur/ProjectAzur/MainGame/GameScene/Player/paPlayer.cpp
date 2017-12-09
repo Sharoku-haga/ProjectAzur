@@ -2,7 +2,7 @@
 //!< @file		paPalyer.cpp
 //!< @brief		pa::Playerクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/07
+//!< @data		作成日時：2017/12/05	更新履歴：2017/12/09
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -54,6 +54,11 @@ void Player::Finalize()
 {
 	m_pPlayerShape->Finalize();
 	m_pPlayerAction->Finalize();
+}
+
+const D3DXVECTOR2& Player::GetPos()
+{
+	return m_pPlayerParam->m_Pos;
 }
 
 }	// namespace pa
