@@ -12,13 +12,29 @@
 namespace pa
 {
 
-/* Public Functions ------------------------------------------------------------------------------------------- */
+/* Protected Functions ---------------------------------------------------------------------------------------- */
 
-StageObjBase::StageObjBase()
-{}
+bool StageObjBase::CheckScreenArea(const D3DXVECTOR2&	rMyPos, const sl::fRect& rMySize)
+{
+	//画面範囲内に存在しているか横と縦にわけて確認する
+	// 確認際、補正値としてオブジェクトのサイズを計算にいれる
+	float widthSize = rMySize.m_Right - rMySize.m_Left;
 
-StageObjBase::~StageObjBase()
-{}
+	if( rMyPos.x < (m_BasePointPos.x - widthSize)
+	|| rMyPos.x > (m_BasePointPos.x + widthSize + m_ScreenSize.m_Right))
+	{
+		return false;
+	}
+ 
+	float heightSize = rMySize.m_Bottom - rMySize.m_Top;
+
+	if( rMyPos.y < (m_BasePointPos.y - heightSize)
+	|| rMyPos.y > (m_BasePointPos.y + heightSize + m_ScreenSize.m_Bottom))
+	{
+		return false;
+	}
+	return true;
+}
 
 }	// namespace pa
 
