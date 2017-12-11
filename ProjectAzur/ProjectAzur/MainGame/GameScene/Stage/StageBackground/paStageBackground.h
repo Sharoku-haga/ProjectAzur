@@ -26,6 +26,12 @@ public:
 	/** Destructor */
 	~StageBackground();
 
+	/** 更新関数 */
+	virtual void Update()override;
+
+private:
+
+
 };	// class StageBackground
 
 }	// namespace pa

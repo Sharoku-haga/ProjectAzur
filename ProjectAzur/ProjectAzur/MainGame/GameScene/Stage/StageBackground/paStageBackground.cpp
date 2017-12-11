@@ -20,6 +20,9 @@ StageBackground::StageBackground()
 StageBackground::~StageBackground()
 {}
 
+void StageBackground::Update()
+{}
+
 }	// namespace pa
 
 //==================================================================================================================================//
