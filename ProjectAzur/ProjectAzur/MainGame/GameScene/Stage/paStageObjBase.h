@@ -27,17 +27,14 @@ public:
 	/** Destructor */
 	virtual ~StageObjBase()  = default;
 
+	/** 初期化関数 */
+	virtual void Initialize() = 0;
+
 	/** 更新関数 */
 	virtual void Update() = 0;
 
-	/** 
-	* Setter 
-	* @param[in] rBasePointPos ベースポイントの座標
-	*/
-	static void SetBasePointPos(const D3DXVECTOR2&	rBasePointPos) 
-	{ 
-		m_BasePointPos = rBasePointPos; 
-	}
+	/** 破棄関数 */
+	virtual void Finalize() = 0;
 
 	/** 
 	* Setter 
@@ -49,6 +46,8 @@ public:
 	}
 
 protected:
+	static sl::fRect		m_ScreenSize;		//!< スクリーンサイズ
+
 	/** 
 	* 自身が画面範囲にあるかを確認する関数
 	* @param[in] rMyPos		自身の座標
@@ -58,8 +57,24 @@ protected:
 	bool CheckScreenArea(const D3DXVECTOR2&	rMyPos, const sl::fRect& rMySize);
 
 private:
+	friend class BasePoint;
+
 	static D3DXVECTOR2		m_BasePointPos;		//!< ベースポイントの座標	
-	static sl::fRect		m_ScreenSize;		//!< スクリーンサイズ
+
+	/** 
+	* Setter 
+	* @param[in] rBasePointPos ベースポイントの座標
+	*/
+	static void SetBasePointPos(const D3DXVECTOR2&	rBasePointPos) 
+	{ 
+		m_BasePointPos = rBasePointPos; 
+	}
+
+	/**
+	* Getter 
+	* @return ベースポイントの座標座標
+	*/
+	static const D3DXVECTOR2& GetBasePointPos() { return m_BasePointPos; }
 
 };	// class StageObjBase
 
