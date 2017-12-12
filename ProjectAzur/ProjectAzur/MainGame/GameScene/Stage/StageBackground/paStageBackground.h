@@ -2,7 +2,7 @@
 //!< @file		paStageBackground.h
 //!< @brief		pa::StageBackgroundクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/11	更新履歴：
+//!< @data		作成日時：2017/12/11	更新履歴：2017/12/13
 //==================================================================================================================================//
 
 #ifndef PA_STAGE_BACKGROUND_H
@@ -26,12 +26,14 @@ class StageBackground : public StageObjBase
 public:
 	/** 
 	* Constructor
+	* @param[in] rID				描画ID
 	* @param[in] rResrcDataFilePath 描画のリソースデータファイルのパス
 	*/
-	explicit StageBackground(const std::string& rResrcDataFilePath);
+	StageBackground(const sl::DrawingID& rID, 
+					const std::string& rResrcDataFilePath);
 
 	/** Destructor */
-	virtual ~StageBackground() = default;
+	virtual ~StageBackground();
 
 	/** 初期化関数 */
 	virtual void Initialize()override;

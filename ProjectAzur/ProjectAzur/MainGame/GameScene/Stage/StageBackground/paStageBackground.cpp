@@ -12,15 +12,20 @@
 #include "sl/Library/Utility/Calculation/slCalculationFunc.h"
 #include "paStageBackground.h"
 #include "../../../paObjDrawingData.h"
+#include "../../../DrawingResrcDataFile/paDrawingResrcDataFile.h"
 
 namespace pa
 {
 
 /* Public Functions ------------------------------------------------------------------------------------------- */
 
-StageBackground::StageBackground(const std::string& rResrcDataFilePath)
-	: m_ResrcDataFilePath(rResrcDataFilePath)
-{}
+StageBackground::StageBackground(const sl::DrawingID& rID
+								, const std::string& rResrcDataFilePath)
+	: m_pDrawingData(new ObjDrawingData())
+	, m_ResrcDataFilePath(rResrcDataFilePath)
+{
+	m_pDrawingData->m_IDs = rID;
+}
 
 StageBackground::~StageBackground()
 {
@@ -28,10 +33,21 @@ StageBackground::~StageBackground()
 }
 
 void StageBackground::Initialize()
-{}
+{
+	// 2Dモデルを生成
+	DrawingResrcDataFile::Instance().LoadDataFile(m_ResrcDataFilePath);
+	DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(m_ResrcDataFilePath, 1);
+	sl::Model2DCreationData data(rResrc.m_Width, rResrc.m_Height, rResrc.m_UVRect, false);
+	m_pDrawingData->m_IDs.m_ModelID = sl::DX11GraphicsLibrary::Instance().CreateDXModel2D(data);
+
+	int	 drawTaskPriority = 0;		// 描画タスクの優先度
+	m_pDrawingData->m_pTask.Reset(new DrawTask(drawTaskPriority, std::bind(&pa::StageBackground::Draw, this)));
+}
 
 void StageBackground::Update()
-{}
+{
+	// 空関数
+}
 
 void StageBackground::Finalize()
 {
@@ -41,7 +57,7 @@ void StageBackground::Finalize()
 void StageBackground::Draw()
 {
 	// ベースポイントの現在の座標を代入する
-	//m_pDrawingData->m_Pos = m_BasePointPos;
+	m_pDrawingData->m_Pos = StageObjBase::GetBasePointPos();
 
 	D3DXMATRIX matWorld;
 	sl::calculation::Calculate2DMatWorld(&matWorld, m_pDrawingData->m_Pos);
