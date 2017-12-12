@@ -2,7 +2,7 @@
 //!< @file		paStageObjBase.h
 //!< @brief		pa::StageObjBaseクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/09	更新履歴：
+//!< @data		作成日時：2017/12/09	更新履歴：2017/12/13
 //==================================================================================================================================//
 
 #ifndef PA_STAGE_OBJ_BASE_H
@@ -56,6 +56,12 @@ protected:
 	*/
 	bool CheckScreenArea(const D3DXVECTOR2&	rMyPos, const sl::fRect& rMySize);
 
+	/**
+	* Getter 
+	* @return ベースポイントの座標座標
+	*/
+	static const D3DXVECTOR2& GetBasePointPos() { return m_BasePointPos; }
+
 private:
 	friend class BasePoint;
 
@@ -69,12 +75,6 @@ private:
 	{ 
 		m_BasePointPos = rBasePointPos; 
 	}
-
-	/**
-	* Getter 
-	* @return ベースポイントの座標座標
-	*/
-	static const D3DXVECTOR2& GetBasePointPos() { return m_BasePointPos; }
 
 };	// class StageObjBase
 
