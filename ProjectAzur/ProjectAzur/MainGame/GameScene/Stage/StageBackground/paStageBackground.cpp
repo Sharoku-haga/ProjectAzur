@@ -17,6 +17,11 @@
 namespace pa
 {
 
+/* Static Variable -------------------------------------------------------------------------------------------- */
+
+sl::fRect		StageBackground::m_ScreenSize = { 0.0f, 0.0f, 0.0f, 0.0f };
+D3DXVECTOR2		StageBackground::m_BasePointPos = {0.0f, 0.0f};
+
 /* Public Functions ------------------------------------------------------------------------------------------- */
 
 StageBackground::StageBackground(const sl::DrawingID& rID
@@ -36,7 +41,7 @@ void StageBackground::Initialize()
 {
 	// 2Dモデルを生成
 	DrawingResrcDataFile::Instance().LoadDataFile(m_ResrcDataFilePath);
-	DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(m_ResrcDataFilePath, 1);
+	DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(m_ResrcDataFilePath, 11);
 	sl::Model2DCreationData data(rResrc.m_Width, rResrc.m_Height, rResrc.m_UVRect, false);
 	m_pDrawingData->m_IDs.m_ModelID = sl::DX11GraphicsLibrary::Instance().CreateDXModel2D(data);
 

@@ -2,15 +2,17 @@
 //!< @file		paStage.h		
 //!< @brief		pa::Stageクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/09	更新履歴：2017/12/11
+//!< @data		作成日時：2017/12/09	更新履歴：2017/12/13
 //==================================================================================================================================//
 
 #ifndef PA_STAGE_H
 #define PA_STAGE_H
 
 #include <vector>
+#include <string>
 #include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
 #include "sl/Library/SmartPointer/WeakPtr/slWeakPtr.h"
+#include "sl/Library/Graphics/slGraphicsID.h"
 #include "../../paIObjectBase.h"
 
 namespace pa
@@ -31,9 +33,13 @@ class Stage final : public IObjectBase
 public:
 	/** 
 	* Constructor 
-	* @param[in] pPlayer Playerクラスのインスタンスへのシェアードポインタ
+	* @param[in] rIDs					描画データID群
+	* @param[in] rResrcDataFilePath		リソースデータファイルへのﾊﾟｽ
+	* @param[in] pPlayer				Playerクラスのインスタンスへのシェアードポインタ
 	*/
-	explicit Stage(const sl::SharedPtr<Player>& pPlayer);
+	Stage(const sl::DrawingID& rIDs
+		, const std::string&	rResrcDataFilePath 
+		, const sl::WeakPtr<Player>& pPlayer);
 
 	/** Destructor */
 	virtual ~Stage();
@@ -48,6 +54,8 @@ public:
 	virtual void Finalize()override;
 
 private:
+	sl::DrawingID														m_DrawingID;				//!< 描画IDを格納した構造体
+	std::string															m_ResrcDataFilePath;		//!< リソースデータファイルﾊﾟｽ
 	sl::WeakPtr<Player>													m_pPlayer;					//!< Playerクラスのインスタンスへのウィークポインタ
 	sl::UniquePtr<BasePoint>											m_pBasePoint;				//!< BasePointクラスのインスタンスへのユニークポインタ
 	std::vector <sl::UniquePtr<IStageObjManager

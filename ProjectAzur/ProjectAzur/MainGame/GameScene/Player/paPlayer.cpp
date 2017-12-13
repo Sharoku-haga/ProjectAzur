@@ -2,7 +2,7 @@
 //!< @file		paPalyer.cpp
 //!< @brief		pa::Playerクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/09
+//!< @data		作成日時：2017/12/05	更新履歴：2017/12/13
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -32,6 +32,9 @@ Player::Player(const sl::DrawingID& rIDs
 	: m_pPlayerParam(new PlayerParam())
 	, m_pPlayerAction(new PlayerAction())
 	, m_pPlayerShape(new PlayerShape(rIDs, pResrcDataFilePath))
+{}
+
+Player::~Player()
 {}
 
 void Player::Initialize()
