@@ -29,8 +29,8 @@ public:
 	* @param[in] rID				描画ID
 	* @param[in] rResrcDataFilePath 描画のリソースデータファイルのパス
 	*/
-	StageBackground(const sl::DrawingID& rID, 
-					const std::string& rResrcDataFilePath);
+	StageBackground(const sl::DrawingID& rID
+					, const std::string& rResrcDataFilePath);
 
 	/** Destructor */
 	virtual ~StageBackground();
