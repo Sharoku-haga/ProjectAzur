@@ -2,7 +2,7 @@
 //!< @file		paPlayerAction.cpp
 //!< @brief		pa::PlayerActionクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/09
+//!< @data		作成日時：2017/12/05	更新履歴：2017/12/15
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -11,6 +11,7 @@
 #include "sl/Library/InputDevice/IInputDeviceLibrary/slIInputDeviceLibrary.h"
 #include "paPlayerAction.h"
 #include "../../paCustomizeInput.h"
+#include "../../EventManager/paEventManager.h"
 
 namespace pa
 {
@@ -53,7 +54,10 @@ void PlayerAction::Update(PlayerParam& rParam)
 		return;
 	}
 	rParam.m_CurrentState = PLAYER_STATE::MOVING;
-			/** 仮処理 */
+
+	EventManager::Instance().TriggerSynEvent("player_move");
+
+		/** 仮処理 */
 		m_CurrentVerticalSpeed = m_SpeedMinVal;
 		/** 仮処理 */
 }
