@@ -21,7 +21,7 @@ class StageBackground;
 //===================================================================================//
 //!< StageBackgroundクラス関連を管理するクラス
 //===================================================================================//
-class StageBackgroundManager : public IStageObjManager
+class StageBackgroundManager final : public IStageObjManager
 {
 
 public:

@@ -2,7 +2,7 @@
 //!< @file		paGameScene.cpp
 //!< @brief		pa::GameSceneクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/11/18	更新履歴：2017/12/09
+//!< @data		作成日時：2017/11/18	更新履歴：2017/12/13
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -16,6 +16,7 @@
 #include "../DrawTask/paDrawTaskManager.h"
 #include "../DrawingResrcDataFile/paDrawingResrcDataFile.h"
 #include "Player/paPlayer.h"
+#include "Stage/paStage.h"
 
 namespace pa
 {
@@ -64,7 +65,11 @@ void GameScene::Enter()
 	DrawingResrcDataFile::Instance().LoadDataFile(resrcPath);
 
 	// プレイヤーの作成
-	m_pObject.emplace_back(new Player(ids, resrcPath.c_str()));
+	sl::SharedPtr<Player>	pPlayer(new Player(ids, resrcPath.c_str()));
+	m_pObject.push_back(pPlayer);
+
+	// ステージオブジェクトの生成
+	m_pObject.emplace_back(new Stage(ids, resrcPath, sl::WeakPtr<Player>(pPlayer)));
 
 	// オブジェクトの初期化
 	for(auto& pObj : m_pObject)

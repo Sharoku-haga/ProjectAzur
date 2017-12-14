@@ -2,7 +2,7 @@
 //!< @file		paPlayer.h
 //!< @brief		pa::Playerクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/09
+//!< @data		作成日時：2017/12/05	更新履歴：2017/12/13
 //==================================================================================================================================//
 
 #ifndef PA_PLAYER_H
@@ -17,9 +17,9 @@
 namespace pa
 {
 
-struct	PlayerParam;
-class	PlayerAction;
-class	PlayerShape;
+struct PlayerParam;
+class PlayerAction;
+class PlayerShape;
 
 //===================================================================================//
 //!< ゲームにおけるプレイヤーのクラス
@@ -37,7 +37,7 @@ public:
 		, const char*	pResrcDataFilePath);
 
 	/** Destructor */
-	virtual ~Player() = default;
+	virtual ~Player();
 
 	/** 初期化関数 */
 	virtual void Initialize()override;

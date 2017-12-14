@@ -20,7 +20,7 @@ struct ObjDrawingData;
 //===================================================================================//
 //!< ステージ背景クラス
 //===================================================================================//
-class StageBackground : public StageObjBase
+class StageBackground final : public StageObjBase
 {
 
 public:

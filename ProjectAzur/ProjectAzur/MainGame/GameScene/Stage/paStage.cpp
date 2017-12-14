@@ -2,7 +2,7 @@
 //!< @file		paStage.cpp		
 //!< @brief		pa::Stageクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/09	更新履歴：2017/12/11
+//!< @data		作成日時：2017/12/09	更新履歴：2017/12/13
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -11,14 +11,19 @@
 #include "../Player/paPlayer.h"
 #include "paBasePoint.h"
 #include "paIStageObjManager.h"
+#include "StageBackground/paStageBackgroundManager.h"
 
 namespace pa
 {
 
 /* Public Functions ------------------------------------------------------------------------------------------- */
 
-Stage::Stage(const sl::SharedPtr<Player>& pPlayer)
-	: m_pPlayer(pPlayer)
+Stage::Stage(const sl::DrawingID& rIDs
+		, const std::string&	rResrcDataFilePath  
+		, const sl::WeakPtr<Player>& pPlayer)
+	: m_DrawingID(rIDs)
+	, m_ResrcDataFilePath(rResrcDataFilePath)
+	, m_pPlayer(pPlayer)
 {}
 
 Stage::~Stage()
@@ -36,6 +41,8 @@ void Stage::Initialize()
 	m_pBasePoint->Initialize();
 
 	// 各IStageObjManagerを継承したクラスの生成と初期化
+
+	m_pIStageObjManager.emplace_back(new StageBackgroundManager(m_DrawingID, m_ResrcDataFilePath));
 
 	for(auto& pObjectManager : m_pIStageObjManager)
 	{
