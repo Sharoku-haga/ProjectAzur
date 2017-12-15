@@ -2,7 +2,7 @@
 //!< @file		paStageBackground.cpp
 //!< @brief		pa::StageBackgroundクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/11	更新履歴：2017/12/13
+//!< @data		作成日時：2017/12/11	更新履歴：2017/12/15
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -16,11 +16,6 @@
 
 namespace pa
 {
-
-/* Static Variable -------------------------------------------------------------------------------------------- */
-
-sl::fRect		StageBackground::m_ScreenSize = { 0.0f, 0.0f, 0.0f, 0.0f };
-D3DXVECTOR2		StageBackground::m_BasePointPos = {0.0f, 0.0f};
 
 /* Public Functions ------------------------------------------------------------------------------------------- */
 
@@ -47,6 +42,9 @@ void StageBackground::Initialize()
 
 	int	 drawTaskPriority = 0;		// 描画タスクの優先度
 	m_pDrawingData->m_pTask.Reset(new DrawTask(drawTaskPriority, std::bind(&pa::StageBackground::Draw, this)));
+
+	m_pDrawingData->m_Pos.x = 0.0f;
+	m_pDrawingData->m_Pos.y = 0.0f;
 }
 
 void StageBackground::Update()
@@ -61,9 +59,6 @@ void StageBackground::Finalize()
 
 void StageBackground::Draw()
 {
-	// ベースポイントの現在の座標を代入する
-	m_pDrawingData->m_Pos = StageObjBase::GetBasePointPos();
-
 	D3DXMATRIX matWorld;
 	sl::calculation::Calculate2DMatWorld(&matWorld, m_pDrawingData->m_Pos);
 
