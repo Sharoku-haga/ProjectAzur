@@ -2,7 +2,7 @@
 //!< @file		paPlayerShape.h
 //!< @brief		pa::PlayerShapeクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/09
+//!< @data		作成日時：2017/12/05	更新履歴：2017/12/16
 //==================================================================================================================================//
 
 #ifndef PA_PLAYER_SHAPE_H
@@ -85,11 +85,21 @@ public:
 	/** 破棄関数 */
 	void Finalize();
 
+	/**
+	* Setter
+	* @param[in] rBasePointPos ベースポイントの座標
+	*/
+	inline void SetBasePointPos(const D3DXVECTOR2& rBasePointPos)
+	{ 
+		m_BasePointPos = rBasePointPos; 
+	}
+
 private:
 	sl::DX11GraphicsLibrary&			m_rLibrary;				//!< グラフィックスライブラリのインスタンスへの参照
 	sl::UniquePtr<ObjDrawingData>		m_pDrawingData;			//!< 描画する為のデータ
 	sl::DrawingID						m_InitialShapeID;		//!< プレイヤーの初期形状の描画ID
 	sl::fRect							m_CurrentRectSize;		//!< 現在の矩形サイズ
+	D3DXVECTOR2							m_BasePointPos;			//!< ベースポイントの座標
 	const char*							m_pResrcDataFilePath;	//!< リソースデータファイルへのパス
 	bool								m_IsInvisible;			//!< 透明(ゲーム中の表現は半透明)どうか true→ 透明である false→透明でない
 	bool								m_IsFacingRight;		//!< 右を向いているかどうか true→ 右を向いている false→向いていない

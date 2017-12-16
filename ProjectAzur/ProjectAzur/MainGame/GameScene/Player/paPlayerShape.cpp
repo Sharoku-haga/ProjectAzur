@@ -2,7 +2,7 @@
 //!< @file		paPlayerShape.cpp
 //!< @brief		pa::PlayerShapeクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/09
+//!< @data		作成日時：2017/12/05	更新履歴：2017/12/16
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -135,7 +135,9 @@ void PlayerShape::Finalize()
 void PlayerShape::Draw()
 {
 	D3DXMATRIX matWorld;
-	sl::calculation::Calculate2DMatWorld(&matWorld, m_pDrawingData->m_Pos);
+	D3DXVECTOR2 drawingPos = (m_pDrawingData->m_Pos - m_BasePointPos);
+
+	sl::calculation::Calculate2DMatWorld(&matWorld, drawingPos);
 
 	sl::Basic2DConstantBuffer constantBuffer;
 	constantBuffer.m_MatWorld = matWorld;

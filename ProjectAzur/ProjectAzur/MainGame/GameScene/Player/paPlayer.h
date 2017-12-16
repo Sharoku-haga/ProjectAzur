@@ -2,7 +2,7 @@
 //!< @file		paPlayer.h
 //!< @brief		pa::Playerクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/13
+//!< @data		作成日時：2017/12/05	更新履歴：2017/12/16
 //==================================================================================================================================//
 
 #ifndef PA_PLAYER_H
@@ -53,6 +53,12 @@ public:
 	* @return プレイヤーの座標 
 	*/
 	const D3DXVECTOR2& GetPos();
+
+	/**
+	* Setter
+	* @param[in] rBasePointPos ベースポイントの座標
+	*/
+	void SetBasePointPos(const D3DXVECTOR2& rBasePointPos);
 
 private:
 	sl::UniquePtr<PlayerParam, sl::DefaultDeleter<PlayerParam>>			m_pPlayerParam;		//!< PlayerParam構造体のインスタンスへのポインタ
