@@ -43,6 +43,9 @@
     <Filter Include="Main\MainGame\GameScene\Stage\StageBackground">
       <UniqueIdentifier>{215cb494-05b3-46e3-9286-3c33e34dc60e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\GameScene\UI">
+      <UniqueIdentifier>{b8291ec9-36a1-42b3-b4d9-4b1474501fa5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -110,6 +113,9 @@
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\Stage\StageBackground\paStageBackgroundManager.cpp">
       <Filter>Main\MainGame\GameScene\Stage\StageBackground</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\UI\paUIManager.cpp">
+      <Filter>Main\MainGame\GameScene\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +196,12 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Stage\StageBackground\paStageBackgroundManager.h">
       <Filter>Main\MainGame\GameScene\Stage\StageBackground</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\UI\paIUI.h">
+      <Filter>Main\MainGame\GameScene\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\UI\paUIManager.h">
+      <Filter>Main\MainGame\GameScene\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
