@@ -138,6 +138,11 @@
     <ClCompile Include="MainGame\GameScene\Stage\paStageObjBase.cpp" />
     <ClCompile Include="MainGame\GameScene\Stage\StageBackground\paStageBackground.cpp" />
     <ClCompile Include="MainGame\GameScene\Stage\StageBackground\paStageBackgroundManager.cpp" />
+    <ClCompile Include="MainGame\GameScene\UI\EnergyGauge\paEnergyBlock.cpp" />
+    <ClCompile Include="MainGame\GameScene\UI\EnergyGauge\paEnergyGauge.cpp" />
+    <ClCompile Include="MainGame\GameScene\UI\EnergyGauge\paGaugeEffect.cpp" />
+    <ClCompile Include="MainGame\GameScene\UI\EnergyGauge\paGaugeFlame.cpp" />
+    <ClCompile Include="MainGame\GameScene\UI\EnergyGauge\paGaugeTimer.cpp" />
     <ClCompile Include="MainGame\GameScene\UI\paUIManager.cpp" />
     <ClCompile Include="MainGame\paMainGame.cpp" />
     <ClCompile Include="MainGame\ResultScene\paResultScene.cpp" />
@@ -164,6 +169,11 @@
     <ClInclude Include="MainGame\GameScene\Stage\paStageObjBase.h" />
     <ClInclude Include="MainGame\GameScene\Stage\StageBackground\paStageBackground.h" />
     <ClInclude Include="MainGame\GameScene\Stage\StageBackground\paStageBackgroundManager.h" />
+    <ClInclude Include="MainGame\GameScene\UI\EnergyGauge\paEnergyBlock.h" />
+    <ClInclude Include="MainGame\GameScene\UI\EnergyGauge\paEnergyGauge.h" />
+    <ClInclude Include="MainGame\GameScene\UI\EnergyGauge\paGaugeEffect.h" />
+    <ClInclude Include="MainGame\GameScene\UI\EnergyGauge\paGaugeFlame.h" />
+    <ClInclude Include="MainGame\GameScene\UI\EnergyGauge\paGaugeTimer.h" />
     <ClInclude Include="MainGame\GameScene\UI\paIUI.h" />
     <ClInclude Include="MainGame\GameScene\UI\paUIManager.h" />
     <ClInclude Include="MainGame\paCustomizeInput.h" />
