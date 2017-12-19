@@ -17,6 +17,7 @@
 #include "../DrawingResrcDataFile/paDrawingResrcDataFile.h"
 #include "Player/paPlayer.h"
 #include "Stage/paStage.h"
+#include "UI\paUIManager.h"
 
 namespace pa
 {
@@ -70,6 +71,9 @@ void GameScene::Enter()
 
 	// ステージオブジェクトの生成
 	m_pObject.emplace_back(new Stage(ids, resrcPath, sl::WeakPtr<Player>(pPlayer)));
+
+	// UIを管理するクラスの生成
+	m_pObject.emplace_back(new UIManager(ids, resrcPath));
 
 	// オブジェクトの初期化
 	for(auto& pObj : m_pObject)

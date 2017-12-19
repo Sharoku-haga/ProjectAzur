@@ -9,6 +9,7 @@
 
 #include "paUIManager.h"
 #include "paIUI.h"
+#include "EnergyGauge/paEnergyGauge.h"
 
 namespace pa
 {
@@ -28,15 +29,20 @@ UIManager::~UIManager()
 
 void UIManager::Initialize()
 {
+	m_pUI.emplace_back(new EnergyGauge(m_DrawingID, m_ResrcDataFilePath));
+
 	for(auto& pUI : m_pUI)
 	{
-		pUI->Initialize();;
+		pUI->Initialize();
 	}
 }
 
 void UIManager::Update()
 {
-
+	for(auto& pUI : m_pUI)
+	{
+		pUI->Update();
+	}
 }
 
 void UIManager::Finalize()

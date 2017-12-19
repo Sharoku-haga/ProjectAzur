@@ -26,7 +26,11 @@ class UIManager final : public IObjectBase
 {
 
 public:
-	/** Constructor */
+	/** 
+	* Constructor 
+	* @param[in] rIDs					描画データID群
+	* @param[in] rResrcDataFilePath		リソースデータファイルへのパス
+	*/
 	UIManager(const sl::DrawingID& rIDs
 			, const std::string&	rResrcDataFilePath);
 
