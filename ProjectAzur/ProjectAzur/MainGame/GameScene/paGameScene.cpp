@@ -2,7 +2,7 @@
 //!< @file		paGameScene.cpp
 //!< @brief		pa::GameSceneクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/11/18	更新履歴：2017/12/13
+//!< @data		作成日時：2017/11/18	更新履歴：2017/12/21
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -12,12 +12,15 @@
 #include "sl/Library/Graphics/slGraphicsID.h"
 #include "sl/Library/Graphics/slGraphicsDeclaration.h"
 #include "sl/Library/InputDevice/IInputDeviceLibrary/slIInputDeviceLibrary.h"
+#include "sl/Library/Scene/slSceneManager.h"
 #include "paGameScene.h"
 #include "../DrawTask/paDrawTaskManager.h"
 #include "../DrawingResrcDataFile/paDrawingResrcDataFile.h"
+#include "../EventManager/paEventListener.h"
+#include "../EventManager/paEventManager.h"
 #include "Player/paPlayer.h"
 #include "Stage/paStage.h"
-#include "UI\paUIManager.h"
+#include "UI/paUIManager.h"
 
 namespace pa
 {
@@ -80,6 +83,10 @@ void GameScene::Enter()
 	{
 		pObj->Initialize();
 	}
+
+	// イベントリスナーの生成とイベント登録
+	m_pEventListener.Reset(new EventListener());
+	EventManager::Instance().RegisterEventListener("game_end", m_pEventListener);
 }
 
 void GameScene::Exit()
@@ -103,6 +110,10 @@ void GameScene::Exit()
 
 void GameScene::Control()
 {
+	EventManager::Instance().Update();
+
+	HandleEvent();
+
 	m_rInputDeviceLibrary.UpdateInputDeviceState();
 
 	for(auto& pObj : m_pObject)
@@ -118,6 +129,30 @@ void GameScene::Draw()
 	m_rDrawTaskManager.Run();
 
 	m_rGraphicsLibrary.EndRender();
+}
+
+void GameScene::HandleEvent()
+{
+	if(m_pEventListener->EmptyCurrentEvent())
+	{
+		return;
+	}
+
+	const std::deque<std::string>& currentEvents = m_pEventListener->GetCurrentEvent();
+
+	for(auto& gameEvent : currentEvents)
+	{
+		if(gameEvent == "game_end")
+		{
+			/** @todo 現在はここでシーン遷移を行っている */
+			sl::SceneManager::Instance().ChangeScene("ResultScene");
+			return;
+		}
+
+	}
+
+	m_pEventListener->DeleteCurrentEvent();
+
 }
 
 }	// namespace pa

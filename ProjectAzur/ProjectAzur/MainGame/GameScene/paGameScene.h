@@ -10,6 +10,7 @@
 
 #include <vector>
 #include "sl/Library/SmartPointer/SharedPtr/slSharedPtr.h"
+#include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
 #include "sl/Library/Scene/slSceneBase.h"
 #include "../paIObjectBase.h"
 
@@ -25,6 +26,7 @@ namespace pa
 {
 
 class DrawTaskManager;
+class EventListener;
 
 //===================================================================================//
 //!< ゲームシーンクラス
@@ -46,11 +48,11 @@ public:
 	virtual void Exit()override;
 
 private:
-	std::vector<sl::SharedPtr<IObjectBase>>			m_pObject;					//!< IObjBaseクラスのインスタンスへのポインタ
-	sl::DX11GraphicsLibrary&						m_rGraphicsLibrary;			//!< DX11GraphicsLibraryクラスのインスタンスへの参照
-	sl::IInputDeviceLibrary&						m_rInputDeviceLibrary;		//!< IInputDeviceLibraryクラスのインスタンスへの参照	
-	DrawTaskManager&								m_rDrawTaskManager;			//!< DrawTaskManagerクラスのインスタンスへの参照
-
+	std::vector<sl::SharedPtr<IObjectBase>>				m_pObject;					//!< IObjBaseクラスのインスタンスへのポインタ
+	sl::DX11GraphicsLibrary&							m_rGraphicsLibrary;			//!< DX11GraphicsLibraryクラスのインスタンスへの参照
+	sl::IInputDeviceLibrary&							m_rInputDeviceLibrary;		//!< IInputDeviceLibraryクラスのインスタンスへの参照	
+	DrawTaskManager&									m_rDrawTaskManager;			//!< DrawTaskManagerクラスのインスタンスへの参照
+	sl::SharedPtr<EventListener>						m_pEventListener;			//!< EventListenerクラスのインスタンスへのユニークポインタ	
 
 	/** 制御関数 */
 	virtual void Control()override;
@@ -58,6 +60,8 @@ private:
 	/** 描画関数 */
 	virtual void Draw()override;
 
+	/** イベントを処理する関数 */
+	void HandleEvent();
 
 };	// class GameScene
 

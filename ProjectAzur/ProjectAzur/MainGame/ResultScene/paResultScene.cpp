@@ -2,11 +2,12 @@
 //!< @file		paResultScene.cpp
 //!< @brief		pa::ResultSceneクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/11/18	更新履歴：
+//!< @data		作成日時：2017/11/18	更新履歴：2017/12/21
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
 
+#include "sl/Library/Scene/slSceneManager.h"
 #include "paResultScene.h"
 
 namespace pa
@@ -29,7 +30,11 @@ void ResultScene::Exit()
 /* Private Functions ------------------------------------------------------------------------------------------ */
 
 void ResultScene::Control()
-{}
+{
+	/** @todo 現在はここでタイトルシーンへの遷移を行っている */
+	sl::SceneManager::Instance().ChangeScene("TitleScene");
+	return;
+}
 
 void ResultScene::Draw()
 {}
