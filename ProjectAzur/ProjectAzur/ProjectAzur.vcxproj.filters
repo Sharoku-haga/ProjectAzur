@@ -49,6 +49,9 @@
     <Filter Include="Main\MainGame\GameScene\UI\EnergyGauge">
       <UniqueIdentifier>{9784cc3d-5ebf-4bca-a448-4cb8d1e8e437}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\GameScene\UI\EnergyGauge\EnergyBlock">
+      <UniqueIdentifier>{58af1f99-df4d-468b-9bab-081f854bef24}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -120,9 +123,6 @@
     <ClCompile Include="MainGame\GameScene\UI\paUIManager.cpp">
       <Filter>Main\MainGame\GameScene\UI</Filter>
     </ClCompile>
-    <ClCompile Include="MainGame\GameScene\UI\EnergyGauge\paEnergyBlock.cpp">
-      <Filter>Main\MainGame\GameScene\UI\EnergyGauge</Filter>
-    </ClCompile>
     <ClCompile Include="MainGame\GameScene\UI\EnergyGauge\paEnergyGauge.cpp">
       <Filter>Main\MainGame\GameScene\UI\EnergyGauge</Filter>
     </ClCompile>
@@ -134,6 +134,12 @@
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\UI\EnergyGauge\paGaugeTimer.cpp">
       <Filter>Main\MainGame\GameScene\UI\EnergyGauge</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\UI\EnergyGauge\EnergyBlock\paEnergyBlock.cpp">
+      <Filter>Main\MainGame\GameScene\UI\EnergyGauge\EnergyBlock</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\UI\EnergyGauge\EnergyBlock\paEnergyEmptyBlock.cpp">
+      <Filter>Main\MainGame\GameScene\UI\EnergyGauge\EnergyBlock</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -221,9 +227,6 @@
     <ClInclude Include="MainGame\GameScene\UI\paUIManager.h">
       <Filter>Main\MainGame\GameScene\UI</Filter>
     </ClInclude>
-    <ClInclude Include="MainGame\GameScene\UI\EnergyGauge\paEnergyBlock.h">
-      <Filter>Main\MainGame\GameScene\UI\EnergyGauge</Filter>
-    </ClInclude>
     <ClInclude Include="MainGame\GameScene\UI\EnergyGauge\paEnergyGauge.h">
       <Filter>Main\MainGame\GameScene\UI\EnergyGauge</Filter>
     </ClInclude>
@@ -235,6 +238,12 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\UI\EnergyGauge\paGaugeTimer.h">
       <Filter>Main\MainGame\GameScene\UI\EnergyGauge</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\UI\EnergyGauge\EnergyBlock\paEnergyBlock.h">
+      <Filter>Main\MainGame\GameScene\UI\EnergyGauge\EnergyBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\UI\EnergyGauge\EnergyBlock\paEnergyEmptyBlock.h">
+      <Filter>Main\MainGame\GameScene\UI\EnergyGauge\EnergyBlock</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
