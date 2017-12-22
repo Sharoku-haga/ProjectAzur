@@ -2,7 +2,7 @@
 //!< @file		paEventListener.h
 //!< @brief		pa::EventListenerクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/11/21	更新履歴：2017/11/22
+//!< @data		作成日時：2017/11/21	更新履歴：2017/12/21
 //==================================================================================================================================//
 
 #ifndef PA_EVENT_LISTENER_H
@@ -46,19 +46,19 @@ public:
 	void CallSynEventFunc(const std::string& rEventName);  
 
 	/** 現在受けとっているイベントを全て削除する関数 */
-	void DeleteCurrentEvent(void); 
+	void DeleteCurrentEvent(); 
 
 	/**
 	* 受け取っているイベントが現在空なのか、もしくはあるのか確認する関数
 	* @return 結果 true→空である false→空でない
 	*/
-	inline bool EmptyCurrentEvent(void) { return m_CurrentEvent.empty(); }
+	inline bool EmptyCurrentEvent() { return m_CurrentEvent.empty(); }
 
 	/**
 	* Getter
 	* @return 現在イベントマネージャーから受け取っているイベントを格納したdeque
 	*/
-	inline const std::deque<std::string>& GetCurrentEvent(void) { return m_CurrentEvent; };
+	inline const std::deque<std::string>& GetCurrentEvent() { return m_CurrentEvent; };
 
 private:
 	friend class EventManager;
