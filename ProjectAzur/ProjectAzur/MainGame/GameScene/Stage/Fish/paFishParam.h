@@ -2,14 +2,34 @@
 //!< @file		paFishParam.h
 //!< @brief		pa::FishParam構造体のヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/23	更新履歴：2017/12/24
+//!< @data		作成日時：2017/12/23	更新履歴：2017/12/25
 //==================================================================================================================================//
 
 #ifndef PA_FISH_PARAM_H
 #define PA_FISH_PARAM_H
 
+#include <D3DX11.h>
+#include <D3DX10.h>
+
 namespace pa
 {
+
+//===================================================================================//
+//!< 魚のパラメータクラス。
+//===================================================================================//
+struct FishParam
+{
+	D3DXVECTOR2		m_Pos;						//!< 座標
+	float			m_Angle;					//!< 角度
+	bool			m_IsFacingRight;			//!< 右を向いているかどうかのフラグ. true→向いている false→向いていない
+
+	FishParam()
+		: m_Pos({0.0f, 0.0f})
+		, m_Angle(0.0f)
+		, m_IsFacingRight(true)
+	{}
+
+};	// struct FishParam
 
 }	// namespace pa
 

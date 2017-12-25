@@ -45,6 +45,12 @@ public:
 		m_ScreenSize = rScreenSize;
 	}
 
+	/**
+	* Getter 
+	* @return ベースポイントの座標座標
+	*/
+	static const D3DXVECTOR2& GetBasePointPos() { return m_BasePointPos; }
+
 protected:
 	static sl::fRect		m_ScreenSize;		//!< スクリーンサイズ
 
@@ -55,12 +61,6 @@ protected:
 	* @return 結果 true→画面範囲内にある false→画面範囲外にある
 	*/
 	bool CheckScreenArea(const D3DXVECTOR2&	rMyPos, const sl::fRect& rMySize);
-
-	/**
-	* Getter 
-	* @return ベースポイントの座標座標
-	*/
-	static const D3DXVECTOR2& GetBasePointPos() { return m_BasePointPos; }
 
 private:
 	friend class BasePoint;
