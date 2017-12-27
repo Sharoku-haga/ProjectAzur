@@ -8,6 +8,7 @@
 #ifndef PA_OBJ_DRAWING_DATA_H
 #define PA_OBJ_DRAWING_DATA_H
 
+#include <D3DX11.h>
 #include <D3DX10.h>
 #include "sl/Library/Graphics/slGraphicsID.h"
 #include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
