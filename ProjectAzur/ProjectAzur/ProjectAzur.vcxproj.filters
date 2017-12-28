@@ -162,6 +162,9 @@
     <ClCompile Include="MainGame\GameScene\Stage\Fish\paFishManager.cpp">
       <Filter>Main\MainGame\GameScene\Stage\Fish</Filter>
     </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishCreator\paFishShapeCreator.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishCreator</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\paMainGame.h">
@@ -280,6 +283,9 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Stage\Fish\paFishParam.h">
       <Filter>Main\MainGame\GameScene\Stage\Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishCreator\paFishShapeCreator.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishCreator</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
