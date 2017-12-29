@@ -133,6 +133,7 @@
     <ClCompile Include="MainGame\GameScene\Player\paPlayer.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\paPlayerAction.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\paPlayerShape.cpp" />
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishCreator\paFishShapeCreator.cpp" />
     <ClCompile Include="MainGame\GameScene\Stage\Fish\FishCreator\psFishCreator.cpp" />
     <ClCompile Include="MainGame\GameScene\Stage\Fish\FishShape\paFishShape.cpp" />
     <ClCompile Include="MainGame\GameScene\Stage\Fish\paFish.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="MainGame\GameScene\Player\paPlayerCommonDeclaration.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayerShape.h" />
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishCreator\paFishCreator.h" />
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishCreator\paFishShapeCreator.h" />
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishShape\paFishShape.h" />
     <ClInclude Include="MainGame\GameScene\Stage\Fish\paFish.h" />
     <ClInclude Include="MainGame\GameScene\Stage\Fish\paFishManager.h" />
