@@ -67,6 +67,9 @@ public:
 	*/
 	void AdjustDrawingData(const FishParam& rParam);
 
+	/** 描画関数 */
+	void Draw();
+
 private:
 	sl::DX11GraphicsLibrary&			m_rLibrary;				//!< グラフィックスライブラリのインスタンスへの参照
 	sl::UniquePtr<ObjDrawingData>		m_pDrawingData;			//!< 描画する為のデータ
@@ -74,9 +77,6 @@ private:
 	std::vector<sl::UVAnimeID>			m_UVAnimeIDs;			//!< UVアニメIDの動的配列(vector)
 	sl::fRect							m_CurrentRectSize;		//!< 現在の矩形サイズ
 	bool								m_IsFacingRight;		//!< 右を向いているかどうか true→ 右を向いている false→向いていない
-	
-	/** 描画関数 */
-	void Draw();
 	
 	/** 
 	* 画像反転処理を行う関数 
