@@ -102,8 +102,6 @@ void FishShape::AdjustDrawingData(const FishParam& rParam)
 	m_pDrawingData->m_Pos = rParam.m_Pos;
 }
 
-/* Private Functions ------------------------------------------------------------------------------------------ */
-
 void FishShape::Draw()
 {
 	D3DXMATRIX matWorld;
@@ -120,6 +118,8 @@ void FishShape::Draw()
 	constantBuffer.m_WindowSize.y = bufferSize.m_Bottom - bufferSize.m_Top;
 	m_rLibrary.DrawModel2D(m_pDrawingData->m_IDs, &constantBuffer);
 }
+
+/* Private Functions ------------------------------------------------------------------------------------------ */
 
 void FishShape::ProcessImageReversal(const FishParam& rParam)
 {
