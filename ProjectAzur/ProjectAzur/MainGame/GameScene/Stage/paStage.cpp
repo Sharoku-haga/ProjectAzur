@@ -7,10 +7,12 @@
 
 /* Includes --------------------------------------------------------------------------------------------------- */
 
+#include "sl/Library/Graphics/DX11GraphicsLibrary/slDX11GraphicsLibrary.h"
 #include "paStage.h"
 #include "../Player/paPlayer.h"
 #include "paBasePoint.h"
 #include "paIStageObjManager.h"
+#include "paStageObjBase.h"
 #include "StageBackground/paStageBackgroundManager.h"
 #include "Fish/paFishManager.h"
 
@@ -40,6 +42,9 @@ void Stage::Initialize()
 	// ベースポイントの生成と初期化
 	m_pBasePoint.Reset(new BasePoint(m_pPlayer, stageSize));
 	m_pBasePoint->Initialize();
+
+	// StageObjBaseにスクリーンのサイズ設定を行う
+	StageObjBase::SetScreenSize(sl::DX11GraphicsLibrary::Instance().GetBackBufferSize());
 
 	// 各IStageObjManagerを継承したクラスの生成と初期化
 

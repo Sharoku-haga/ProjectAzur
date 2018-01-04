@@ -35,6 +35,7 @@ void FishManager::Initialize()
 
 	// FishCreatorクラスの生成と初期化
 	m_pCreator.Reset(new FishCreator(m_DrawingID, m_ResrcDataFilePath.c_str()));
+	m_pCreator->Initialize();
 
 	// 魚クラスの生成
 	/** @todo 現在仮実装 */
