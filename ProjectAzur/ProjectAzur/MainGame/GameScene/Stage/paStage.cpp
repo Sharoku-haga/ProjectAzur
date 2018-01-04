@@ -2,16 +2,19 @@
 //!< @file		paStage.cpp		
 //!< @brief		pa::Stageクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/09	更新履歴：2017/12/13
+//!< @data		作成日時：2017/12/09	更新履歴：2018/01/04
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
 
+#include "sl/Library/Graphics/DX11GraphicsLibrary/slDX11GraphicsLibrary.h"
 #include "paStage.h"
 #include "../Player/paPlayer.h"
 #include "paBasePoint.h"
 #include "paIStageObjManager.h"
+#include "paStageObjBase.h"
 #include "StageBackground/paStageBackgroundManager.h"
+#include "Fish/paFishManager.h"
 
 namespace pa
 {
@@ -40,9 +43,13 @@ void Stage::Initialize()
 	m_pBasePoint.Reset(new BasePoint(m_pPlayer, stageSize));
 	m_pBasePoint->Initialize();
 
+	// StageObjBaseにスクリーンのサイズ設定を行う
+	StageObjBase::SetScreenSize(sl::DX11GraphicsLibrary::Instance().GetBackBufferSize());
+
 	// 各IStageObjManagerを継承したクラスの生成と初期化
 
 	m_pIStageObjManager.emplace_back(new StageBackgroundManager(m_DrawingID, m_ResrcDataFilePath));
+	m_pIStageObjManager.emplace_back(new FishManager(m_DrawingID, m_ResrcDataFilePath));
 
 	for(auto& pObjectManager : m_pIStageObjManager)
 	{

@@ -18,7 +18,7 @@ namespace pa
 namespace
 {
 
-const int		m_DrawingDataID = 3;		// 描画データID
+const int		m_DrawingDataID = 14;		// 描画データID
 
 }
 
