@@ -2,28 +2,80 @@
 //!< @file		paColliderBase.h
 //!< @brief		pa::ColliderBaseクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/05	更新履歴：
+//!< @data		作成日時：2018/01/05	更新履歴：2018/01/06
 //==================================================================================================================================//
 
 #ifndef PA_COLLIDER_BASE_H
 #define PA_COLLIDER_BASE_H
 
+#include <string>
+#include <D3DX11.h>
+#include <D3DX10.h>
+#include "sl/Library/Utility/slRect.h"
+
 namespace pa
 {
 
 //===================================================================================//
-//!< 衝突処理を行うクラス
+//!< 衝突処理クラス
 //!< 基底クラス
 //===================================================================================//
 class ColliderBase
 {
 
 public:
-	/** Constructor */
-	ColliderBase();
+	/** 
+	* Constructor
+	* @param[in] rTypeName Colliderのタイプ名
+	*/
+	ColliderBase(const std::string& rTypeName);
 
 	/** Destructor */
-	virtual ~ColliderBase();
+	virtual ~ColliderBase() = default;
+
+	/** 初期化関数 */
+	virtual void Initialize() = 0;
+
+	/** 
+	* 衝突処理を行う関数
+	* 衝突した際に呼ばれる
+	* @param[in] rCollider	衝突したCollider
+	*/
+	virtual void ProcessCollision(const ColliderBase& rCollider) = 0;
+
+	/**
+	* Getter 
+	* @return Colliderのタイプ(継承クラスの種類)名 
+	*/
+	inline const std::string& GetTypeName() { return m_TypeName; }
+
+	/**
+	* Getter 
+	* @return 現在の矩形データ
+	*/
+	inline const sl::fRect& GetCurrentRectData() { return m_CurrentRectData; }
+
+protected:
+	/**
+	* Setter
+	* @param[in] rPos 位置座標
+	*/
+	inline void SetPos(const D3DXVECTOR2&	rPos) { m_Pos = rPos; }
+
+	/**
+	* Setter
+	* @param[in] rSize サイズ
+	*/
+	inline void SetSize(const sl::fRect& rSize) { m_Size = rSize; }
+
+	/** 現在の矩形データを更新する関数 */
+	void UpdateCurrentRectData();
+
+private:
+	std::string		m_TypeName;				//!< Colliderのタイプ(継承クラスの種類)名
+	D3DXVECTOR2		m_Pos;					//!< 位置座標
+	sl::fRect		m_Size;					//!< このColliderのサイズ
+	sl::fRect		m_CurrentRectData;		//!< 現在の矩形データ(m_RectSize + Pos)
 
 };	// class ColliderBase
 
