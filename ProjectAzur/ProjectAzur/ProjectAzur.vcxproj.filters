@@ -61,6 +61,9 @@
     <Filter Include="Main\MainGame\GameScene\Stage\Fish\FIshShape">
       <UniqueIdentifier>{315d6360-02a3-423f-a43b-c513f32c01c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\GameScene\Collider">
+      <UniqueIdentifier>{cbbef116-b1e3-4c23-b3ef-0ea5623614e7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -164,6 +167,18 @@
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\Stage\Fish\FishCreator\paFishShapeCreator.cpp">
       <Filter>Main\MainGame\GameScene\Stage\Fish\FishCreator</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Collider\paColliderBase.cpp">
+      <Filter>Main\MainGame\GameScene\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Collider\paColliderManager.cpp">
+      <Filter>Main\MainGame\GameScene\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Collider\paFishBodyCollider.cpp">
+      <Filter>Main\MainGame\GameScene\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Collider\paPlayerCollider.cpp">
+      <Filter>Main\MainGame\GameScene\Collider</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -286,6 +301,18 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishCreator\paFishShapeCreator.h">
       <Filter>Main\MainGame\GameScene\Stage\Fish\FishCreator</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Collider\paColliderBase.h">
+      <Filter>Main\MainGame\GameScene\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Collider\paColliderManager.h">
+      <Filter>Main\MainGame\GameScene\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Collider\paFishBodyCollider.h">
+      <Filter>Main\MainGame\GameScene\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Collider\paPlayerCollider.h">
+      <Filter>Main\MainGame\GameScene\Collider</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

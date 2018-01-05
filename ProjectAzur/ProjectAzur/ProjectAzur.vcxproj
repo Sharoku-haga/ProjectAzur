@@ -129,6 +129,10 @@
     <ClCompile Include="MainGame\DrawTask\paDrawTaskManager.cpp" />
     <ClCompile Include="MainGame\EventManager\paEventListener.cpp" />
     <ClCompile Include="MainGame\EventManager\paEventManager.cpp" />
+    <ClCompile Include="MainGame\GameScene\Collider\paColliderBase.cpp" />
+    <ClCompile Include="MainGame\GameScene\Collider\paColliderManager.cpp" />
+    <ClCompile Include="MainGame\GameScene\Collider\paFishBodyCollider.cpp" />
+    <ClCompile Include="MainGame\GameScene\Collider\paPlayerCollider.cpp" />
     <ClCompile Include="MainGame\GameScene\paGameScene.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\paPlayer.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\paPlayerAction.cpp" />
@@ -164,6 +168,10 @@
     <ClInclude Include="MainGame\DrawTask\paDrawTaskManager.h" />
     <ClInclude Include="MainGame\EventManager\paEventListener.h" />
     <ClInclude Include="MainGame\EventManager\paEventManager.h" />
+    <ClInclude Include="MainGame\GameScene\Collider\paColliderBase.h" />
+    <ClInclude Include="MainGame\GameScene\Collider\paColliderManager.h" />
+    <ClInclude Include="MainGame\GameScene\Collider\paFishBodyCollider.h" />
+    <ClInclude Include="MainGame\GameScene\Collider\paPlayerCollider.h" />
     <ClInclude Include="MainGame\GameScene\paGameScene.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayer.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayerAction.h" />
