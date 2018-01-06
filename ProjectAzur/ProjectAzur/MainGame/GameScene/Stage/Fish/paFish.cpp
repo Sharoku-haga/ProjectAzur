@@ -10,6 +10,7 @@
 #include "sl/Library/Utility/slDefine.h"
 #include "paFish.h"
 #include "../../../DrawTask/paDrawTask.h"
+#include "FishCollider/paFishCollider.h"
 
 namespace pa
 {
@@ -36,11 +37,15 @@ void Fish::Initialize()
 {
 	m_pShape->Initialize(m_Param);
 	m_pDrawTask.Reset(new DrawTask(DrawTaskPriority, std::bind(&pa::Fish::Draw, this)));
+
+	m_pCollider.Reset(new FishCollider(m_pShape->GetCurrentRectSize(), this, m_Param));
+	m_pCollider->Initialize();
 }
 
 void Fish::Update()
 {
 	m_pShape->Update(m_Param);
+	m_pCollider->Update(m_Param);
 }
 
 void Fish::Finalize()

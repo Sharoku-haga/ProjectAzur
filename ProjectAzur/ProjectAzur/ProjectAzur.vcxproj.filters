@@ -64,6 +64,9 @@
     <Filter Include="Main\MainGame\GameScene\Collider">
       <UniqueIdentifier>{cbbef116-b1e3-4c23-b3ef-0ea5623614e7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishCollider">
+      <UniqueIdentifier>{2b152a06-c7a7-460d-a41c-3cf1af09a86d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -174,11 +177,11 @@
     <ClCompile Include="MainGame\GameScene\Collider\paColliderManager.cpp">
       <Filter>Main\MainGame\GameScene\Collider</Filter>
     </ClCompile>
-    <ClCompile Include="MainGame\GameScene\Collider\paFishBodyCollider.cpp">
-      <Filter>Main\MainGame\GameScene\Collider</Filter>
-    </ClCompile>
     <ClCompile Include="MainGame\GameScene\Player\paPlayerCollider.cpp">
       <Filter>Main\MainGame\GameScene\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishCollider\paFishCollider.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishCollider</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -308,11 +311,11 @@
     <ClInclude Include="MainGame\GameScene\Collider\paColliderManager.h">
       <Filter>Main\MainGame\GameScene\Collider</Filter>
     </ClInclude>
-    <ClInclude Include="MainGame\GameScene\Collider\paFishBodyCollider.h">
-      <Filter>Main\MainGame\GameScene\Collider</Filter>
-    </ClInclude>
     <ClInclude Include="MainGame\GameScene\Player\paPlayerCollider.h">
       <Filter>Main\MainGame\GameScene\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishCollider\paFishCollider.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishCollider</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

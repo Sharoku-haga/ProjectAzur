@@ -18,6 +18,7 @@
 namespace pa
 {
 
+class FishCollider;
 class DrawTask;
 
 //===================================================================================//
@@ -49,6 +50,8 @@ public:
 private:
 	FishParam												m_Param;		//!< 魚のパラメータ
 	sl::UniquePtr<FishShape>								m_pShape;		//!< FishShapeクラスのインスタンスへのユニークポインタ
+	sl::UniquePtr<FishCollider
+				, sl::DefaultDeleter<FishCollider>>			m_pCollider;	//!< FishColliderクラスのインスタンスへのユニークポインタ
 	sl::UniquePtr<DrawTask
 				, sl::DefaultDeleter<DrawTask>>				m_pDrawTask;	//!< DrawTaskクラスのインスタンスへのユニークポインタ
 
