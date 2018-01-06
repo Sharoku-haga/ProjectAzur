@@ -177,8 +177,8 @@
     <ClCompile Include="MainGame\GameScene\Collider\paFishBodyCollider.cpp">
       <Filter>Main\MainGame\GameScene\Collider</Filter>
     </ClCompile>
-    <ClCompile Include="MainGame\GameScene\Collider\paPlayerCollider.cpp">
-      <Filter>Main\MainGame\GameScene\Collider</Filter>
+    <ClCompile Include="MainGame\GameScene\Player\paPlayerCollider.cpp">
+      <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -311,8 +311,8 @@
     <ClInclude Include="MainGame\GameScene\Collider\paFishBodyCollider.h">
       <Filter>Main\MainGame\GameScene\Collider</Filter>
     </ClInclude>
-    <ClInclude Include="MainGame\GameScene\Collider\paPlayerCollider.h">
-      <Filter>Main\MainGame\GameScene\Collider</Filter>
+    <ClInclude Include="MainGame\GameScene\Player\paPlayerCollider.h">
+      <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -77,7 +77,7 @@ public:
 
 	/** 
 	* 描画するデータを調整する関数.
-	* 主に衝突判定処理後にdデータが変わったらよぶ
+	* 主に衝突判定処理後にデータが変わったらよぶ
 	* @param[in] rParam					プレイヤーのパラメータ
 	*/
 	void AdjustDrawingData(const PlayerParam&	rParam);
