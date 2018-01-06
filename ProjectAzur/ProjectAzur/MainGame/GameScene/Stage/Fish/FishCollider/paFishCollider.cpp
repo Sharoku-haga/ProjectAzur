@@ -49,7 +49,7 @@ void FishCollider::Update(const FishParam& rParam)
 	UpdateCurrentRectData();
 
 	// ColliderManagerに登録
-	//ColliderManager::Instance().RegisterPlayerCollider(this);
+	ColliderManager::Instance().RegisterStageObjCollider(this);
 }
 
 }	// namespace pa

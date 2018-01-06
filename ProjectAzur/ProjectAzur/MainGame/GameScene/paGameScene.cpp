@@ -21,6 +21,7 @@
 #include "Player/paPlayer.h"
 #include "Stage/paStage.h"
 #include "UI/paUIManager.h"
+#include "Collider/paColliderManager.h"
 
 namespace pa
 {
@@ -68,6 +69,9 @@ void GameScene::Enter()
 	string resrcPath = "CG_inGame_1.vtxd";
 	DrawingResrcDataFile::Instance().LoadDataFile(resrcPath);
 
+	// 衝突管理クラスの生成
+	ColliderManager::Create();
+
 	// プレイヤーの作成
 	sl::SharedPtr<Player>	pPlayer(new Player(ids, resrcPath.c_str()));
 	m_pObject.push_back(pPlayer);
@@ -96,6 +100,8 @@ void GameScene::Exit()
 		pObj->Finalize();
 	}
 
+	ColliderManager::Destroy();
+
 	m_rDrawTaskManager.DeleteALL();
 
 	m_rGraphicsLibrary.ReleaseConstantBufferALL();
@@ -120,6 +126,8 @@ void GameScene::Control()
 	{
 		pObj->Update();
 	}
+
+	ColliderManager::Instance().Update();
 }
 
 void GameScene::Draw()

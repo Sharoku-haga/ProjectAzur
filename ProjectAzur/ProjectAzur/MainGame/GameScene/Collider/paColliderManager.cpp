@@ -2,7 +2,7 @@
 //!< @file		paColliderManager.cpp
 //!< @brief		pa::ColliderManagerクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/05	更新履歴：2018/01/06
+//!< @data		作成日時：2018/01/05	更新履歴：2018/01/07
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -16,7 +16,7 @@ namespace pa
 
 void ColliderManager::Update()
 {
-	if(m_pStageObjColliders.empty() || m_pPlayerCoolider.Get() == nullptr)
+	if(m_pStageObjColliders.empty() || m_pPlayerCoolider == nullptr)
 	{
 		return;
 	}
@@ -29,12 +29,16 @@ void ColliderManager::Update()
 }
 
 
-void ColliderManager::RegisterStageObjCollider(sl::SharedPtr<ColliderBase> pStageObjCollider)
+void ColliderManager::RegisterStageObjCollider(ColliderBase* pStageObjCollider)
 {
 	m_pStageObjColliders.emplace_back(pStageObjCollider);
 }
 
 /* Private Functions ------------------------------------------------------------------------------------------ */
+
+ColliderManager::ColliderManager()
+	: m_pPlayerCoolider(nullptr)
+{}
 
 void ColliderManager::CheckCollisionPlayer()
 {
@@ -42,8 +46,8 @@ void ColliderManager::CheckCollisionPlayer()
 	{
 		if(CheckRectCollision(m_pPlayerCoolider->GetCurrentRectData(), pStageObjCollider->GetCurrentRectData()))
 		{
-			m_pPlayerCoolider->ProcessCollision(*pStageObjCollider.Get());
-			pStageObjCollider->ProcessCollision(*m_pPlayerCoolider.Get());
+			m_pPlayerCoolider->ProcessCollision(*pStageObjCollider);
+			pStageObjCollider->ProcessCollision(*m_pPlayerCoolider);
 		}
 	}
 }
@@ -63,14 +67,8 @@ bool ColliderManager::CheckRectCollision(const sl::fRect& rRectA, const sl::fRec
 
 void ColliderManager::ResetColliderPointer()
 {
-	m_pPlayerCoolider.Reset();
-
-	for(auto& pStageObjCollider : m_pStageObjColliders)
-	{
-		pStageObjCollider.Reset();
-	}
-
-	std::vector<sl::SharedPtr<ColliderBase>>().swap(m_pStageObjColliders);
+	m_pPlayerCoolider = nullptr;
+	std::vector<ColliderBase*>().swap(m_pStageObjColliders);
 }
 
 }	// namespace pa
