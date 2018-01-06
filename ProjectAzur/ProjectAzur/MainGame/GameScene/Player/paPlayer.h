@@ -2,7 +2,7 @@
 //!< @file		paPlayer.h
 //!< @brief		pa::Playerクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/16
+//!< @data		作成日時：2017/12/05	更新履歴：2018/01/06
 //==================================================================================================================================//
 
 #ifndef PA_PLAYER_H
@@ -20,6 +20,7 @@ namespace pa
 struct PlayerParam;
 class PlayerAction;
 class PlayerShape;
+class PlayerCollider;
 
 //===================================================================================//
 //!< ゲームにおけるプレイヤーのクラス
@@ -60,10 +61,17 @@ public:
 	*/
 	void SetBasePointPos(const D3DXVECTOR2& rBasePointPos);
 
+	/**
+	* プレイヤーのデータを更新する関数
+	* 主に衝突判定時によばれる
+	*/
+	void AdjustData();
+
 private:
 	sl::UniquePtr<PlayerParam, sl::DefaultDeleter<PlayerParam>>			m_pPlayerParam;		//!< PlayerParam構造体のインスタンスへのポインタ
 	sl::UniquePtr<PlayerAction, sl::DefaultDeleter<PlayerAction>>		m_pPlayerAction;	//!< PlayerActionクラスのインスタンスへのポインタ
 	sl::UniquePtr<PlayerShape, sl::DefaultDeleter<PlayerShape>>			m_pPlayerShape;		//!< PlayerShapeクラスのインスタンスへのポインタ
+	sl::UniquePtr<PlayerCollider, sl::DefaultDeleter<PlayerCollider>>	m_pPlayerCollider;	//!< PlayerColliderクラスのインスタンスへのポインタ
 
 };	// class Player
 

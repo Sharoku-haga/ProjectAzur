@@ -2,7 +2,7 @@
 //!< @file		paPalyer.cpp
 //!< @brief		pa::Playerクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/16
+//!< @data		作成日時：2017/12/05	更新履歴：2018/01/06
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -10,6 +10,7 @@
 #include "paPlayer.h"
 #include "paPlayerAction.h"
 #include "paPlayerShape.h"
+#include "paPlayerCollider.h"
 #include "paPlayerCommonDeclaration.h"
 
 namespace pa
@@ -46,12 +47,15 @@ void Player::Initialize()
 	m_pPlayerAction->Initialize();
 	m_pPlayerShape->Initialize(*m_pPlayerParam);
 
+	m_pPlayerCollider.Reset(new PlayerCollider(m_pPlayerShape->InformShapeSize(), this, *m_pPlayerParam));
+	m_pPlayerCollider->Initialize();
 }
 
 void Player::Update()
 {
 	m_pPlayerAction->Update(*m_pPlayerParam);
 	m_pPlayerShape->Update(*m_pPlayerParam);
+	m_pPlayerCollider->Update(*m_pPlayerParam);
 }
 
 void Player::Finalize()
@@ -68,6 +72,12 @@ const D3DXVECTOR2& Player::GetPos()
 void Player::SetBasePointPos(const D3DXVECTOR2& rBasePointPos)
 {
 	m_pPlayerShape->SetBasePointPos(rBasePointPos);
+}
+
+void Player::AdjustData()
+{
+	m_pPlayerCollider->AdjustPlayerParam(*m_pPlayerParam);
+	m_pPlayerShape->AdjustDrawingData(*m_pPlayerParam);
 }
 
 }	// namespace pa
