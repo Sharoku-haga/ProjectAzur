@@ -60,8 +60,8 @@ public:
 	void AdjustPlayerParam(PlayerParam&	rParam);
 
 private:
-	Player*						m_pOwner;				//!< オーナーのポインタ
-	D3DXVECTOR2					m_DiffPos;				//!< 差分座標
+	Player*						m_pOwner;					//!< オーナーのポインタ
+	D3DXVECTOR2					m_DiffPos;					//!< 差分座標
 
 	/** 
 	* 衝突時における差分の値を計算する関数 

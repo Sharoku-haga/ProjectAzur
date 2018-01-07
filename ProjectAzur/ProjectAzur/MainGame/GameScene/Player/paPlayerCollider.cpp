@@ -57,7 +57,7 @@ void PlayerCollider::Update(const PlayerParam&	rParam)
 	UpdateCurrentRectData();
 
 	// ColliderManagerに登録
-	//ColliderManager::Instance().RegisterPlayerCollider(this);
+	ColliderManager::Instance().RegisterPlayerCollider(this);
 }
 
 void PlayerCollider::AdjustPlayerParam(PlayerParam&	rParam)
