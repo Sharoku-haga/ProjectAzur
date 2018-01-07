@@ -36,8 +36,6 @@ void PlayerAction::Initialize()
 	/** @todo 現在は仮の数値 */
 	m_SpeedMaxVal = 4.0f;
 	m_SpeedMinVal = 0.0f;
-	m_CurrentVerticalSpeed = 0.0f;
-	m_CurrentHorizontalSpeed = 0.0f;
 }
 
 void PlayerAction::Update(PlayerParam& rParam)
@@ -47,8 +45,8 @@ void PlayerAction::Update(PlayerParam& rParam)
 	Rotate(rParam);
 
 	// 待機状態かどうかのチェックを行う
-	if(m_CurrentHorizontalSpeed == m_SpeedMinVal
-		&& m_CurrentVerticalSpeed == m_SpeedMinVal)
+	if(rParam.m_CurrentHorizontalSpeed == m_SpeedMinVal
+		&& rParam.m_CurrentVerticalSpeed == m_SpeedMinVal)
 	{
 		rParam.m_CurrentState = PLAYER_STATE::WAITING;
 		return;
@@ -56,10 +54,6 @@ void PlayerAction::Update(PlayerParam& rParam)
 	rParam.m_CurrentState = PLAYER_STATE::MOVING;
 
 	EventManager::Instance().TriggerSynEvent("player_move");
-
-		/** 仮処理 */
-		m_CurrentVerticalSpeed = m_SpeedMinVal;
-		/** 仮処理 */
 }
 
 void PlayerAction::Finalize()
@@ -74,60 +68,65 @@ void PlayerAction::MoveHorizontally(PlayerParam& rParam)
 	// 右移動
 	if(m_rInputLibrary.CheckCustomizeInputState(RIGHT_MOVE, sl::ON))
 	{
-		m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? rParam.m_Acceleration : AttenuationSpeed;
+		rParam.m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? rParam.m_Acceleration : AttenuationSpeed;
 	}
 	else if(m_rInputLibrary.CheckCustomizeInputState(RIGHT_MOVE, sl::OFF)
-			&& m_CurrentHorizontalSpeed != m_SpeedMinVal)
+			&& rParam.m_CurrentHorizontalSpeed != m_SpeedMinVal)
 	{
-		m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? -AttenuationSpeed : 0.0f;
+		rParam.m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? -AttenuationSpeed : 0.0f;
 	}
 
 	// 左移動
 	if(m_rInputLibrary.CheckCustomizeInputState(LEFT_MOVE, sl::ON))
 	{
-		m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? -AttenuationSpeed : -rParam.m_Acceleration;
+		rParam.m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? -AttenuationSpeed : -rParam.m_Acceleration;
 	}
 	else if(m_rInputLibrary.CheckCustomizeInputState(LEFT_MOVE, sl::OFF)
-			&& m_CurrentHorizontalSpeed != m_SpeedMinVal)
+			&& rParam.m_CurrentHorizontalSpeed != m_SpeedMinVal)
 	{
-		m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? 0.0f : AttenuationSpeed;
+		rParam.m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? 0.0f : AttenuationSpeed;
 	}
 
 	// スピードの最小値と最大値の間に調整する
 	if(rParam.m_IsFacingRight)
 	{
-		if(m_CurrentHorizontalSpeed < 0.0f)
+		if(rParam.m_CurrentHorizontalSpeed < 0.0f)
 		{
-			m_CurrentHorizontalSpeed = 0.0f;
+			rParam.m_CurrentHorizontalSpeed = 0.0f;
 		}
-		m_CurrentHorizontalSpeed = std::max<float>(m_SpeedMinVal, std::min<float>(m_SpeedMaxVal, m_CurrentHorizontalSpeed));
+		rParam.m_CurrentHorizontalSpeed = std::max<float>(m_SpeedMinVal, std::min<float>(m_SpeedMaxVal, rParam.m_CurrentHorizontalSpeed));
 	}
 	else 
 	{
-		if(m_CurrentHorizontalSpeed > 0.0f)
+		if(rParam.m_CurrentHorizontalSpeed > 0.0f)
 		{
-			m_CurrentHorizontalSpeed = 0.0f;
+			rParam.m_CurrentHorizontalSpeed = 0.0f;
 		}
-		m_CurrentHorizontalSpeed = std::min<float>(m_SpeedMinVal, std::max<float>(-m_SpeedMaxVal, m_CurrentHorizontalSpeed));
+		rParam.m_CurrentHorizontalSpeed = std::min<float>(m_SpeedMinVal, std::max<float>(-m_SpeedMaxVal, rParam.m_CurrentHorizontalSpeed));
 	}
 
-	rParam.m_Pos.x += m_CurrentHorizontalSpeed;
+	rParam.m_Pos.x += rParam.m_CurrentHorizontalSpeed;
 }
 
 void PlayerAction::MoveVertically(PlayerParam& rParam)
 {
 	/** @todo ここは仮処理 */
+
+	/** 仮処理 */
+	rParam.m_CurrentVerticalSpeed = m_SpeedMinVal;
+	/** 仮処理 */
+
 	// 上移動
 	if(m_rInputLibrary.CheckCustomizeInputState(UP_MOVE, sl::ON))
 	{
-		m_CurrentVerticalSpeed -= rParam.m_Acceleration;
+		rParam.m_CurrentVerticalSpeed -= rParam.m_Acceleration;
 		rParam.m_Pos.y -= rParam.m_Acceleration * 10;
 	}
 
 	// 下移動
 	if(m_rInputLibrary.CheckCustomizeInputState(DOWN_MOVE, sl::ON))
 	{
-		m_CurrentVerticalSpeed += rParam.m_Acceleration;
+		rParam.m_CurrentVerticalSpeed += rParam.m_Acceleration;
 		rParam.m_Pos.y += rParam.m_Acceleration * 10;
 	}
 }

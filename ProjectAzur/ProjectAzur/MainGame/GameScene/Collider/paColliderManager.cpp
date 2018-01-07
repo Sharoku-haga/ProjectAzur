@@ -34,6 +34,19 @@ void ColliderManager::RegisterStageObjCollider(ColliderBase* pStageObjCollider)
 	m_pStageObjColliders.emplace_back(pStageObjCollider);
 }
 
+bool ColliderManager::CheckRectCollision(const sl::fRect& rRectA, const sl::fRect& rRectB)
+{
+	if(rRectA.m_Right > rRectB.m_Left
+		&& rRectA.m_Top < rRectB.m_Bottom
+		&& rRectA.m_Left < rRectB.m_Right
+		&& rRectA.m_Bottom > rRectB.m_Top)
+	{
+		return true;
+	}
+
+	return false;
+}
+
 /* Private Functions ------------------------------------------------------------------------------------------ */
 
 ColliderManager::ColliderManager()
@@ -50,19 +63,6 @@ void ColliderManager::CheckCollisionPlayer()
 			pStageObjCollider->ProcessCollision(*m_pPlayerCoolider);
 		}
 	}
-}
-
-bool ColliderManager::CheckRectCollision(const sl::fRect& rRectA, const sl::fRect& rRectB)
-{
-	if(rRectA.m_Right > rRectB.m_Left
-		&& rRectA.m_Top < rRectB.m_Bottom
-		&& rRectA.m_Left < rRectB.m_Right
-		&& rRectA.m_Bottom > rRectB.m_Top)
-	{
-		return true;
-	}
-
-	return false;
 }
 
 void ColliderManager::ResetColliderPointer()

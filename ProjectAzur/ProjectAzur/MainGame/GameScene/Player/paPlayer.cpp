@@ -69,6 +69,11 @@ const D3DXVECTOR2& Player::GetPos()
 	return m_pPlayerParam->m_Pos;
 }
 
+const PlayerParam& Player::GetPlayerParam()
+{
+	return *m_pPlayerParam;
+}
+
 void Player::SetBasePointPos(const D3DXVECTOR2& rBasePointPos)
 {
 	m_pPlayerShape->SetBasePointPos(rBasePointPos);

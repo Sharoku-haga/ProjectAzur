@@ -55,6 +55,12 @@ public:
 	*/
 	inline const sl::fRect& GetCurrentRectData() { return m_CurrentRectData; }
 
+	/**
+	* Getter
+	* @return 位置座標
+	*/
+	inline const D3DXVECTOR2&	GetPos() { return m_Pos; }
+
 protected:
 	/**
 	* Setter

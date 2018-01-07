@@ -43,6 +43,14 @@ public:
 	*/
 	void RegisterStageObjCollider(ColliderBase* pStageObjCollider);
 
+	/**
+	* 2つの矩形の衝突判定を行う関数.
+	* @param[in] rRectA 判定したい矩形の1つ 
+	* @param[in] rRectB  判定したい矩形の1つ
+	* @return 衝突しているかどうか true→衝突している false→衝突していない
+	*/
+	bool CheckRectCollision(const sl::fRect& rRectA, const sl::fRect& rRectB);
+
 private:
 	friend class sl::UserManualSingleton <ColliderManager>;
 
@@ -57,14 +65,6 @@ private:
 
 	/** プレイヤーとの衝突判定を行う関数 */
 	void CheckCollisionPlayer();
-
-	/**
-	* 2つの矩形の衝突判定を行う関数.
-	* @param[in] rRectA 判定したい矩形の1つ 
-	* @param[in] rRectB  判定したい矩形の1つ
-	* @return 衝突しているかどうか true→衝突している false→衝突していない
-	*/
-	bool CheckRectCollision(const sl::fRect& rRectA, const sl::fRect& rRectB);
 
 	/** 現在登録しているColliderポインタをリセットする関数 */
 	void ResetColliderPointer();
