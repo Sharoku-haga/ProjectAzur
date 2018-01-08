@@ -50,8 +50,6 @@ private:
 	sl::IInputDeviceLibrary&	m_rInputLibrary;					//!< sl::IInputDeviceLibraryクラスのインスタンスへのポインタ
 	float						m_SpeedMinVal;						//!< スピードの最小値
 	float						m_SpeedMaxVal;						//!< スピードの最大値
-	float						m_CurrentVerticalSpeed;				//!< 現在の縦のスピード
-	float						m_CurrentHorizontalSpeed;			//!< 現在の横のスピード
 
 	/** 
 	* 横に移動する関数 

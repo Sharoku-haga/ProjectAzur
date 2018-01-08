@@ -2,7 +2,7 @@
 //!< @file		paPlayerCollider.h
 //!< @brief		pa::PlayerColliderクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/05	更新履歴：2018/01/06
+//!< @data		作成日時：2018/01/05	更新履歴：2018/01/08
 //==================================================================================================================================//
 
 #ifndef PA_PLAYER_COLLIDER_H
@@ -68,6 +68,20 @@ private:
 	* @param[in] rCollider	衝突したCollider
 	*/
 	void CalculateDiffVal(ColliderBase& rCollider);
+
+	/** 
+	* 衝突時における横の差分の値を計算する関数 
+	* @param[in] rMyRect	 自分の矩形 
+	* @param[in] rOtherRect  差分を計算したい矩形
+	*/
+	void CalculateHorizontalDiffVal(const sl::fRect& rMyRect, const sl::fRect& rOtherRect);
+
+	/** 
+	* 衝突時における縦の差分の値を計算する関数 
+	* @param[in] rMyRect	 自分の矩形 
+	* @param[in] rOtherRect  差分を計算したい矩形
+	*/
+	void CalculateVerticalDiffVal(const sl::fRect& rMyRect, const sl::fRect& rOtherRect);
 
 };	// class PlayerCollider
 

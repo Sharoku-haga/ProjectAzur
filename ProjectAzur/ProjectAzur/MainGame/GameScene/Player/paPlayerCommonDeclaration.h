@@ -30,6 +30,8 @@ struct PlayerParam
 	D3DXVECTOR2		m_Pos;						//!< 位置座標
 	float			m_Angle;					//!< 角度
 	float			m_Acceleration;				//!< 加速度
+	float			m_CurrentVerticalSpeed;		//!< 現在の縦のスピード
+	float			m_CurrentHorizontalSpeed;	//!< 現在の横のスピード
 	PLAYER_STATE	m_CurrentState;				//!< プレイヤーの現在の状態
 	bool			m_IsFacingRight;			//!< 右を向いているかどうかのフラグ. true→向いている false→向いていない
 
@@ -37,6 +39,8 @@ struct PlayerParam
 		: m_Pos({0.0f, 0.0f})
 		, m_Angle(0.0f)
 		, m_Acceleration(0.0f)
+		, m_CurrentVerticalSpeed(0.0f)
+		, m_CurrentHorizontalSpeed(0.0f)
 		, m_CurrentState(PLAYER_STATE::WAITING)
 		, m_IsFacingRight(true)
 	{}

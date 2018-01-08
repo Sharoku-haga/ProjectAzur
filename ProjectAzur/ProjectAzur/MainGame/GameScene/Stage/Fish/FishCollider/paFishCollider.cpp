@@ -2,7 +2,7 @@
 //!< @file		paFishCollider.cpp
 //!< @brief		pa::FishColliderクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/05	更新履歴：2018/01/06
+//!< @data		作成日時：2018/01/05	更新履歴：2018/01/07
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -22,7 +22,13 @@ FishCollider::FishCollider(const sl::fRect& rSize
 	: ColliderBase("FishCollider")
 	, m_pOwner(pFish)
 {
-	SetSize(rSize);
+	// 仮微調整
+	sl::fRect size = rSize;
+	float val = 5.f;
+	size.m_Top += val;
+	size.m_Bottom -= val;
+
+	SetSize(size);
 	SetPos(rParam.m_Pos);
 	SetAngle(rParam.m_Angle);
 }

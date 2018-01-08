@@ -11,6 +11,7 @@
 #include <D3DX11.h>
 #include <D3DX10.h>
 #include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
+#include "sl/Library/SmartPointer/SharedPtr/slSharedPtr.h"
 #include "sl/Library/Graphics/slGraphicsID.h"
 #include "../../paIObjectBase.h"
 
@@ -50,10 +51,16 @@ public:
 	virtual void Finalize()override;
 
 	/**
-	* 座標を取得する関数
+	* Getter
 	* @return プレイヤーの座標 
 	*/
 	const D3DXVECTOR2& GetPos();
+
+	/**
+	* Getter
+	* @return プレイヤーのパラメータ
+	*/
+	const PlayerParam& GetPlayerParam();
 
 	/**
 	* Setter
