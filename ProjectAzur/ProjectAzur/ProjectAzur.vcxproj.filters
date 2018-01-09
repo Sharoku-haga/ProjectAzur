@@ -67,6 +67,9 @@
     <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishCollider">
       <UniqueIdentifier>{2b152a06-c7a7-460d-a41c-3cf1af09a86d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishReaction">
+      <UniqueIdentifier>{029abe18-f973-418d-b7e4-6f7e9e03f74b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -182,6 +185,12 @@
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\Stage\Fish\FishCollider\paFishCollider.cpp">
       <Filter>Main\MainGame\GameScene\Stage\Fish\FishCollider</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\paBalloon.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\paFishReaction.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -316,6 +325,12 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishCollider\paFishCollider.h">
       <Filter>Main\MainGame\GameScene\Stage\Fish\FishCollider</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\paBalloon.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\paFishReaction.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
