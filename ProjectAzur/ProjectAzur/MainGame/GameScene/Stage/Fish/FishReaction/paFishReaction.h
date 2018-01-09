@@ -2,14 +2,18 @@
 //!< @file		paFishReaction.h
 //!< @brief		pa::FishReactionクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/09	更新履歴：
+//!< @data		作成日時：2018/01/09	更新履歴：2018/01/11
 //==================================================================================================================================//
 
 #ifndef PA_FISH_REACTION_H
 #define PA_FISH_REACTION_H
 
+#include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
+
 namespace pa
 {
+
+class Balloon;
 
 //===================================================================================//
 //!< 魚のリアクションクラス
@@ -23,6 +27,9 @@ public:
 
 	/** Destructor */
 	~FishReaction();
+
+private:
+	sl::UniquePtr<Balloon, sl::DefaultDeleter<Balloon>>		m_pBalloon;
 
 };	// class FishReaction
 
