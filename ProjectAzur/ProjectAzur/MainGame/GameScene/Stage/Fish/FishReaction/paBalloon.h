@@ -2,27 +2,68 @@
 //!< @file		paBalloon.h
 //!< @brief		pa::Balloonクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/09	更新履歴：
+//!< @data		作成日時：2018/01/09	更新履歴：2018/01/11
 //==================================================================================================================================//
 
 #ifndef PA_BALLOON_H
 #define PA_BALLOON_H
 
+#include <string>
+#include <D3DX11.h>
+#include <D3DX10.h>
+#include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
+#include "sl/Library/Graphics/slGraphicsID.h"
+#include "../paFishParam.h"
+
+
 namespace pa
 {
 
+struct ObjDrawingData;
+
 //===================================================================================//
-//!< 魚のリアクションの吹き出し
+//!< 魚のリアクションの吹き出しクラス
 //===================================================================================//
-class Balloon
+class Balloon final
 {
 
 public:
-	/** Constructor */
-	Balloon();
+	/** 
+	* Constructor
+	* @param[in] rIDs					描画のID群
+	* @param[in] pResrcDataFilePath		リソースデータのファイルパス
+	* @param[in] rFishPosDiff			魚座標との差分
+	*/
+	Balloon(const sl::DrawingID&	rIDs
+			, const std::string&	rResrcDataFilePath
+			, const D3DXVECTOR2&	rFishPosDiff);
 
 	/** Destructor */
 	~Balloon();
+
+	/** 
+	* 更新関数 
+	* @param[in] rParam 魚のパラメータ
+	*/
+	void Update(const FishParam& rParam);
+
+	/** 
+	* 描画関数 
+	* @param[in] rParam 魚のパラメータ 
+	*/
+	void Draw(const FishParam& rParam);
+
+private:
+	sl::UniquePtr<ObjDrawingData
+				, sl::DefaultDeleter<ObjDrawingData>>	m_pDrawingData;				//!< 描画データ構造体のインスタンスへのユニークポインタ
+	D3DXVECTOR2											m_GaugeDiffPos;				//!< ゲージ座標との座標の差分
+	bool												m_IsFacingRight;			//!< 右を向いているかどうかのフラグ. true→向いている false→向いていない
+
+	/** 
+	* 画像を逆転する関数 
+	* @param[in] rParam 魚のパラメータ
+	*/
+	void ProcessImageReversal(const FishParam& rParam);
 
 };	// class Balloon
 
