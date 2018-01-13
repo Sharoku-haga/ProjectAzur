@@ -32,14 +32,18 @@ public:
 	* Constructor
 	* @param[in] rIDs					描画のID群
 	* @param[in] pResrcDataFilePath		リソースデータのファイルパス
-	* @param[in] rFishPosDiff			魚座標との差分
 	*/
 	Balloon(const sl::DrawingID&	rIDs
-			, const std::string&	rResrcDataFilePath
-			, const D3DXVECTOR2&	rFishPosDiff);
+			, const std::string&	rResrcDataFilePath);
 
 	/** Destructor */
 	~Balloon();
+
+	/** 
+	* 初期化関数
+	* @param[in] rFishPosDiff			魚座標との差分
+	*/
+	void Initialize(const D3DXVECTOR2&	rFishPosDiff);
 
 	/** 
 	* 更新関数 
