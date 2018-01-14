@@ -2,7 +2,7 @@
 //!< @file		paFishCreator.cpp
 //!< @brief		pa::FishCreatorクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/23	更新履歴：2018/01/01
+//!< @data		作成日時：2017/12/23	更新履歴：2018/01/15
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -31,7 +31,15 @@ void FishCreator::Initialize()
 
 sl::UniquePtr<Fish> FishCreator::CreateFish(const D3DXVECTOR2& rPos)
 {
-	return sl::UniquePtr<Fish>(new Fish(rPos, m_pShapeCreator->CreateFishShape()));
+	return sl::UniquePtr<Fish>(new Fish(rPos, m_pShapeCreator->CreateFishShape(), CreateFishReaction()));
+}
+
+
+/* Private Functions ------------------------------------------------------------------------------------------ */
+
+sl::UniquePtr<FishReaction>	FishCreator::CreateFishReaction()
+{
+	return sl::UniquePtr<FishReaction>(new FishReaction(m_DrawingID, m_pResrcDataFilePath));
 }
 
 }	// namespace pa
