@@ -27,10 +27,8 @@ const int ResrcDataID = 24;		// リソースデータID
 }
 
 Balloon::Balloon(const sl::DrawingID&	rIDs
-				, const std::string&	rResrcDataFilePath
-				, const D3DXVECTOR2&	rFishPosDiff)
+				, const std::string&	rResrcDataFilePath)
 	: m_pDrawingData(new ObjDrawingData())
-	, m_GaugeDiffPos(rFishPosDiff)
 	, m_IsFacingRight(true)
 {
 	m_pDrawingData->m_IDs = rIDs;
@@ -44,6 +42,11 @@ Balloon::Balloon(const sl::DrawingID&	rIDs
 Balloon::~Balloon()
 {
 	sl::DX11GraphicsLibrary::Instance().ReleaseDXModel2D(m_pDrawingData->m_IDs.m_ModelID);
+}
+
+void Balloon::Initialize(const D3DXVECTOR2&	rFishPosDiff)
+{
+	m_GaugeDiffPos = rFishPosDiff;
 }
 
 void Balloon::Update(const FishParam& rParam)
