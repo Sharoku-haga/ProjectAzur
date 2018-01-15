@@ -2,7 +2,7 @@
 //!< @file		paFishReaction.cpp
 //!< @brief		pa::FishReactionクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/09	更新履歴：2018/01/14
+//!< @data		作成日時：2018/01/09	更新履歴：2018/01/15
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -25,7 +25,7 @@ FishReaction::~FishReaction()
 
 void FishReaction::Initialize()
 {
-	D3DXVECTOR2 balloonDiffPos = { 10.0f, 10.f};
+	D3DXVECTOR2 balloonDiffPos = { 50.0f, -90.0f};
 	m_pBalloon->Initialize(balloonDiffPos);
 }
 

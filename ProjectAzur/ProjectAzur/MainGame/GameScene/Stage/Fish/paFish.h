@@ -14,6 +14,8 @@
 #include "../paStageObjBase.h"
 #include "paFishParam.h"
 #include "FishShape/paFishShape.h"
+#include "FishReaction/paFishReaction.h"
+#include "FishReaction\paFishReaction.h"
 
 namespace pa
 {
@@ -32,8 +34,11 @@ public:
 	* Constructor 
 	* @param[in] rPos		位置座標
 	* @param[in] pShape		形状
+	* @param[in] pReaction	リアクション
 	*/
-	Fish(const D3DXVECTOR2& rPos, sl::UniquePtr<FishShape> pShape);
+	Fish(const D3DXVECTOR2& rPos
+		, sl::UniquePtr<FishShape> pShape
+		, sl::UniquePtr<FishReaction> pReaction);
 
 	/** Destructor */
 	virtual ~Fish();
@@ -50,6 +55,7 @@ public:
 private:
 	FishParam												m_Param;		//!< 魚のパラメータ
 	sl::UniquePtr<FishShape>								m_pShape;		//!< FishShapeクラスのインスタンスへのユニークポインタ
+	sl::UniquePtr<FishReaction>								m_pReaction;	//!< FishReactionクラスのインスタンスへのユニークポインタ
 	sl::UniquePtr<FishCollider
 				, sl::DefaultDeleter<FishCollider>>			m_pCollider;	//!< FishColliderクラスのインスタンスへのユニークポインタ
 	sl::UniquePtr<DrawTask
