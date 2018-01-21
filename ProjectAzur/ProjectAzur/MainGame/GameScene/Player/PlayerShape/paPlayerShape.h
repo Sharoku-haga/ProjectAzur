@@ -8,6 +8,7 @@
 #ifndef PA_PLAYER_SHAPE_H
 #define PA_PLAYER_SHAPE_H
 
+#include <string>
 #include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
 #include "sl/Library/Utility/slRect.h"
 #include "../../../paObjDrawingData.h"
@@ -33,10 +34,10 @@ public:
 	/** 
 	* Constructor
 	* @param[in] rIDs					描画のID群
-	* @param[in] pResrcDataFilePath		リソースデータのファイルパス
+	* @param[in] rResrcDataFilePath		リソースデータのファイルパス
 	*/
 	PlayerShape(const sl::DrawingID&	rIDs
-				, const char*	pResrcDataFilePath);
+				, const std::string&	rResrcDataFilePath);
 
 	/** Destrcutor */
 	~PlayerShape() = default;
@@ -100,7 +101,7 @@ private:
 	sl::DrawingID						m_InitialShapeID;		//!< プレイヤーの初期形状の描画ID
 	sl::fRect							m_CurrentRectSize;		//!< 現在の矩形サイズ
 	D3DXVECTOR2							m_BasePointPos;			//!< ベースポイントの座標
-	const char*							m_pResrcDataFilePath;	//!< リソースデータファイルへのパス
+	std::string							m_ResrcDataFilePath;	//!< リソースデータファイルへのパス
 	bool								m_IsInvisible;			//!< 透明(ゲーム中の表現は半透明)どうか true→ 透明である false→透明でない
 	bool								m_IsFacingRight;		//!< 右を向いているかどうか true→ 右を向いている false→向いていない
 
