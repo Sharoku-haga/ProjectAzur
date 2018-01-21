@@ -70,6 +70,9 @@
     <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishReaction">
       <UniqueIdentifier>{029abe18-f973-418d-b7e4-6f7e9e03f74b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\GameScene\Player\PlayerShape">
+      <UniqueIdentifier>{39c6c8f0-5f08-4eab-973a-34d039213c1f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -118,9 +121,6 @@
       <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\Player\paPlayerAction.cpp">
-      <Filter>Main\MainGame\GameScene\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="MainGame\GameScene\Player\paPlayerShape.cpp">
       <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\Stage\paBasePoint.cpp">
@@ -192,6 +192,15 @@
     <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\paFishReaction.cpp">
       <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction</Filter>
     </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerShape.cpp">
+      <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShell.cpp">
+      <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerOriginalShape.cpp">
+      <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\paMainGame.h">
@@ -246,9 +255,6 @@
       <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Player\paPlayerAction.h">
-      <Filter>Main\MainGame\GameScene\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="MainGame\GameScene\Player\paPlayerShape.h">
       <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Player\paPlayerCommonDeclaration.h">
@@ -331,6 +337,15 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\paFishReaction.h">
       <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerShape.h">
+      <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShell.h">
+      <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerOriginalShape.h">
+      <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
