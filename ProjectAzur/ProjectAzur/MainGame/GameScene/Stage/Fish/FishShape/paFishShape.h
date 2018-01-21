@@ -12,7 +12,7 @@
 #include <D3DX11.h>
 #include <D3DX10.h>
 #include "sl/Library/Graphics/DX11GraphicsLibrary/slDX11GraphicsLibrary.h"
-#include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
+#include "sl/Library/SmartPointer/SharedPtr/slSharedPtr.h"
 #include "../paFishParam.h"
 #include "../../../../paObjDrawingData.h"
 
@@ -60,6 +60,25 @@ public:
 	*/
 	const sl::fRect& GetCurrentRectSize();
 
+
+	/**
+	* Getter
+	* @return 描画する為のデータ
+	*/
+	sl::SharedPtr<ObjDrawingData> GetpDrawingData()
+	{
+		return m_pDrawingData;
+	}
+
+	/**
+	* 右を向いているかどうか確認する関数
+	* @return ture→右を向いている false→右を向いていない
+	*/
+	bool IsFacingRight()
+	{
+		return m_IsFacingRight;
+	}
+
 	/** 
 	* 描画するデータを調整する関数.
 	* 主に衝突判定処理後にデータが変わったらよぶ
@@ -72,7 +91,7 @@ public:
 
 private:
 	sl::DX11GraphicsLibrary&			m_rLibrary;				//!< グラフィックスライブラリのインスタンスへの参照
-	sl::UniquePtr<ObjDrawingData>		m_pDrawingData;			//!< 描画する為のデータ
+	sl::SharedPtr<ObjDrawingData>		m_pDrawingData;			//!< 描画する為のデータ
 	std::vector<sl::ModelID>			m_ModelIDs;				//!< モデルIDの動的配列(vector)
 	std::vector<sl::UVAnimeID>			m_UVAnimeIDs;			//!< UVアニメIDの動的配列(vector)
 	sl::fRect							m_CurrentRectSize;		//!< 現在の矩形サイズ

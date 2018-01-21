@@ -13,7 +13,7 @@
 #include "sl/Library/Utility/slDefine.h"
 #include "sl/Library/Graphics/DX11GraphicsLibrary/slDX11GraphicsLibrary.h"
 #include "paPlayerShape.h"
-#include "../../DrawingResrcDataFile/paDrawingResrcDataFile.h"
+#include "../../../DrawingResrcDataFile/paDrawingResrcDataFile.h"
 
 namespace pa
 {
