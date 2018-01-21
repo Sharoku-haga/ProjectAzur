@@ -9,7 +9,7 @@
 
 #include "paPlayer.h"
 #include "paPlayerAction.h"
-#include "paPlayerShape.h"
+#include "PlayerShape/paPlayerShape.h"
 #include "paPlayerCollider.h"
 #include "paPlayerCommonDeclaration.h"
 
