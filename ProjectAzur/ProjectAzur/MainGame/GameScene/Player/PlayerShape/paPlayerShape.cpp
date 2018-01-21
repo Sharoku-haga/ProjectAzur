@@ -18,70 +18,53 @@
 namespace pa
 {
 
+/* Unnamed Namespace ------------------------------------------------------------------------------------------ */
+
+namespace 
+{
+
+const int	 DrawTaskPriority = 2;		// 描画タスクの優先度
+
+}
+
 /* Public Functions ------------------------------------------------------------------------------------------- */
 
 PlayerShape::PlayerShape(const sl::DrawingID&	rIDs
 						, const std::string&	rResrcDataFilePath)
 	: m_rLibrary(sl::DX11GraphicsLibrary::Instance())
-	, m_InitialShapeID(rIDs)
 	, m_ResrcDataFilePath(rResrcDataFilePath)
-	, m_IsInvisible(false)
 {}
 
 void PlayerShape::Initialize(const PlayerParam&	rParam)
 {
-	int	 drawTaskPriority = 2;		// 描画タスクの優先度
-	m_pDrawingData->m_pTask.Reset(new DrawTask(drawTaskPriority, std::bind(&pa::PlayerShape::Draw, this)));
+	m_pOriginalShape.Reset(new PlayerOriginalShape());
+	m_pOriginalShape->Initialize(m_IDs, m_ResrcDataFilePath, rParam);
 
-	m_rLibrary.InformSizeData(m_pDrawingData->m_IDs.m_ModelID, m_CurrentRectSize);
-	m_IsFacingRight = rParam.m_IsFacingRight;
+	m_pFishShell.Reset(new PlayerFishShell());
+	m_pFishShell->Initialize();
+
+	m_pTask.Reset(new DrawTask(DrawTaskPriority, std::bind(&pa::PlayerShape::Draw, this)));
 }
 
 void PlayerShape::Update(const PlayerParam&	rParam)
 {
-	m_pDrawingData->m_Pos = rParam.m_Pos;
-	m_pDrawingData->m_Angle = rParam.m_Angle;
-
-	if(m_rLibrary.UpdateUVAnime(m_pDrawingData->m_IDs.m_ModelID, m_pDrawingData->m_IDs.m_UVAnimeID, true))
-	{	// アニメーションが更新されたら反転処理を行う
-		ProcessImageReversal(rParam);
-		if(m_IsFacingRight != rParam.m_IsFacingRight)
-		{
-			m_IsFacingRight = rParam.m_IsFacingRight;
-		}
-	
-		ProcessTransparent(rParam);
+	if(m_pFishShell->HasCreatedShaell())
+	{
+		m_pFishShell->Update(rParam);
 		return;
 	}
 
-	// 前の状態(右向いているかどうか)が異なっていたら反転処理を行う
-	if(m_IsFacingRight != rParam.m_IsFacingRight)
-	{
-		ProcessImageReversal(rParam);
-		m_IsFacingRight = rParam.m_IsFacingRight;
-	}
-
-	ProcessTransparent(rParam);
+	m_pOriginalShape->Update(rParam);
 }
 
-void PlayerShape::ChangeShape(const sl::DrawingID&	rIDs)
+void PlayerShape::ChangeShape(ObjDrawingData* pFishDrawingData)
 {
-	m_pDrawingData->m_IDs = rIDs;
-	m_rLibrary.InitUVAnime(m_pDrawingData->m_IDs.m_ModelID, m_pDrawingData->m_IDs.m_UVAnimeID);
-	m_rLibrary.InformSizeData(m_pDrawingData->m_IDs.m_ModelID, m_CurrentRectSize);
-	m_IsInvisible = false;		// 透明は初期形状のみの動作なので、ここでfalseにしておく
+	m_pFishShell->CreateShell(pFishDrawingData);
 }
 
 void PlayerShape::ChangeInitialShape()
 {
-	m_pDrawingData->m_IDs = m_InitialShapeID;
-	m_rLibrary.InitUVAnime(m_pDrawingData->m_IDs.m_ModelID, m_pDrawingData->m_IDs.m_UVAnimeID);
-	m_rLibrary.InformSizeData(m_pDrawingData->m_IDs.m_ModelID, m_CurrentRectSize);
-
-	// 念の為、透明処理をきっておく
-	std::vector<D3DXCOLOR> color(m_rLibrary.GetModel2DVertexCount(), NormalStateColorVal);
-	m_rLibrary.SetDXModel2DColorData(m_pDrawingData->m_IDs.m_ModelID, color);
-	m_IsInvisible = false;
+	m_pFishShell->DestroyShell();
 }
 
 const sl::fRect& PlayerShape::InformShapeSize()
@@ -89,22 +72,44 @@ const sl::fRect& PlayerShape::InformShapeSize()
 	return m_CurrentRectSize;
 }
 
+bool PlayerShape::IsInvisible()
+{
+	if(m_pFishShell->HasCreatedShaell())
+	{
+		return false;
+	}
+
+	return m_pOriginalShape->IsInvisible();
+}
+
 void PlayerShape::AdjustDrawingData(const PlayerParam& rParam)
 {
-	m_pDrawingData->m_Pos = rParam.m_Pos;
+	if(m_pFishShell->HasCreatedShaell())
+	{
+		m_pFishShell->AdjustDrawingData(rParam);
+		return;
+	}
+
+	m_pOriginalShape->AdjustDrawingData(rParam);
 }
 
 void PlayerShape::Finalize()
 {
-	m_rLibrary.ReleaseUVAnimation(m_pDrawingData->m_IDs.m_UVAnimeID);
-	m_rLibrary.ReleaseDXModel2D(m_pDrawingData->m_IDs.m_ModelID);
+	m_pFishShell->Finalize();
+	m_pOriginalShape->Finalize();
 }
 
 /* Private Functions ------------------------------------------------------------------------------------------ */
 
 void PlayerShape::Draw()
 {
+	if(m_pFishShell->HasCreatedShaell())
+	{
+		m_pFishShell->Draw(m_BasePointPos);
+		return;
+	}
 
+	m_pOriginalShape->Draw(m_BasePointPos);
 }
 
 }	// namespace pa

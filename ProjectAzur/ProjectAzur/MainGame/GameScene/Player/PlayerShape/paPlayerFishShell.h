@@ -25,7 +25,7 @@ class FishShape;
 //===================================================================================//
 //!< プレイヤーの魚の殻のクラス 
 //===================================================================================//
-class PlayerFishShell
+class PlayerFishShell final
 {
 
 public:
@@ -35,11 +35,14 @@ public:
 	/** Destructor */
 	~PlayerFishShell();
 
+	/** 初期化関数 */
+	void Initialize();
+
 	/**
 	* 魚の形を作成する関数 
-	* @param[in] pFishShape 魚の形状クラスのポインタ
+	* @param[in] pFishDrawingData	魚の描画データのポインタ
 	*/
-	void CreateShell(FishShape* pFishShape);
+	void CreateShell(ObjDrawingData* pFishDrawingData);
 
 	/** 魚の形を破棄する関数 */
 	void DestroyShell();
@@ -62,6 +65,9 @@ public:
 	* @param[in] rBasePointPos ベースポイント座標
 	*/
 	void Draw(const D3DXVECTOR2&	rBasePointPos);
+
+	/** 破棄関数 */
+	void Finalize();
 
 	/**
 	* Getter

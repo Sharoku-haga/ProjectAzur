@@ -27,9 +27,19 @@ PlayerFishShell::PlayerFishShell()
 PlayerFishShell::~PlayerFishShell()
 {}
 
-void PlayerFishShell::CreateShell(FishShape* pFishShape)
+void PlayerFishShell::Initialize()
 {
-	m_pDrawingData = pFishShape->GetpDrawingData();
+	m_pDrawingData.Reset();
+	m_RectSize.m_Left	= 0.0f;
+	m_RectSize.m_Bottom	= 0.0f;
+	m_RectSize.m_Right	= 0.0f;
+	m_RectSize.m_Top	= 0.0f;
+	m_HasCreatedShell	= false;
+}
+
+void PlayerFishShell::CreateShell(ObjDrawingData* pFishDrawingData)
+{
+	m_pDrawingData.Reset(pFishDrawingData);
 	m_rLibrary.InformSizeData(m_pDrawingData->m_IDs.m_ModelID, m_RectSize);
 	m_HasCreatedShell = true;
 }
@@ -41,7 +51,7 @@ void PlayerFishShell::DestroyShell()
 	m_RectSize.m_Bottom	= 0.0f;
 	m_RectSize.m_Right	= 0.0f;
 	m_RectSize.m_Top	= 0.0f;
-	m_HasCreatedShell = false;
+	m_HasCreatedShell	= false;
 }
 
 void PlayerFishShell::Update(const PlayerParam&	rParam)
@@ -87,6 +97,21 @@ void PlayerFishShell::Draw(const D3DXVECTOR2&	rBasePointPos)
 	constantBuffer.m_WindowSize.x = bufferSize.m_Right - bufferSize.m_Left;
 	constantBuffer.m_WindowSize.y = bufferSize.m_Bottom - bufferSize.m_Top;
 	m_rLibrary.DrawModel2D(m_pDrawingData->m_IDs, &constantBuffer);	
+}
+
+void PlayerFishShell::Finalize()
+{
+	if(m_pDrawingData.UseRefCount() == 0)
+	{
+		return;
+	}
+
+	if(m_pDrawingData.UseRefCount() > 1)
+	{
+		return;
+	}
+	m_rLibrary.ReleaseDXModel2D(m_pDrawingData->m_IDs.m_ModelID);
+	m_rLibrary.ReleaseUVAnimation(m_pDrawingData->m_IDs.m_UVAnimeID);
 }
 
 /* Private Functions ------------------------------------------------------------------------------------------ */
