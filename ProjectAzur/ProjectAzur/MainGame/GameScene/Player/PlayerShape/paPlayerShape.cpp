@@ -41,7 +41,7 @@ void PlayerShape::Initialize(const PlayerParam&	rParam)
 	m_pOriginalShape->Initialize(m_IDs, m_ResrcDataFilePath, rParam);
 
 	m_pFishShell.Reset(new PlayerFishShell());
-	m_pFishShell->Initialize();
+	m_pFishShell->Initialize(m_IDs, m_ResrcDataFilePath);
 
 	m_pTask.Reset(new DrawTask(DrawTaskPriority, std::bind(&pa::PlayerShape::Draw, this)));
 }

@@ -201,6 +201,9 @@
     <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerOriginalShape.cpp">
       <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
     </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShapeLine.cpp">
+      <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\paMainGame.h">
@@ -345,6 +348,9 @@
       <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerOriginalShape.h">
+      <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShapeLine.h">
       <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
     </ClInclude>
   </ItemGroup>

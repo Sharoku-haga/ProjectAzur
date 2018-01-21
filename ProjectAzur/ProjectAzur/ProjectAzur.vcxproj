@@ -135,6 +135,7 @@
     <ClCompile Include="MainGame\GameScene\Player\paPlayer.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\paPlayerAction.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\paPlayerCollider.cpp" />
+    <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShapeLine.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShell.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerOriginalShape.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerShape.cpp" />
@@ -179,6 +180,7 @@
     <ClInclude Include="MainGame\GameScene\Player\paPlayerAction.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayerCollider.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayerCommonDeclaration.h" />
+    <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShapeLine.h" />
     <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShell.h" />
     <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerOriginalShape.h" />
     <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerShape.h" />
