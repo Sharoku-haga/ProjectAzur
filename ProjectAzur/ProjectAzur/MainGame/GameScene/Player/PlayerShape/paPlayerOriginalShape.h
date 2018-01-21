@@ -9,6 +9,7 @@
 #define PA_PLAYER_ORIGINAL_SHAPE_H
 
 #include <string>
+#include "sl/Library/Graphics/DX11GraphicsLibrary/slDX11GraphicsLibrary.h"
 #include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
 #include "sl/Library/Utility/slRect.h"
 #include "../../../paObjDrawingData.h"
@@ -20,7 +21,7 @@ namespace pa
 //===================================================================================//
 //!< プレイヤーのオリジナルの形状クラス
 //===================================================================================//
-class PlayerOriginalShape
+class PlayerOriginalShape final
 {
 
 public:
@@ -61,6 +62,13 @@ public:
 
 	/** 破棄関数 */
 	void Finalize();
+
+	/**
+	* 形状が透明(ゲーム中の表現は半透明)かどうか
+	* @attention この透明という状態は初期形状のみの状態である
+	* @retrun true→ 透明である false→透明でない
+	*/
+	bool IsInvisible();
 
 	/**
 	* Getter

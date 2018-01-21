@@ -120,6 +120,11 @@ void PlayerOriginalShape::Finalize()
 	m_rLibrary.ReleaseDXModel2D(m_pDrawingData->m_IDs.m_ModelID);
 }
 
+bool PlayerOriginalShape::IsInvisible()
+{
+	return m_IsInvisible;
+}
+
 /* Private Functions ------------------------------------------------------------------------------------------ */
 
 void PlayerOriginalShape::ProcessImageReversal(const PlayerParam&	rParam)

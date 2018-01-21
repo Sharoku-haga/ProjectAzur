@@ -11,8 +11,11 @@
 #include <string>
 #include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
 #include "sl/Library/Utility/slRect.h"
+#include "../../../DrawTask/paDrawTask.h"
 #include "../../../paObjDrawingData.h"
 #include "../paPlayerCommonDeclaration.h"
+#include "paPlayerOriginalShape.h"
+#include "paPlayerFishShell.h"
 
 namespace sl
 {
@@ -56,9 +59,9 @@ public:
 
 	/** 
 	* 描画する形状を変える関数
-	* @param[in] rIDs		変えたい形状の描画のID群
+	* @param[in] pFishDrawingData	魚の描画データのポインタ
 	*/
-	void ChangeShape(const sl::DrawingID&	rIDs);
+	void ChangeShape(ObjDrawingData* pFishDrawingData);
 
 	/** 初期の形状に変える関数 */
 	void ChangeInitialShape();
@@ -74,7 +77,7 @@ public:
 	* @attention この透明という状態は初期形状のみの状態である
 	* @retrun true→ 透明である false→透明でない
 	*/
-	bool IsInvisible() { return m_IsInvisible; }
+	bool IsInvisible();
 
 	/** 
 	* 描画するデータを調整する関数.
@@ -97,29 +100,16 @@ public:
 
 private:
 	sl::DX11GraphicsLibrary&			m_rLibrary;				//!< グラフィックスライブラリのインスタンスへの参照
-	sl::UniquePtr<ObjDrawingData>		m_pDrawingData;			//!< 描画する為のデータ
-	sl::DrawingID						m_InitialShapeID;		//!< プレイヤーの初期形状の描画ID
 	sl::fRect							m_CurrentRectSize;		//!< 現在の矩形サイズ
 	D3DXVECTOR2							m_BasePointPos;			//!< ベースポイントの座標
+	sl::DrawingID						m_IDs;					//!< 描画ID群
 	std::string							m_ResrcDataFilePath;	//!< リソースデータファイルへのパス
-	bool								m_IsInvisible;			//!< 透明(ゲーム中の表現は半透明)どうか true→ 透明である false→透明でない
-	bool								m_IsFacingRight;		//!< 右を向いているかどうか true→ 右を向いている false→向いていない
+	sl::UniquePtr<DrawTask>				m_pTask;				//!< 描画タスクのユニークポインタ
+	sl::UniquePtr<PlayerFishShell>		m_pFishShell;			//!< PlayerFishShell(魚の殻)クラスのインスタンスへのポインタ
+	sl::UniquePtr<PlayerOriginalShape>	m_pOriginalShape;		//!< PlayerOriginalShape(基本形状)クラスのインスタンスへのポインタ
 
 	/** 描画関数 */
 	void Draw();
-
-	/** 
-	* 画像反転処理を行う関数 
-	* @param[in] rParam					プレイヤーのパラメータ
-	*/
-	void ProcessImageReversal(const PlayerParam&	rParam);
-
-	/**
-	* 透明化処理を行う関数
-	* 初期形状の場合のみ待機中透明となるため、その処理を行う
-	* @param[in] rParam					プレイヤーのパラメータ
-	*/
-	void ProcessTransparent(const PlayerParam&	rParam);
 
 };	// class PlayerShape
 
