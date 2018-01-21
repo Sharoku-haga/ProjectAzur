@@ -10,8 +10,8 @@
 
 #include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
 #include "sl/Library/Utility/slRect.h"
-#include "../../paObjDrawingData.h"
-#include "paPlayerCommonDeclaration.h"
+#include "../../../paObjDrawingData.h"
+#include "../paPlayerCommonDeclaration.h"
 
 namespace sl
 {
