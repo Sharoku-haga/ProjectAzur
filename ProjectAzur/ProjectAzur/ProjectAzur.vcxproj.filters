@@ -329,9 +329,6 @@
     <ClInclude Include="MainGame\GameScene\Stage\Fish\paFishManager.h">
       <Filter>Main\MainGame\GameScene\Stage\Fish</Filter>
     </ClInclude>
-    <ClInclude Include="MainGame\GameScene\Stage\Fish\paFishParam.h">
-      <Filter>Main\MainGame\GameScene\Stage\Fish</Filter>
-    </ClInclude>
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishCreator\paFishShapeCreator.h">
       <Filter>Main\MainGame\GameScene\Stage\Fish\FishCreator</Filter>
     </ClInclude>
@@ -373,6 +370,9 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMarkManager.h">
       <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\paFishCommonDeclaration.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,18 +1,29 @@
 ﻿//==================================================================================================================================//
-//!< @file		paFishParam.h
-//!< @brief		pa::FishParam構造体のヘッダ
+//!< @file		paFishCommonDeclaration.h
+//!< @brief		pa::Fishクラスに関連する共通宣言をまとめたヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/23	更新履歴：2017/12/25
+//!< @data		作成日時：2017/12/23	更新履歴：2018/01/23
 //==================================================================================================================================//
 
-#ifndef PA_FISH_PARAM_H
-#define PA_FISH_PARAM_H
+#ifndef PA_FISH_COMMON_DECLARATION_H
+#define PA_FISH_COMMON_DECLARATION_H
 
 #include <D3DX11.h>
 #include <D3DX10.h>
 
 namespace pa
 {
+
+/** 魚のリアクションのマークの種類の列挙 */
+enum REACTION_MARK_TYPE
+{
+	HUNGER = 0x01,		//!< 空腹
+	WARNING = 0x02,		//!< 警戒
+	ATTACK = 0x04,		//!< 攻撃
+	DISCOVERY = 0x08,	//!< 発見
+	REFUGE = 0x10,		//!< 避難
+
+};	// enum REACTION_MARK_TYPE
 
 //===================================================================================//
 //!< 魚のパラメータクラス。
@@ -22,11 +33,13 @@ struct FishParam
 	D3DXVECTOR2		m_Pos;						//!< 座標
 	float			m_Angle;					//!< 角度
 	bool			m_IsFacingRight;			//!< 右を向いているかどうかのフラグ. true→向いている false→向いていない
+	int				m_ReactionMarkFlag;			//!< 魚のリアクションマークのフラグ(ビット管理)
 
 	FishParam()
 		: m_Pos({0.0f, 0.0f})
 		, m_Angle(0.0f)
 		, m_IsFacingRight(true)
+		, m_ReactionMarkFlag(0)
 	{}
 
 };	// struct FishParam
@@ -34,7 +47,7 @@ struct FishParam
 }	// namespace pa
 
 
-#endif	// PA_FISH_PARAM_H
+#endif	// PA_FISH_COMMON_DECLARATION_H
 
 //==================================================================================================================================//
 // END OF FILE

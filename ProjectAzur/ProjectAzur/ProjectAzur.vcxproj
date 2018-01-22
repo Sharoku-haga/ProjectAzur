@@ -198,7 +198,7 @@
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishShape\paFishShape.h" />
     <ClInclude Include="MainGame\GameScene\Stage\Fish\paFish.h" />
     <ClInclude Include="MainGame\GameScene\Stage\Fish\paFishManager.h" />
-    <ClInclude Include="MainGame\GameScene\Stage\Fish\paFishParam.h" />
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\paFishCommonDeclaration.h" />
     <ClInclude Include="MainGame\GameScene\Stage\paIStageObjManager.h" />
     <ClInclude Include="MainGame\GameScene\Stage\paBasePoint.h" />
     <ClInclude Include="MainGame\GameScene\Stage\paStage.h" />
