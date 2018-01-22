@@ -10,7 +10,7 @@
 
 #include "sl/Library/Utility/slRect.h"
 #include "../../../Collider/paColliderBase.h"
-#include "../paFishParam.h"
+#include "../paFishCommonDeclaration.h"
 
 namespace pa
 {

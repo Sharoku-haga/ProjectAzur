@@ -12,7 +12,7 @@
 #include <D3DX10.h>
 #include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
 #include "../paStageObjBase.h"
-#include "paFishParam.h"
+#include "paFishCommonDeclaration.h"
 #include "FishShape/paFishShape.h"
 #include "FishReaction/paFishReaction.h"
 #include "FishReaction\paFishReaction.h"

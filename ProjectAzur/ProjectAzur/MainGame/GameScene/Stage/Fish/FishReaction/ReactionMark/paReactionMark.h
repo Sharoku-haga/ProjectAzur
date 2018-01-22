@@ -13,7 +13,7 @@
 #include <D3DX10.h>
 #include "sl/Library/Graphics/DX11GraphicsLibrary/slDX11GraphicsLibrary.h"
 #include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
-#include "../../paFishParam.h"
+#include "../../paFishCommonDeclaration.h"
 #include "../../../../../paObjDrawingData.h"
 #include "../../../../../DrawingResrcDataFile/paDrawingResrcDataFile.h"
 

@@ -11,7 +11,7 @@
 #include <string>
 #include "sl/Library/Graphics/slGraphicsID.h"
 #include "sl/Library/SmartPointer/UniquePtr/slUniquePtr.h"
-#include "../paFishParam.h"
+#include "../paFishCommonDeclaration.h"
 
 namespace pa
 {
