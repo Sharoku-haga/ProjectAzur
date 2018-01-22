@@ -2,7 +2,7 @@
 //!< @file		paReactionMark.cpp
 //!< @brief		pa::ReactionMarkクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/22	更新履歴：
+//!< @data		作成日時：2018/01/22	更新履歴：2018/01/23
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -19,10 +19,10 @@ namespace pa
 
 ReactionMark::ReactionMark(const sl::DrawingID& rIDs
 						, const DrawingResrcData& rResrc
-						, const std::string& rMarkName)
+						, const REACTION_MARK_TYPE& rMarkType)
 	: m_rLibrary(sl::DX11GraphicsLibrary::Instance())
 	, m_pDrawingData(new ObjDrawingData())
-	, m_Name(rMarkName)
+	, m_MarkType(rMarkType)
 	, m_IsFacingRight(true)
 {
 	m_pDrawingData->m_Pos.x = 0.0f;
@@ -41,9 +41,6 @@ ReactionMark::~ReactionMark()
 
 void ReactionMark::Update(const FishParam& rParam)
 {
-	m_pDrawingData->m_Pos = rParam.m_Pos;
-	m_pDrawingData->m_Angle = rParam.m_Angle;
-
 	// 前の状態(右向いているかどうか)が異なっていたら反転処理を行う
 	if(m_IsFacingRight != rParam.m_IsFacingRight)
 	{
@@ -51,13 +48,11 @@ void ReactionMark::Update(const FishParam& rParam)
 	}
 }
 
-void ReactionMark::AdjustDrawingData(const FishParam&	rParam)
+void ReactionMark::Draw(const FishParam& rParam, const D3DXVECTOR2& rBasePointPos)
 {
 	m_pDrawingData->m_Pos = rParam.m_Pos;
-}
+	m_pDrawingData->m_Angle = rParam.m_Angle;
 
-void ReactionMark::Draw(const D3DXVECTOR2& rBasePointPos)
-{
 	D3DXMATRIX matWorld;
 	D3DXVECTOR2 drawingPos = (m_pDrawingData->m_Pos - rBasePointPos);
 
