@@ -30,7 +30,7 @@ PlayerFishShapeLine::PlayerFishShapeLine(const sl::DrawingID&	rIDs
 	m_pDrawingData->m_IDs = rIDs;
 
 	// モデル作成
-	DrawingResrcDataFile::Instance().LoadDataFile(rResrcDataFilePath);
+	//DrawingResrcDataFile::Instance().LoadDataFile(rResrcDataFilePath);
 
 	int resrcDataID = 12;
 	DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(rResrcDataFilePath, resrcDataID);
