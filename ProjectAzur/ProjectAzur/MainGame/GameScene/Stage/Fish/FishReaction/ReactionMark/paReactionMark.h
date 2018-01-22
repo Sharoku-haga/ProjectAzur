@@ -2,7 +2,7 @@
 //!< @file		paReactionMark.h
 //!< @brief		pa::ReactionMarkクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/22	更新履歴：
+//!< @data		作成日時：2018/01/22	更新履歴：2018/01/23
 //==================================================================================================================================//
 
 #ifndef PA_REACTION_MARK_H
@@ -27,10 +27,15 @@ class ReactionMark
 {
 
 public:
-	/** Constructor */
+	/** 
+	* Constructor
+	* @param[in] rIDs		描画ID
+	* @param[in] rResrc		リソースデータ
+	* @param[in] rMarkType	リアクションマークの種類
+	*/
 	ReactionMark(const sl::DrawingID& rIDs
 				, const DrawingResrcData& rResrc
-				, const std::string& rMarkName);
+				, const REACTION_MARK_TYPE& rMarkType);
 
 	/** Destructor */
 	~ReactionMark();
@@ -43,27 +48,21 @@ public:
 
 	/**
 	* 描画関数
-	* @param[in] rBasePointPos ベースポイントの座標
+	* @param[in] rParam			魚のパラメータ
+	* @param[in] rBasePointPos	ベースポイントの座標
 	*/
-	void Draw(const D3DXVECTOR2& rBasePointPos);
-
-	/** 
-	* 描画するデータを調整する関数.
-	* 主に衝突判定処理後にデータが変わったらよぶ
-	* @param[in] rParam					魚のパラメータ
-	*/
-	void AdjustDrawingData(const FishParam&	rParam);
+	void Draw(const FishParam& rParam, const D3DXVECTOR2& rBasePointPos);
 
 	/**
 	* Getter
-	* @return リアクションマークの名前
+	* @return リアクションマークの種類
 	*/
-	inline const std::string& GetName() { return m_Name; }
+	inline const REACTION_MARK_TYPE& GetMarkType() { return m_MarkType; }
 
 private:
 	sl::DX11GraphicsLibrary&			m_rLibrary;				//!< グラフィックスライブラリのインスタンスへの参照
 	sl::UniquePtr<ObjDrawingData>		m_pDrawingData;			//!< 描画データのユニークポインタ
-	std::string							m_Name;					//!< リアクションマークの名前
+	REACTION_MARK_TYPE					m_MarkType;				//!< リアクションマークの種類
 	bool								m_IsFacingRight;		//!< 右を向いているかどうか true→ 右を向いている false→向いていない
 
 	/** 画像反転処理を行う関数 */
