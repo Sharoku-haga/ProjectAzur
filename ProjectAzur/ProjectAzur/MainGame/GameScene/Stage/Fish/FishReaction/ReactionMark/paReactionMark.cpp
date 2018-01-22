@@ -19,9 +19,11 @@ namespace pa
 
 ReactionMark::ReactionMark(const sl::DrawingID& rIDs
 						, const DrawingResrcData& rResrc
-						, const REACTION_MARK_TYPE& rMarkType)
+						, const REACTION_MARK_TYPE& rMarkType
+						, const D3DXVECTOR2& rFishDiffPos)
 	: m_rLibrary(sl::DX11GraphicsLibrary::Instance())
 	, m_pDrawingData(new ObjDrawingData())
+	, m_FishDiffPos(rFishDiffPos)
 	, m_MarkType(rMarkType)
 	, m_IsFacingRight(true)
 {
@@ -44,13 +46,14 @@ void ReactionMark::Update(const FishParam& rParam)
 	// 前の状態(右向いているかどうか)が異なっていたら反転処理を行う
 	if(m_IsFacingRight != rParam.m_IsFacingRight)
 	{
-		ProcessImageReversal();
+		m_FishDiffPos = -m_FishDiffPos;
+		m_IsFacingRight = rParam.m_IsFacingRight;
 	}
 }
 
 void ReactionMark::Draw(const FishParam& rParam, const D3DXVECTOR2& rBasePointPos)
 {
-	m_pDrawingData->m_Pos = rParam.m_Pos;
+	m_pDrawingData->m_Pos = rParam.m_Pos + m_FishDiffPos;
 	m_pDrawingData->m_Angle = rParam.m_Angle;
 
 	D3DXMATRIX matWorld;
@@ -67,29 +70,6 @@ void ReactionMark::Draw(const FishParam& rParam, const D3DXVECTOR2& rBasePointPo
 	constantBuffer.m_WindowSize.y = bufferSize.m_Bottom - bufferSize.m_Top;
 	m_rLibrary.DrawModel2D(m_pDrawingData->m_IDs, &constantBuffer);	
 
-}
-
-/* Private Functions ------------------------------------------------------------------------------------------ */
-
-void ReactionMark::ProcessImageReversal()
-{
-	sl::fRect currentUVRect;
-	m_rLibrary.InformUVData(m_pDrawingData->m_IDs.m_ModelID, currentUVRect);
-	
-	if( currentUVRect.m_Left > currentUVRect.m_Right)
-	{	
-		sl::SwapTemplate(currentUVRect.m_Left, currentUVRect.m_Right);
-		m_rLibrary.SetDXModel2DUVData(m_pDrawingData->m_IDs.m_ModelID, currentUVRect);
-		m_IsFacingRight = true;
-		return;
-	}
-
-	if(currentUVRect.m_Left < currentUVRect.m_Right)
-	{	
-		sl::SwapTemplate(currentUVRect.m_Left, currentUVRect.m_Right);
-		m_rLibrary.SetDXModel2DUVData(m_pDrawingData->m_IDs.m_ModelID, currentUVRect);
-		m_IsFacingRight = false;
-	}
 }
 
 }	// namespace pa

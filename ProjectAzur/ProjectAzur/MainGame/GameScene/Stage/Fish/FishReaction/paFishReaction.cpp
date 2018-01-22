@@ -2,7 +2,7 @@
 //!< @file		paFishReaction.cpp
 //!< @brief		pa::FishReactionクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/09	更新履歴：2018/01/15
+//!< @data		作成日時：2018/01/09	更新履歴：2018/01/23
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -34,9 +34,9 @@ void FishReaction::Upadte(const FishParam& rParam)
 	m_pBalloon->Update(rParam);
 }
 
-void FishReaction::Draw(const FishParam& rParam)
+void FishReaction::Draw(const FishParam& rParam, const D3DXVECTOR2& rBasePointPos)
 {
-	m_pBalloon->Draw(rParam);
+	m_pBalloon->Draw(rParam, rBasePointPos);
 }
 
 }	// namespace pa

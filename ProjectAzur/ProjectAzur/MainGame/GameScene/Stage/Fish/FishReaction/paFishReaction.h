@@ -2,7 +2,7 @@
 //!< @file		paFishReaction.h
 //!< @brief		pa::FishReactionクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/09	更新履歴：2018/01/14
+//!< @data		作成日時：2018/01/09	更新履歴：2018/01/23
 //==================================================================================================================================//
 
 #ifndef PA_FISH_REACTION_H
@@ -47,9 +47,10 @@ public:
 
 	/** 
 	* 描画関数 
-	* @param[in] rParam 魚のパラメータ 
+	* @param[in] rParam			魚のパラメータ 
+	* @param[in] rBasePointPos	ベースポイントの座標
 	*/
-	void Draw(const FishParam& rParam);
+	void Draw(const FishParam& rParam, const D3DXVECTOR2& rBasePointPos);
 
 private:
 	sl::UniquePtr<Balloon, sl::DefaultDeleter<Balloon>>		m_pBalloon;					//!< Balloonクラスのインスタンスへのユニークポインタ
