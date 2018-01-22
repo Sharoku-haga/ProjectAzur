@@ -31,8 +31,11 @@ const	D3DXCOLOR	InvisibleStateColorVal	= 0x55ffffff;		// 透明状態のとき�
 
 PlayerOriginalShape::PlayerOriginalShape()
 	: m_rLibrary(sl::DX11GraphicsLibrary::Instance())
+	, m_IsFacingRight(true)
 	, m_IsInvisible(false)
-{}
+{
+	m_pDrawingData.Reset();
+}
 
 PlayerOriginalShape::~PlayerOriginalShape()
 {}
@@ -116,6 +119,11 @@ void PlayerOriginalShape::Draw(const D3DXVECTOR2&	rBasePointPos)
 
 void PlayerOriginalShape::Finalize()
 {
+	if(m_pDrawingData.Get() == nullptr)
+	{
+		return;
+	}
+
 	m_rLibrary.ReleaseUVAnimation(m_pDrawingData->m_IDs.m_UVAnimeID);
 	m_rLibrary.ReleaseDXModel2D(m_pDrawingData->m_IDs.m_ModelID);
 }
