@@ -2,7 +2,7 @@
 //!< @file		paBalloon.cpp
 //!< @brief		pa::Balloonクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/09	更新履歴：2018/01/13
+//!< @data		作成日時：2018/01/09	更新履歴：2018/01/23
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -46,7 +46,7 @@ Balloon::~Balloon()
 
 void Balloon::Initialize(const D3DXVECTOR2&	rFishPosDiff)
 {
-	m_GaugeDiffPos = rFishPosDiff;
+	m_FishDiffPos = rFishPosDiff;
 }
 
 void Balloon::Update(const FishParam& rParam)
@@ -59,10 +59,10 @@ void Balloon::Update(const FishParam& rParam)
 	}
 }
 
-void Balloon::Draw(const FishParam& rParam)
+void Balloon::Draw(const FishParam& rParam, const D3DXVECTOR2& rBasePointPos)
 {
 	// 座標を更新 ゲージの座標に差分を足して表示
-	m_pDrawingData->m_Pos = (rParam.m_Pos + m_GaugeDiffPos);
+	m_pDrawingData->m_Pos = (rParam.m_Pos + m_FishDiffPos) - rBasePointPos;
 	m_pDrawingData->m_Angle = rParam.m_Angle;
 
 	D3DXMATRIX matWorld;
@@ -82,7 +82,7 @@ void Balloon::Draw(const FishParam& rParam)
 
 void Balloon::ProcessImageReversal(const FishParam& rParam)
 {
-	m_GaugeDiffPos = -m_GaugeDiffPos;
+	m_FishDiffPos = -m_FishDiffPos;
 	sl::fRect currentUVRect;
 	sl::DX11GraphicsLibrary::Instance().InformUVData(m_pDrawingData->m_IDs.m_ModelID, currentUVRect);
 	

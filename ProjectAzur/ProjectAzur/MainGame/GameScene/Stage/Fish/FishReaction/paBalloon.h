@@ -2,7 +2,7 @@
 //!< @file		paBalloon.h
 //!< @brief		pa::Balloonクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/09	更新履歴：2018/01/11
+//!< @data		作成日時：2018/01/09	更新履歴：2018/01/23
 //==================================================================================================================================//
 
 #ifndef PA_BALLOON_H
@@ -53,14 +53,15 @@ public:
 
 	/** 
 	* 描画関数 
-	* @param[in] rParam 魚のパラメータ 
+	* @param[in] rParam			魚のパラメータ 
+	* @param[in] rBasePointPos	ベースポイントの座標
 	*/
-	void Draw(const FishParam& rParam);
+	void Draw(const FishParam& rParam, const D3DXVECTOR2& rBasePointPos);
 
 private:
 	sl::UniquePtr<ObjDrawingData
 				, sl::DefaultDeleter<ObjDrawingData>>	m_pDrawingData;				//!< 描画データ構造体のインスタンスへのユニークポインタ
-	D3DXVECTOR2											m_GaugeDiffPos;				//!< ゲージ座標との座標の差分
+	D3DXVECTOR2											m_FishDiffPos;				//!< 魚の座標との差分
 	bool												m_IsFacingRight;			//!< 右を向いているかどうかのフラグ. true→向いている false→向いていない
 
 	/** 

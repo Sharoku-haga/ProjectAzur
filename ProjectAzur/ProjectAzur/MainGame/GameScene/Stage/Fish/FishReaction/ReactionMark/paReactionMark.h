@@ -28,14 +28,16 @@ class ReactionMark
 
 public:
 	/** 
-	* Constructor
-	* @param[in] rIDs		描画ID
-	* @param[in] rResrc		リソースデータ
-	* @param[in] rMarkType	リアクションマークの種類
+	* Constructor	
+	* @param[in] rIDs			描画ID
+	* @param[in] rResrc			リソースデータ
+	* @param[in] rMarkType		リアクションマークの種類
+	* @param[in] rFishDiffPos	魚座標との差分
 	*/
 	ReactionMark(const sl::DrawingID& rIDs
 				, const DrawingResrcData& rResrc
-				, const REACTION_MARK_TYPE& rMarkType);
+				, const REACTION_MARK_TYPE& rMarkType
+				, const D3DXVECTOR2& rFishDiffPos);
 
 	/** Destructor */
 	~ReactionMark();
@@ -62,11 +64,9 @@ public:
 private:
 	sl::DX11GraphicsLibrary&			m_rLibrary;				//!< グラフィックスライブラリのインスタンスへの参照
 	sl::UniquePtr<ObjDrawingData>		m_pDrawingData;			//!< 描画データのユニークポインタ
+	D3DXVECTOR2							m_FishDiffPos;			//!< 魚の座標との差分
 	REACTION_MARK_TYPE					m_MarkType;				//!< リアクションマークの種類
 	bool								m_IsFacingRight;		//!< 右を向いているかどうか true→ 右を向いている false→向いていない
-
-	/** 画像反転処理を行う関数 */
-	void ProcessImageReversal();
 
 };	// class ReactionMark
 
