@@ -144,6 +144,9 @@
     <ClCompile Include="MainGame\GameScene\Stage\Fish\FishCreator\psFishCreator.cpp" />
     <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\paBalloon.cpp" />
     <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\paFishReaction.cpp" />
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMark.cpp" />
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMarkFactory.cpp" />
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMarkManager.cpp" />
     <ClCompile Include="MainGame\GameScene\Stage\Fish\FishShape\paFishShape.cpp" />
     <ClCompile Include="MainGame\GameScene\Stage\Fish\paFish.cpp" />
     <ClCompile Include="MainGame\GameScene\Stage\Fish\paFishManager.cpp" />
@@ -189,6 +192,9 @@
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishCreator\paFishShapeCreator.h" />
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\paBalloon.h" />
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\paFishReaction.h" />
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMark.h" />
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMarkFactory.h" />
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMarkManager.h" />
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishShape\paFishShape.h" />
     <ClInclude Include="MainGame\GameScene\Stage\Fish\paFish.h" />
     <ClInclude Include="MainGame\GameScene\Stage\Fish\paFishManager.h" />

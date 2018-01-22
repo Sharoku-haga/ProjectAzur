@@ -73,6 +73,9 @@
     <Filter Include="Main\MainGame\GameScene\Player\PlayerShape">
       <UniqueIdentifier>{39c6c8f0-5f08-4eab-973a-34d039213c1f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark">
+      <UniqueIdentifier>{401575e3-ddd4-4d31-98cd-be3cdad42de6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -203,6 +206,15 @@
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShapeLine.cpp">
       <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMark.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMarkFactory.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMarkManager.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -352,6 +364,15 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShapeLine.h">
       <Filter>Main\MainGame\GameScene\Player\PlayerShape</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMark.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMarkFactory.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMarkManager.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
