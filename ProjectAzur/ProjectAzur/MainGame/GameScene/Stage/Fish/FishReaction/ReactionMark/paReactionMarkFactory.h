@@ -9,6 +9,7 @@
 #define PA_REACTION_MARK_FACTORY_H
 
 #include <map>
+#include <vector>
 #include <sl/Library/Singleton/slUserManualSingleton.h>
 #include "sl/Library/SmartPointer/SharedPtr/slSharedPtr.h"
 #include "paReactionMark.h"
@@ -18,7 +19,7 @@ namespace pa
 {
 
 //===================================================================================//
-//!< リアクションのマークを生成、管理を行うクラス
+//!< リアクションのマーク関連の生成、管理を行うクラス
 //!< Singletonクラス
 //!< クラス生成、初期化などの処理はFishManager内にて行う
 //===================================================================================//
@@ -35,6 +36,14 @@ public:
 	void Initialize(const sl::DrawingID&	rIDs
 					, const std::string&	rResrcDataFilePath
 					, const D3DXVECTOR2&	rFishDiffPos);
+
+	/**
+	* リアクションマークのvectorを生成する関数
+	* @param[in] reactionMarkFlag	前のリアクションマークのフラグ
+	* @param[out] rMarks			リアクションマークの種類を格納したvector							
+	*/
+	void CreateReactionMarks(int reactionMarkFlag
+								, std::vector<REACTION_MARK_TYPE>& rMarks);
 
 	/**
 	* Getter

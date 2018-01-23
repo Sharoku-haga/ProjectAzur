@@ -59,6 +59,37 @@ void ReactionMarkFactory::Initialize(const sl::DrawingID&	rIDs
 	}
 }
 
+void ReactionMarkFactory::CreateReactionMarks(int reactionMarkFlag
+											, std::vector<REACTION_MARK_TYPE>& rMarks)
+{
+	std::vector<REACTION_MARK_TYPE>().swap(rMarks);
+
+	if(reactionMarkFlag & HUNGER)
+	{
+		rMarks.push_back(HUNGER);
+	}
+
+	if(reactionMarkFlag & WARNING)
+	{
+		rMarks.push_back(WARNING);
+	}
+
+	if(reactionMarkFlag & ATTACK)
+	{
+		rMarks.push_back(ATTACK);
+	}
+
+	if(reactionMarkFlag & DISCOVERY)
+	{
+		rMarks.push_back(DISCOVERY);
+	}
+
+	if(reactionMarkFlag & REFUGE)
+	{
+		rMarks.push_back(REFUGE);
+	}
+}
+
 }	// namespace pa
 
 //==================================================================================================================================//
