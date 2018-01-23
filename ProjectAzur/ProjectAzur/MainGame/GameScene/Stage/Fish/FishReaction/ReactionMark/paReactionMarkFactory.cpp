@@ -21,41 +21,43 @@ void ReactionMarkFactory::Initialize(const sl::DrawingID&	rIDs
 									, const std::string&	rResrcDataFilePath
 									, const D3DXVECTOR2&	rFishDiffPos)
 {
+	m_FishDiffPos = rFishDiffPos;
+
 	// インスタンス作成
 
 	// HUNGER
 	{
 		int resrcDataID = 1;
 		DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(rResrcDataFilePath, resrcDataID);
-		m_pMark[HUNGER].Reset(new ReactionMark(rIDs, rResrc, HUNGER, rFishDiffPos));
+		m_pMark[HUNGER].Reset(new ReactionMark(rIDs, rResrc, HUNGER, m_FishDiffPos));
 	}
 	
 	// WARNING 
 	{
-		int resrcDataID = 1;
+		int resrcDataID = 10;
 		DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(rResrcDataFilePath, resrcDataID);
-		m_pMark[WARNING].Reset(new ReactionMark(rIDs, rResrc, WARNING, rFishDiffPos));
+		m_pMark[WARNING].Reset(new ReactionMark(rIDs, rResrc, WARNING, m_FishDiffPos));
 	}
 
 	// ATTACK
 	{
 		int resrcDataID = 1;
 		DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(rResrcDataFilePath, resrcDataID);
-		m_pMark[ATTACK].Reset(new ReactionMark(rIDs, rResrc, ATTACK, rFishDiffPos));
+		m_pMark[ATTACK].Reset(new ReactionMark(rIDs, rResrc, ATTACK, m_FishDiffPos));
 	}
 
 	// DISCOVERY
 	{
 		int resrcDataID = 1;
 		DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(rResrcDataFilePath, resrcDataID);
-		m_pMark[DISCOVERY].Reset(new ReactionMark(rIDs, rResrc, DISCOVERY, rFishDiffPos));
+		m_pMark[DISCOVERY].Reset(new ReactionMark(rIDs, rResrc, DISCOVERY, m_FishDiffPos));
 	}
 
 	// REFUGE
 	{
 		int resrcDataID = 1;
 		DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(rResrcDataFilePath, resrcDataID);
-		m_pMark[REFUGE].Reset(new ReactionMark(rIDs, rResrc, REFUGE, rFishDiffPos));
+		m_pMark[REFUGE].Reset(new ReactionMark(rIDs, rResrc, REFUGE, m_FishDiffPos));
 	}
 }
 

@@ -77,6 +77,11 @@ void ReactionMarkManager::Draw(const FishParam& rParam, const D3DXVECTOR2& rBase
 
 void ReactionMarkManager::ChangeDispMark()
 {
+	if(m_DispMarks.size() == 0)
+	{
+		return;
+	}
+
 	++m_CurrentMarkOrderIndex;
 
 	if(m_DispMarks.size() == 1)

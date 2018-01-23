@@ -55,9 +55,19 @@ public:
 		return m_pMark[type];
 	}
 
+	/**
+	* Getter
+	* @return 魚との差異座標
+	*/
+	const D3DXVECTOR2& GetFishDiffPos()
+	{
+		return m_FishDiffPos;
+	}
+
 private:
 	friend class sl::UserManualSingleton <ReactionMarkFactory>;
 	std::map<REACTION_MARK_TYPE, sl::SharedPtr<ReactionMark>>		m_pMark;			//!< ReactionMarkクラスのインスタンスへのポインタのmap
+	D3DXVECTOR2														m_FishDiffPos;		//!< 魚との差異座標
 
 	/** Constructor */
 	ReactionMarkFactory() = default;

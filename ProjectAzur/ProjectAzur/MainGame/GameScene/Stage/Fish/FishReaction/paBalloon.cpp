@@ -35,7 +35,7 @@ Balloon::Balloon(const sl::DrawingID&	rIDs
 	DrawingResrcDataFile::Instance().LoadDataFile(rResrcDataFilePath);
 
 	DrawingResrcData& rResrc = DrawingResrcDataFile::Instance().GetDrawingData(rResrcDataFilePath, ResrcDataID);
-	sl::Model2DCreationData data(rResrc.m_Width, rResrc.m_Height, rResrc.m_UVRect, false);
+	sl::Model2DCreationData data(rResrc.m_Width, rResrc.m_Height, rResrc.m_UVRect, true);
 	m_pDrawingData->m_IDs.m_ModelID = sl::DX11GraphicsLibrary::Instance().CreateDXModel2D(data);
 }
 
