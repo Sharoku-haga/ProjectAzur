@@ -17,6 +17,7 @@ namespace pa
 {
 
 class Balloon;
+class ReactionMarkManager;
 
 //===================================================================================//
 //!< 魚のリアクションクラス
@@ -36,8 +37,11 @@ public:
 	/** Destructor */
 	~FishReaction();
 
-	/** 初期化関数 */
-	void Initialize();
+	/** 
+	* 初期化関数 
+	* @param[in] rParam 魚のパラメータ
+	*/
+	void Initialize(const FishParam& rParam);
 
 	/** 
 	* 更新関数 
@@ -53,7 +57,9 @@ public:
 	void Draw(const FishParam& rParam, const D3DXVECTOR2& rBasePointPos);
 
 private:
-	sl::UniquePtr<Balloon, sl::DefaultDeleter<Balloon>>		m_pBalloon;					//!< Balloonクラスのインスタンスへのユニークポインタ
+	sl::UniquePtr<Balloon, sl::DefaultDeleter<Balloon>>		m_pBalloon;						//!< Balloonクラスのインスタンスへのユニークポインタ
+	sl::UniquePtr<ReactionMarkManager
+				, sl::DefaultDeleter<ReactionMarkManager>>	m_pReactionMarkManager;			//!< ReactionMarkManagerクラスのインスタンスへのユニークポインタ
 
 };	// class FishReaction
 

@@ -11,6 +11,7 @@
 #include"../../../DrawingResrcDataFile/paDrawingResrcDataFile.h"
 #include "FishCreator/paFishCreator.h"
 #include "paFish.h"
+#include "FishReaction/ReactionMark/paReactionMarkFactory.h"
 
 namespace pa
 {
@@ -36,6 +37,11 @@ void FishManager::Initialize()
 	// FishCreatorクラスの生成と初期化
 	m_pCreator.Reset(new FishCreator(m_DrawingID, m_ResrcDataFilePath.c_str()));
 	m_pCreator->Initialize();
+
+	// 魚に関連するSingletonクラスの生成と初期化
+	D3DXVECTOR2 diffPos = { 80.0f, -50.0f};
+	ReactionMarkFactory::Create();
+	ReactionMarkFactory::Instance().Initialize(m_DrawingID, m_ResrcDataFilePath, diffPos);
 
 	// 魚クラスの生成
 	/** @todo 現在仮実装 */
@@ -66,6 +72,8 @@ void FishManager::Finalize()
 
 	std::vector<sl::UniquePtr<Fish
 		, sl::DefaultDeleter<Fish>>>().swap(m_pFishes);
+
+	ReactionMarkFactory::Destroy();
 }
 
 }	// namespace pa

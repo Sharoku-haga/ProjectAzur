@@ -39,7 +39,7 @@ Fish::~Fish()
 void Fish::Initialize()
 {
 	m_pShape->Initialize(m_Param);
-	m_pReaction->Initialize();
+	m_pReaction->Initialize(m_Param);
 
 	m_pDrawTask.Reset(new DrawTask(DrawTaskPriority, std::bind(&pa::Fish::Draw, this)));
 

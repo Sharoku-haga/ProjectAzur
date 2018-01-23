@@ -9,6 +9,8 @@
 
 #include "paFishReaction.h"
 #include "paBalloon.h"
+#include "ReactionMark/paReactionMarkFactory.h"
+#include "ReactionMark\paReactionMarkManager.h"
 
 namespace pa
 {
@@ -18,25 +20,28 @@ namespace pa
 FishReaction::FishReaction(const sl::DrawingID&	rIDs
 						, const std::string&	rResrcDataFilePath)
 	: m_pBalloon(new Balloon(rIDs, rResrcDataFilePath))
+	, m_pReactionMarkManager(new ReactionMarkManager())
 {}
 
 FishReaction::~FishReaction()
 {}
 
-void FishReaction::Initialize()
+void FishReaction::Initialize(const FishParam& rParam)
 {
-	D3DXVECTOR2 balloonDiffPos = { 50.0f, -90.0f};
-	m_pBalloon->Initialize(balloonDiffPos);
+	m_pBalloon->Initialize(ReactionMarkFactory::Instance().GetFishDiffPos());
+	m_pReactionMarkManager->Initialize(rParam);
 }
 
 void FishReaction::Upadte(const FishParam& rParam)
 {
 	m_pBalloon->Update(rParam);
+	m_pReactionMarkManager->Update(rParam);
 }
 
 void FishReaction::Draw(const FishParam& rParam, const D3DXVECTOR2& rBasePointPos)
 {
 	m_pBalloon->Draw(rParam, rBasePointPos);
+	m_pReactionMarkManager->Draw(rParam, rBasePointPos);
 }
 
 }	// namespace pa
