@@ -17,6 +17,7 @@ namespace pa
 /** 魚のリアクションのマークの種類の列挙 */
 enum REACTION_MARK_TYPE
 {
+	NONE = 0x00,		//!< 何もない
 	HUNGER = 0x01,		//!< 空腹
 	WARNING = 0x02,		//!< 警戒
 	ATTACK = 0x04,		//!< 攻撃
