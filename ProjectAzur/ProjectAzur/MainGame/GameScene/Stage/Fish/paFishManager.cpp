@@ -16,6 +16,15 @@
 namespace pa
 {
 
+/* Unnamed Namespace ------------------------------------------------------------------------------------------ */
+
+namespace
+{
+
+const int		FishCount = 3;			//!< 魚の数
+
+}
+
 /* Public Functions ------------------------------------------------------------------------------------------- */
 
 FishManager::FishManager(const sl::DrawingID&	rIDs
@@ -46,7 +55,10 @@ void FishManager::Initialize()
 	// 魚クラスの生成
 	/** @todo 現在仮実装 */
 
-	m_pFishes.emplace_back(m_pCreator->CreateFish(D3DXVECTOR2(200.f, 200.f)));
+	for(int i = 0; i < FishCount; ++i)
+	{
+		m_pFishes.emplace_back(m_pCreator->CreateFish());
+	}
 
 	// Fishクラスの初期化
 	for(auto& pfish : m_pFishes)

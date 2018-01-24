@@ -9,6 +9,7 @@
 
 #include "paFishCreator.h"
 #include "paFishShapeCreator.h"
+#include "../FishSpawnPoint/paFishSpawnPoint.h"
 
 namespace pa
 {
@@ -27,11 +28,17 @@ FishCreator::~FishCreator()
 void FishCreator::Initialize()
 {
 	m_pShapeCreator.Reset(new FishShapeCreator(m_DrawingID, m_pResrcDataFilePath));
+	m_pFishSpawnPoint.Reset(new FishSpawnPoint());
+	m_pFishSpawnPoint->Initialize();
 }
 
-sl::UniquePtr<Fish> FishCreator::CreateFish(const D3DXVECTOR2& rPos)
+sl::UniquePtr<Fish> FishCreator::CreateFish()
 {
-	return sl::UniquePtr<Fish>(new Fish(rPos, m_pShapeCreator->CreateFishShape(), CreateFishReaction()));
+	sl::UniquePtr<Fish> pFish(new Fish(m_pFishSpawnPoint->GetPointPos(), m_pShapeCreator->CreateFishShape(), CreateFishReaction()));
+
+	m_pFishSpawnPoint->UpdatePoint();
+
+	return pFish;
 }
 
 

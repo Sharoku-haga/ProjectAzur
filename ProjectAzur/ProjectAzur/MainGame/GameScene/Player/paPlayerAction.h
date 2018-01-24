@@ -8,6 +8,7 @@
 #ifndef PA_PLAYER_ACTION_H
 #define PA_PLAYER_ACTION_H
 
+#include <D3DX11.h>
 #include <D3DX10.h>
 #include "paPlayerCommonDeclaration.h"
 
