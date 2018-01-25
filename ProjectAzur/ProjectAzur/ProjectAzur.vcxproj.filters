@@ -76,6 +76,9 @@
     <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark">
       <UniqueIdentifier>{401575e3-ddd4-4d31-98cd-be3cdad42de6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishSpawnPoint">
+      <UniqueIdentifier>{2cdde51b-ca89-423a-8983-3890e749de67}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -215,6 +218,9 @@
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark\paReactionMarkManager.cpp">
       <Filter>Main\MainGame\GameScene\Stage\Fish\FishReaction\ReactionMark</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishSpawnPoint\paFishSpawnPoint.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishSpawnPoint</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -373,6 +379,9 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Stage\Fish\paFishCommonDeclaration.h">
       <Filter>Main\MainGame\GameScene\Stage\Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishSpawnPoint\paFishSpawnPoint.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishSpawnPoint</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

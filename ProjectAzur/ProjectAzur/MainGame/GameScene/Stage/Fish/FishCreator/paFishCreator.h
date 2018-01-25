@@ -2,7 +2,7 @@
 //!< @file		paFishCreator.h
 //!< @brief		pa::FishCreatorクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/23	更新履歴：2018/01/15
+//!< @data		作成日時：2017/12/23	更新履歴：2018/01/24
 //==================================================================================================================================//
 
 #ifndef PA_FISH_CREATOR_H
@@ -18,6 +18,7 @@ namespace pa
 {
 
 class FishShapeCreator;
+class FishSpawnPoint;
 
 class FishCreator final
 {
@@ -39,14 +40,15 @@ public:
 
 	/** 
 	* 魚を生成する関数 
-	* @param[in] rPos 位置座標
 	* @return Fishクラスのインスタンスへのユニークポインタ
 	*/
-	sl::UniquePtr<Fish> CreateFish(const D3DXVECTOR2& rPos);
+	sl::UniquePtr<Fish> CreateFish();
 
 private:
 	sl::UniquePtr<FishShapeCreator,
-		sl::DefaultDeleter<FishShapeCreator>>			m_pShapeCreator;		// 魚の形状を生成するクラス
+		sl::DefaultDeleter<FishShapeCreator>>			m_pShapeCreator;		//!< 魚の形状を生成するクラス
+	sl::UniquePtr<FishSpawnPoint,
+		sl::DefaultDeleter<FishSpawnPoint>>				m_pFishSpawnPoint;		//!< 魚の出現ポイントクラス
 	sl::DrawingID										m_DrawingID;			//!< 基本形状の描画ID
 	const char*											m_pResrcDataFilePath;	//!< リソースデータファイルへのパス
 
