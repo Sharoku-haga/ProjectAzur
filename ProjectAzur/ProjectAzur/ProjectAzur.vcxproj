@@ -133,8 +133,11 @@
     <ClCompile Include="MainGame\GameScene\Collider\paColliderManager.cpp" />
     <ClCompile Include="MainGame\GameScene\paGameScene.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\paPlayer.cpp" />
-    <ClCompile Include="MainGame\GameScene\Player\paPlayerAction.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\paPlayerCollider.cpp" />
+    <ClCompile Include="MainGame\GameScene\Player\PlayerAction\paPlayerAction.cpp" />
+    <ClCompile Include="MainGame\GameScene\Player\PlayerAction\paPlayerActionImplBase.cpp" />
+    <ClCompile Include="MainGame\GameScene\Player\PlayerAction\paPlayerFishAction.cpp" />
+    <ClCompile Include="MainGame\GameScene\Player\PlayerAction\paPlayerOriginalAction.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShapeLine.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShell.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\PlayerShape\paPlayerOriginalShape.cpp" />
@@ -170,6 +173,7 @@
     <ClCompile Include="MainGame\TitleScene\paTitleScene.cpp" />
     <ClCompile Include="MainGame\TitleScene\TitleBackground\paTitleBackground.cpp" />
     <ClCompile Include="MainGame\TitleScene\TitleBackground\paTitleBackgroundAnime.cpp" />
+    <ClCompile Include="paPlayerActionImplBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\DrawingResrcDataFile\paDrawingResrcDataFile.h" />
@@ -181,9 +185,12 @@
     <ClInclude Include="MainGame\GameScene\Collider\paColliderManager.h" />
     <ClInclude Include="MainGame\GameScene\paGameScene.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayer.h" />
-    <ClInclude Include="MainGame\GameScene\Player\paPlayerAction.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayerCollider.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayerCommonDeclaration.h" />
+    <ClInclude Include="MainGame\GameScene\Player\PlayerAction\paPlayerAction.h" />
+    <ClInclude Include="MainGame\GameScene\Player\PlayerAction\paPlayerActionImplBase.h" />
+    <ClInclude Include="MainGame\GameScene\Player\PlayerAction\paPlayerFishAction.h" />
+    <ClInclude Include="MainGame\GameScene\Player\PlayerAction\paPlayerOriginalAction.h" />
     <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShapeLine.h" />
     <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerFishShell.h" />
     <ClInclude Include="MainGame\GameScene\Player\PlayerShape\paPlayerOriginalShape.h" />
@@ -225,6 +232,7 @@
     <ClInclude Include="MainGame\TitleScene\paTitleScene.h" />
     <ClInclude Include="MainGame\TitleScene\TitleBackground\paTitleBackground.h" />
     <ClInclude Include="MainGame\TitleScene\TitleBackground\paTitleBackgroundAnime.h" />
+    <ClInclude Include="paPlayerActionImplBase.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

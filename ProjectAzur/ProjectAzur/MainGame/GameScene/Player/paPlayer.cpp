@@ -8,7 +8,7 @@
 /* Includes --------------------------------------------------------------------------------------------------- */
 
 #include "paPlayer.h"
-#include "paPlayerAction.h"
+#include "PlayerAction/paPlayerAction.h"
 #include "PlayerShape/paPlayerShape.h"
 #include "paPlayerCollider.h"
 #include "paPlayerCommonDeclaration.h"
