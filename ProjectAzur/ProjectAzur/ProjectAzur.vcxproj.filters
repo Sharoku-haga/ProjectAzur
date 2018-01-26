@@ -79,6 +79,9 @@
     <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishSpawnPoint">
       <UniqueIdentifier>{2cdde51b-ca89-423a-8983-3890e749de67}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\GameScene\Player\PlayerAction">
+      <UniqueIdentifier>{1b93913e-ae6e-49a0-bf44-5cbea9134fb2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -124,9 +127,6 @@
       <Filter>Main\MainGame\TitleScene\TitleBackground</Filter>
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\Player\paPlayer.cpp">
-      <Filter>Main\MainGame\GameScene\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="MainGame\GameScene\Player\paPlayerAction.cpp">
       <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\Stage\paBasePoint.cpp">
@@ -222,6 +222,19 @@
     <ClCompile Include="MainGame\GameScene\Stage\Fish\FishSpawnPoint\paFishSpawnPoint.cpp">
       <Filter>Main\MainGame\GameScene\Stage\Fish\FishSpawnPoint</Filter>
     </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Player\PlayerAction\paPlayerAction.cpp">
+      <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Player\PlayerAction\paPlayerFishAction.cpp">
+      <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Player\PlayerAction\paPlayerOriginalAction.cpp">
+      <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
+    </ClCompile>
+    <ClCompile Include="paPlayerActionImplBase.cpp" />
+    <ClCompile Include="MainGame\GameScene\Player\PlayerAction\paPlayerActionImplBase.cpp">
+      <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\paMainGame.h">
@@ -273,9 +286,6 @@
       <Filter>Main\MainGame\TitleScene\TitleBackground</Filter>
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Player\paPlayer.h">
-      <Filter>Main\MainGame\GameScene\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="MainGame\GameScene\Player\paPlayerAction.h">
       <Filter>Main\MainGame\GameScene\Player</Filter>
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Player\paPlayerCommonDeclaration.h">
@@ -382,6 +392,19 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\Stage\Fish\FishSpawnPoint\paFishSpawnPoint.h">
       <Filter>Main\MainGame\GameScene\Stage\Fish\FishSpawnPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Player\PlayerAction\paPlayerAction.h">
+      <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Player\PlayerAction\paPlayerFishAction.h">
+      <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Player\PlayerAction\paPlayerOriginalAction.h">
+      <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
+    </ClInclude>
+    <ClInclude Include="paPlayerActionImplBase.h" />
+    <ClInclude Include="MainGame\GameScene\Player\PlayerAction\paPlayerActionImplBase.h">
+      <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
