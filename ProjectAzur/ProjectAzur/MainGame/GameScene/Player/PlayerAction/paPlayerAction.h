@@ -56,6 +56,18 @@ public:
 	/** プレイヤーのオリジナルアクションに変える関数 */
 	void ChangeOriginalActionimpl();
 
+	/** 
+	* 横のスピードを止める関数
+	* @param[out] rParam プレイヤーパラメータ 
+	*/
+	void StopHorizontalSpeed(PlayerParam& rParam);
+
+	/** 
+	* 縦のスピードをゼロにする関数 
+	* @param[out] rParam プレイヤーパラメータ 
+	*/
+	void StopVerticalSpeed(PlayerParam& rParam);
+
 private:
 	std::vector<sl::UniquePtr<PlayerActionImplBase>>			m_pActionImpl;				//!< PlayerActionImplBaseクラスのインスタンスへのユニークポインタ
 	int															m_ActiveImplIndex;			//!< 現在のアクティブなm_pActionImplのインデックス

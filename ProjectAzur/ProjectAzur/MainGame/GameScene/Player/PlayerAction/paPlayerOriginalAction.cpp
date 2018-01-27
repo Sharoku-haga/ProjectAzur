@@ -7,7 +7,6 @@
 
 /* Includes --------------------------------------------------------------------------------------------------- */
 
-#include <algorithm>
 #include "paPlayerOriginalAction.h"
 #include "../../../paCustomizeInput.h"
 #include "../../../EventManager/paEventManager.h"
@@ -33,17 +32,19 @@ PlayerOriginalAction::~PlayerOriginalAction()
 {}
 
 void PlayerOriginalAction::Initialize()
-{}
+{
+	SetSpeedMinVal(0.0f);
+	SetSpeedMaxVal(5.0f);
+}
 
 void PlayerOriginalAction::Update(PlayerParam& rParam)
 {
+	D3DXVECTOR2 oldPos = rParam.m_Pos;
 	MoveHorizontally(rParam);
 	MoveVertically(rParam);
-	//Rotate(rParam);
 
 	// 待機状態かどうかのチェックを行う
-	if(rParam.m_CurrentHorizontalSpeed == m_SpeedMinVal
-		&& rParam.m_CurrentVerticalSpeed == m_SpeedMinVal)
+	if(rParam.m_Pos == oldPos)
 	{
 		rParam.m_CurrentState = PLAYER_STATE::WAITING;
 		return;
@@ -54,7 +55,9 @@ void PlayerOriginalAction::Update(PlayerParam& rParam)
 }
 
 void PlayerOriginalAction::Finalize()
-{}
+{
+	// 現在処理なし
+}
 
 /* Private Functions ------------------------------------------------------------------------------------------ */
 
@@ -63,65 +66,59 @@ void PlayerOriginalAction::MoveHorizontally(PlayerParam& rParam)
 	// 右移動
 	if(m_rInputLibrary.CheckCustomizeInputState(RIGHT_MOVE, sl::ON))
 	{
-		rParam.m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? rParam.m_Acceleration : AttenuationSpeed;
+		rParam.m_CurrentSpeed.m_Right += rParam.m_Acceleration.m_Right;
 	}
-	else if(m_rInputLibrary.CheckCustomizeInputState(RIGHT_MOVE, sl::OFF)
-			&& rParam.m_CurrentHorizontalSpeed != m_SpeedMinVal)
+	else if(m_rInputLibrary.CheckCustomizeInputState(RIGHT_MOVE, sl::OFF))
 	{
-		rParam.m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? -AttenuationSpeed : 0.0f;
+		rParam.m_CurrentSpeed.m_Right -= AttenuationSpeed;
 	}
 
 	// 左移動
 	if(m_rInputLibrary.CheckCustomizeInputState(LEFT_MOVE, sl::ON))
 	{
-		rParam.m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? -AttenuationSpeed : -rParam.m_Acceleration;
+		rParam.m_CurrentSpeed.m_Left += rParam.m_Acceleration.m_Left;
 	}
-	else if(m_rInputLibrary.CheckCustomizeInputState(LEFT_MOVE, sl::OFF)
-			&& rParam.m_CurrentHorizontalSpeed != m_SpeedMinVal)
+	else if(m_rInputLibrary.CheckCustomizeInputState(LEFT_MOVE, sl::OFF))
 	{
-		rParam.m_CurrentHorizontalSpeed += rParam.m_IsFacingRight ? 0.0f : AttenuationSpeed;
+		rParam.m_CurrentSpeed.m_Left  -= AttenuationSpeed;
 	}
 
 	// スピードの最小値と最大値の間に調整する
-	if(rParam.m_IsFacingRight)
-	{
-		if(rParam.m_CurrentHorizontalSpeed < 0.0f)
-		{
-			rParam.m_CurrentHorizontalSpeed = 0.0f;
-		}
-		rParam.m_CurrentHorizontalSpeed = std::max<float>(m_SpeedMinVal, std::min<float>(m_SpeedMaxVal, rParam.m_CurrentHorizontalSpeed));
-	}
-	else 
-	{
-		if(rParam.m_CurrentHorizontalSpeed > 0.0f)
-		{
-			rParam.m_CurrentHorizontalSpeed = 0.0f;
-		}
-		rParam.m_CurrentHorizontalSpeed = std::min<float>(m_SpeedMinVal, std::max<float>(-m_SpeedMaxVal, rParam.m_CurrentHorizontalSpeed));
-	}
-
-	rParam.m_Pos.x += rParam.m_CurrentHorizontalSpeed;
+	rParam.m_CurrentSpeed.m_Right = AdjustSpeedBetweenMaxandMinVal(rParam.m_CurrentSpeed.m_Right);
+	rParam.m_CurrentSpeed.m_Left = AdjustSpeedBetweenMaxandMinVal(rParam.m_CurrentSpeed.m_Left);
+	
+	// スピードを足す
+	rParam.m_Pos.x += ((-rParam.m_CurrentSpeed.m_Left) + rParam.m_CurrentSpeed.m_Right);
 }
 
 void PlayerOriginalAction::MoveVertically(PlayerParam& rParam)
 {
-	/** 仮処理 */
-	rParam.m_CurrentVerticalSpeed = m_SpeedMinVal;
-	/** 仮処理 */
-
 	// 上移動
 	if(m_rInputLibrary.CheckCustomizeInputState(UP_MOVE, sl::ON))
 	{
-		rParam.m_CurrentVerticalSpeed -= rParam.m_Acceleration;
-		rParam.m_Pos.y -= rParam.m_Acceleration * 10;
+		rParam.m_CurrentSpeed.m_Up += rParam.m_Acceleration.m_Up;
+	}
+	else if(m_rInputLibrary.CheckCustomizeInputState(UP_MOVE, sl::OFF))
+	{
+		rParam.m_CurrentSpeed.m_Up -= AttenuationSpeed;
 	}
 
 	// 下移動
 	if(m_rInputLibrary.CheckCustomizeInputState(DOWN_MOVE, sl::ON))
 	{
-		rParam.m_CurrentVerticalSpeed += rParam.m_Acceleration;
-		rParam.m_Pos.y += rParam.m_Acceleration * 10;
+		rParam.m_CurrentSpeed.m_Down += rParam.m_Acceleration.m_Down;
 	}
+	else if(m_rInputLibrary.CheckCustomizeInputState(DOWN_MOVE, sl::OFF))
+	{
+		rParam.m_CurrentSpeed.m_Down -= AttenuationSpeed;
+	}
+
+	// スピードの最小値と最大値の間に調整する
+	rParam.m_CurrentSpeed.m_Up = AdjustSpeedBetweenMaxandMinVal(rParam.m_CurrentSpeed.m_Up);
+	rParam.m_CurrentSpeed.m_Down = AdjustSpeedBetweenMaxandMinVal(rParam.m_CurrentSpeed.m_Down);
+
+	// スピードを足す
+	rParam.m_Pos.y += ((-rParam.m_CurrentSpeed.m_Up) + rParam.m_CurrentSpeed.m_Down);
 }
 
 }	// namespace pa

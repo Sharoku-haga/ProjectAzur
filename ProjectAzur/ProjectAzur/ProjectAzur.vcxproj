@@ -173,7 +173,6 @@
     <ClCompile Include="MainGame\TitleScene\paTitleScene.cpp" />
     <ClCompile Include="MainGame\TitleScene\TitleBackground\paTitleBackground.cpp" />
     <ClCompile Include="MainGame\TitleScene\TitleBackground\paTitleBackgroundAnime.cpp" />
-    <ClCompile Include="paPlayerActionImplBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame\DrawingResrcDataFile\paDrawingResrcDataFile.h" />
@@ -183,6 +182,7 @@
     <ClInclude Include="MainGame\EventManager\paEventManager.h" />
     <ClInclude Include="MainGame\GameScene\Collider\paColliderBase.h" />
     <ClInclude Include="MainGame\GameScene\Collider\paColliderManager.h" />
+    <ClInclude Include="MainGame\GameScene\paCommonSpeed.h" />
     <ClInclude Include="MainGame\GameScene\paGameScene.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayer.h" />
     <ClInclude Include="MainGame\GameScene\Player\paPlayerCollider.h" />
@@ -232,7 +232,6 @@
     <ClInclude Include="MainGame\TitleScene\paTitleScene.h" />
     <ClInclude Include="MainGame\TitleScene\TitleBackground\paTitleBackground.h" />
     <ClInclude Include="MainGame\TitleScene\TitleBackground\paTitleBackgroundAnime.h" />
-    <ClInclude Include="paPlayerActionImplBase.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

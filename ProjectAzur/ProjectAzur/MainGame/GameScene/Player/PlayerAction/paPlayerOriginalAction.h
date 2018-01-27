@@ -24,7 +24,7 @@ public:
 	PlayerOriginalAction();
 
 	/** Destructor */
-	~PlayerOriginalAction();
+	virtual ~PlayerOriginalAction();
 
 	/** 初期化関数 */
 	virtual void Initialize()override;

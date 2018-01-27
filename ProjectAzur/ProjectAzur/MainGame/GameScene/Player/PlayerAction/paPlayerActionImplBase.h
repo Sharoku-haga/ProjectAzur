@@ -24,8 +24,8 @@ public:
 	/** アクション実装の種類 */
 	enum TYPE 
 	{
-		FISH_ACTION,		//!< 魚のアクション
 		ORIGINAL_ACTION,	//!< オリジナルアクション
+		FISH_ACTION,		//!< 魚のアクション
 		ACTION_MAX,			
 	};	// enum TYPE
 
@@ -47,6 +47,18 @@ public:
 	/** 破棄関数 */
 	virtual void Finalize() = 0;
 
+	/**
+	* Getter
+	* @return speedMinVal スピードの最小値
+	*/
+	inline float GetSpeedMinVal() { return m_SpeedMinVal; }
+
+	/**
+	* Getter
+	* @return speedMaxVal スピードの最大値
+	*/
+	inline float GetSpeedMaxVal() { return m_SpeedMaxVal; }
+
 protected:
 	sl::IInputDeviceLibrary&	m_rInputLibrary;			//!< sl::IInputDeviceLibraryクラスのインスタンスへのポインタ
 	
@@ -62,6 +74,13 @@ protected:
 	*/
 	virtual void MoveVertically(PlayerParam& rParam) = 0;
 
+	/** 
+	* スピードを最大値と最小値の間に調整する
+	* @param[in] speed 調整したいスピード
+	* @return 調整したスピード
+	*/
+	float AdjustSpeedBetweenMaxandMinVal(float speed);
+
 	/**
 	* Setter
 	* @param[in] speedMinVal スピードの最小値
@@ -73,18 +92,6 @@ protected:
 	* @param[in] speedMaxVal スピードの最大値
 	*/
 	inline void SetSpeedMaxVal(float speedMaxVal) { m_SpeedMaxVal = speedMaxVal;  }
-
-	/**
-	* Getter
-	* @return speedMinVal スピードの最小値
-	*/
-	inline float GetSpeedMinVal() { return m_SpeedMinVal; }
-
-	/**
-	* Getter
-	* @return speedMaxVal スピードの最大値
-	*/
-	inline float GetSpeedMaxVal() { return m_SpeedMaxVal; }
 
 private:
 	float				m_SpeedMinVal;						//!< スピードの最小値
