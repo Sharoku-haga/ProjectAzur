@@ -2,15 +2,18 @@
 //!< @file		paPlayerAction.h
 //!< @brief		pa::PlayerActionクラスのヘッダ
 //!< @author	T.Haga
-//!< @data		作成日時：2017/12/05	更新履歴：2017/12/09
+//!< @data		作成日時：2017/12/05	更新履歴：2018/01/28
 //==================================================================================================================================//
 
 #ifndef PA_PLAYER_ACTION_H
 #define PA_PLAYER_ACTION_H
 
+#include <vector>
 #include <D3DX11.h>
 #include <D3DX10.h>
+#include "sl/Library/SmartPointer/slSmartPointer.h"
 #include "../paPlayerCommonDeclaration.h"
+#include "paPlayerActionImplBase.h"
 
 namespace sl
 {
@@ -47,32 +50,20 @@ public:
 	/** 破棄関数 */
 	void Finalize();
 
+	/** プレイヤーの魚アクションに変える関数 */
+	void ChangeFishActionImpl();
+
+	/** プレイヤーのオリジナルアクションに変える関数 */
+	void ChangeOriginalActionimpl();
+
 private:
-	sl::IInputDeviceLibrary&	m_rInputLibrary;					//!< sl::IInputDeviceLibraryクラスのインスタンスへのポインタ
-	float						m_SpeedMinVal;						//!< スピードの最小値
-	float						m_SpeedMaxVal;						//!< スピードの最大値
+	std::vector<sl::UniquePtr<PlayerActionImplBase>>			m_pActionImpl;				//!< PlayerActionImplBaseクラスのインスタンスへのユニークポインタ
+	int															m_ActiveImplIndex;			//!< 現在のアクティブなm_pActionImplのインデックス
 
-	/** 
-	* 横に移動する関数 
-	* @param[out] rParam プレイヤーパラメータ
-	*/
-	void MoveHorizontally(PlayerParam& rParam);
-	
-	/** 
-	* 縦に移動する関数 
-	* @param[out] rParam プレイヤーパラメータ
-	*/
-	void MoveVertically(PlayerParam& rParam);
+};	// class PlayerAction
 
-	/** 
-	* 回転する関数
-	* @param[out] rParam プレイヤーパラメータ
-	*/
-	void Rotate(PlayerParam& rParam);
+} // namespace pa
 
-};	// namespace pa
-
-}
 #endif	// PA_PLAYER_ACTION_H
 
 //==================================================================================================================================//
