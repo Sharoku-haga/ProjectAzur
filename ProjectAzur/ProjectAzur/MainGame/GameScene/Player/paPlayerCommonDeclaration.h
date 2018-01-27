@@ -20,6 +20,7 @@ enum class PLAYER_STATE
 {
 	WAITING,					//!< 待機状態
 	MOVING,						//!< 移動状態
+	BEING_EATEN,				//!< 食べられている状態
 };	// enum class PLAYER_STATE
 
 //===================================================================================//

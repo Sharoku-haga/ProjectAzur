@@ -21,6 +21,14 @@ class PlayerActionImplBase
 {
 
 public:
+	/** アクション実装の種類 */
+	enum TYPE 
+	{
+		FISH_ACTION,		//!< 魚のアクション
+		ORIGINAL_ACTION,	//!< オリジナルアクション
+		ACTION_MAX,			
+	};	// enum TYPE
+
 	/** Constructor */
 	PlayerActionImplBase();
 
@@ -42,6 +50,18 @@ public:
 protected:
 	sl::IInputDeviceLibrary&	m_rInputLibrary;			//!< sl::IInputDeviceLibraryクラスのインスタンスへのポインタ
 	
+	/** 
+	* 横に移動する関数 
+	* @param[out] rParam プレイヤーパラメータ
+	*/
+	virtual void MoveHorizontally(PlayerParam& rParam) = 0;
+	
+	/** 
+	* 縦に移動する関数 
+	* @param[out] rParam プレイヤーパラメータ
+	*/
+	virtual void MoveVertically(PlayerParam& rParam) = 0;
+
 	/**
 	* Setter
 	* @param[in] speedMinVal スピードの最小値

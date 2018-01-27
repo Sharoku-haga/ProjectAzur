@@ -38,6 +38,19 @@ public:
 	/** 破棄関数 */
 	virtual void Finalize()override;
 
+private:
+	/** 
+	* 横に移動する関数 
+	* @param[out] rParam プレイヤーパラメータ
+	*/
+	virtual void MoveHorizontally(PlayerParam& rParam)override;
+	
+	/** 
+	* 縦に移動する関数 
+	* @param[out] rParam プレイヤーパラメータ
+	*/
+	virtual void MoveVertically(PlayerParam& rParam)override;
+
 };	// class PlayerOriginalAction
 
 }	// namespace pa
