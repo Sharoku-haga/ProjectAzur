@@ -46,7 +46,7 @@ void ReactionMark::Update(const FishParam& rParam)
 	// 前の状態(右向いているかどうか)が異なっていたら反転処理を行う
 	if(m_IsFacingRight != rParam.m_IsFacingRight)
 	{
-		m_FishDiffPos = -m_FishDiffPos;
+		m_FishDiffPos.x = -m_FishDiffPos.x;
 		m_IsFacingRight = rParam.m_IsFacingRight;
 	}
 }

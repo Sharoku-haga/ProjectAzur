@@ -18,7 +18,7 @@ namespace pa
 namespace
 {
 
-const int	DispTime = 120;				//!< 表示時間
+const int	DispTime = 80;				//!< 表示時間
 
 }
 
