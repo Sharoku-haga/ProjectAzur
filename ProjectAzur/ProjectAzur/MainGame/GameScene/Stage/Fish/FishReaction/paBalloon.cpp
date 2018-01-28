@@ -82,7 +82,7 @@ void Balloon::Draw(const FishParam& rParam, const D3DXVECTOR2& rBasePointPos)
 
 void Balloon::ProcessImageReversal(const FishParam& rParam)
 {
-	m_FishDiffPos = -m_FishDiffPos;
+	m_FishDiffPos.x = -m_FishDiffPos.x;
 	sl::fRect currentUVRect;
 	sl::DX11GraphicsLibrary::Instance().InformUVData(m_pDrawingData->m_IDs.m_ModelID, currentUVRect);
 	

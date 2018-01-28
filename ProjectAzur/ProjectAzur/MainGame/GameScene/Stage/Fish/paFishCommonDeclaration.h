@@ -23,6 +23,9 @@ enum REACTION_MARK_TYPE
 	ATTACK = 0x04,		//!< 攻撃
 	DISCOVERY = 0x08,	//!< 発見
 	REFUGE = 0x10,		//!< 避難
+	EATING = 0x20,		//!< 捕食
+	TARGET = 0x40,		//!< 目標
+	DETECTION = 0x80,	//!< 標的(探知)
 
 };	// enum REACTION_MARK_TYPE
 
