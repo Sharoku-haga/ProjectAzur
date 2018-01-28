@@ -23,8 +23,6 @@ PlayerAction::PlayerAction()
 
 void PlayerAction::Initialize()
 {
-	m_pActionImpl.resize(PlayerActionImplBase::TYPE::ACTION_MAX);
-
 	// オリジナルのアクション実装クラス
 	m_pActionImpl.emplace_back(new PlayerOriginalAction());
 
@@ -36,8 +34,13 @@ void PlayerAction::Initialize()
 	{
 		pImpl->Initialize();
 	}
-
+	//*
 	ChangeOriginalActionimpl();
+	//*/
+
+	/*
+	ChangeFishActionImpl();
+	//*/
 }
 
 void PlayerAction::Update(PlayerParam& rParam)
@@ -66,6 +69,18 @@ void PlayerAction::ChangeFishActionImpl()
 void PlayerAction::ChangeOriginalActionimpl()	
 {
 	m_ActiveImplIndex = PlayerActionImplBase::TYPE::ORIGINAL_ACTION;
+}
+
+void PlayerAction::StopHorizontalSpeed(PlayerParam& rParam)
+{
+	rParam.m_CurrentSpeed.m_Left = m_pActionImpl[m_ActiveImplIndex]->GetSpeedMinVal();
+	rParam.m_CurrentSpeed.m_Right = m_pActionImpl[m_ActiveImplIndex]->GetSpeedMinVal();
+}
+
+void PlayerAction::StopVerticalSpeed(PlayerParam& rParam)
+{
+	rParam.m_CurrentSpeed.m_Up = m_pActionImpl[m_ActiveImplIndex]->GetSpeedMinVal();
+	rParam.m_CurrentSpeed.m_Down = m_pActionImpl[m_ActiveImplIndex]->GetSpeedMinVal();
 }
 
 }	// namespace pa

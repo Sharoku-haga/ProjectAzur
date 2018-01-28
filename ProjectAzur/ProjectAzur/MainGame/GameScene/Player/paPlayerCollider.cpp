@@ -2,7 +2,7 @@
 //!< @file		paPlayerCollider.cpp
 //!< @brief		pa::PlayerColliderクラスの実装
 //!< @author	T.Haga
-//!< @data		作成日時：2018/01/05	更新履歴：2018/01/08
+//!< @data		作成日時：2018/01/05	更新履歴：2018/01/28
 //==================================================================================================================================//
 
 /* Includes --------------------------------------------------------------------------------------------------- */
@@ -41,6 +41,16 @@ void PlayerCollider::ProcessCollision(ColliderBase& rCollider)
 {
 	// 差分を計算
 	CalculateDiffVal(rCollider);
+
+	if(m_DiffPos.x != 0.0f)
+	{
+		m_pOwner->StopHorizontalSpeed();
+	}
+
+	if(m_DiffPos.y != 0.0f)
+	{
+		m_pOwner->StopVerticalSpeed();
+	}
 
 	// プレイヤーに差分データを反映
 	m_pOwner->AdjustData();
@@ -82,55 +92,59 @@ void PlayerCollider::CalculateDiffVal(ColliderBase& rCollider)
 
 	if(std::abs(rMyPos.x - rOtherPos.x) > std::abs(rMyPos.y - rOtherPos.y))
 	{
-		if(rParam.m_CurrentHorizontalSpeed != 0.0f)
+		CalculateHorizontalDiffVal(rMyRect, rOtherRect);
+
+		//* 
+		// 角の部分の処理
+		if(m_DiffPos.x > rParam.m_CurrentSpeed.m_Left)
 		{
-			CalculateHorizontalDiffVal(rMyRect, rOtherRect);
-			
-			// 角の部分の処理
-			if(std::abs(m_DiffPos.x) > std::abs(rParam.m_CurrentHorizontalSpeed))
-			{
-				if(m_DiffPos.x >  0.0f)
-				{
-					m_DiffPos.x = std::abs(rParam.m_CurrentHorizontalSpeed);
-				}
-				else if(m_DiffPos.x < 0.0f)
-				{
-					m_DiffPos.x = -std::abs(rParam.m_CurrentHorizontalSpeed);
-				}
-			}
+			m_DiffPos.x = rParam.m_CurrentSpeed.m_Left;
 		}
+		else if(m_DiffPos.x < rParam.m_CurrentSpeed.m_Right)
+		{
+			m_DiffPos.x = -rParam.m_CurrentSpeed.m_Right;
+		}
+		//*/
 
 		checkRect.m_Left += m_DiffPos.x;
 		checkRect.m_Right += m_DiffPos.x;
 
 		if(ColliderManager::Instance().CheckRectCollision(checkRect, rOtherRect))
 		{
-			if(rParam.m_CurrentVerticalSpeed != 0.0f)
+			if(rParam.m_CurrentSpeed.m_Up != 0.0f
+				|| rParam.m_CurrentSpeed.m_Down != 0.0f)
 			{
 				CalculateVerticalDiffVal(checkRect, rOtherRect);
-				int i = 0;
 			}
 		}
-
 	}
-	else //if(std::abs(rMyPos.x - rOtherPos.x) < std::abs(rMyPos.y - rOtherPos.y))
+	else
 	{
-		if(rParam.m_CurrentVerticalSpeed != 0.0f)
+		CalculateVerticalDiffVal(rMyRect, rOtherRect);
+
+		/*
+		if(m_DiffPos.y > rParam.m_CurrentSpeed.m_Down)
 		{
-			CalculateVerticalDiffVal(rMyRect, rOtherRect);
+			m_DiffPos.y = rParam.m_CurrentSpeed.m_Down;
 		}
+		else if(m_DiffPos.y < rParam.m_CurrentSpeed.m_Up)
+		{
+			m_DiffPos.y = -rParam.m_CurrentSpeed.m_Up;
+		}
+		//*/
 
 		checkRect.m_Top += m_DiffPos.y;
 		checkRect.m_Bottom += m_DiffPos.y;
-
 		if(ColliderManager::Instance().CheckRectCollision(checkRect, rOtherRect))
 		{
-			if(rParam.m_CurrentHorizontalSpeed != 0.0f)
+			if(rParam.m_CurrentSpeed.m_Left != 0.0f
+				|| rParam.m_CurrentSpeed.m_Right != 0.0f)
 			{
 				CalculateHorizontalDiffVal(checkRect, rOtherRect);
 			}
 		}
 	}
+
 }
 
 void PlayerCollider::CalculateHorizontalDiffVal(const sl::fRect& rMyRect, const sl::fRect& rOtherRect)

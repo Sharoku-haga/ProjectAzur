@@ -44,6 +44,11 @@ void PlayerShape::Initialize(const PlayerParam&	rParam)
 	m_pFishShell->Initialize(m_IDs, m_ResrcDataFilePath);
 
 	m_pTask.Reset(new DrawTask(DrawTaskPriority, std::bind(&pa::PlayerShape::Draw, this)));
+
+	/* テストコード
+	m_CurrentRectSize = m_pFishShell->GetRectSize();
+
+	//*/
 }
 
 void PlayerShape::Update(const PlayerParam&	rParam)

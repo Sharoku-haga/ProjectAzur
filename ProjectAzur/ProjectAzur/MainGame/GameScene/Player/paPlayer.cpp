@@ -21,8 +21,8 @@ namespace pa
 namespace
 {
 
-const D3DXVECTOR2	InitialPos				= { 100.0f, 100.0f};		// 初期座標
-const float			Acceleration			= 0.07f;					// 加速度
+const D3DXVECTOR2	InitialPos				= { 100.0f, 100.0f};							// 初期座標
+Accelerations		Acceleration			= { 0.07f, 0.07f, 0.07f, 0.07f};				// 加速度
 
 }
 
@@ -62,6 +62,16 @@ void Player::Finalize()
 {
 	m_pPlayerShape->Finalize();
 	m_pPlayerAction->Finalize();
+}
+
+void Player::StopHorizontalSpeed()
+{
+	m_pPlayerAction->StopHorizontalSpeed(*m_pPlayerParam);
+}
+
+void Player::StopVerticalSpeed()
+{
+	m_pPlayerAction->StopVerticalSpeed(*m_pPlayerParam);
 }
 
 const D3DXVECTOR2& Player::GetPos()

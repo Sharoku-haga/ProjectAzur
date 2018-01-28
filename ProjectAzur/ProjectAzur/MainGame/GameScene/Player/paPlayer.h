@@ -50,6 +50,12 @@ public:
 	/** 破棄関数 */
 	virtual void Finalize()override;
 
+	/** 横のスピードを止める関数 */
+	void StopHorizontalSpeed();
+
+	/** 縦のスピードをゼロにする関数 */
+	void StopVerticalSpeed();
+
 	/**
 	* Getter
 	* @return プレイヤーの座標 

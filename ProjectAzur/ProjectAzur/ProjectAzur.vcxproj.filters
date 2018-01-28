@@ -231,7 +231,6 @@
     <ClCompile Include="MainGame\GameScene\Player\PlayerAction\paPlayerOriginalAction.cpp">
       <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
     </ClCompile>
-    <ClCompile Include="paPlayerActionImplBase.cpp" />
     <ClCompile Include="MainGame\GameScene\Player\PlayerAction\paPlayerActionImplBase.cpp">
       <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
     </ClCompile>
@@ -402,9 +401,11 @@
     <ClInclude Include="MainGame\GameScene\Player\PlayerAction\paPlayerOriginalAction.h">
       <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
     </ClInclude>
-    <ClInclude Include="paPlayerActionImplBase.h" />
     <ClInclude Include="MainGame\GameScene\Player\PlayerAction\paPlayerActionImplBase.h">
       <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\paCommonSpeed.h">
+      <Filter>Main\MainGame\GameScene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
