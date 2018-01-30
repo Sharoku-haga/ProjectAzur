@@ -82,6 +82,21 @@
     <Filter Include="Main\MainGame\GameScene\Player\PlayerAction">
       <UniqueIdentifier>{1b93913e-ae6e-49a0-bf44-5cbea9134fb2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree">
+      <UniqueIdentifier>{d862f949-5d70-46e0-9fb3-1dd59acdeb7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\NodeBase">
+      <UniqueIdentifier>{e0612e0e-2c5a-4c68-857b-adcbd6819934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior">
+      <UniqueIdentifier>{ac5fe45d-3703-42a5-a3df-37630b1bd510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior\BehaviorBase_Child">
+      <UniqueIdentifier>{879a0ece-aaa2-4dfd-aa9d-cfa9e148e763}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\FishInferenceEngine">
+      <UniqueIdentifier>{166e9e13-062c-4d6b-93da-a98c2de1e667}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -233,6 +248,27 @@
     </ClCompile>
     <ClCompile Include="MainGame\GameScene\Player\PlayerAction\paPlayerActionImplBase.cpp">
       <Filter>Main\MainGame\GameScene\Player\PlayerAction</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\paFishBehaviorTree.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\paFishBehaviorTreeFactory.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\paFishBehaviorTreeMachine.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\NodeBase\paNodeBase.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\NodeBase</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior\BehaviorFactory.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\FishInferenceEngine\paFishInferenceEngine.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\FishInferenceEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior\BehaviorBase_Child\paRootBehavior.cpp">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior\BehaviorBase_Child</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -406,6 +442,30 @@
     </ClInclude>
     <ClInclude Include="MainGame\GameScene\paCommonSpeed.h">
       <Filter>Main\MainGame\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\paFishBehaviorTree.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\paFishBehaviorTreeFactory.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\paFishBehaviorTreeMachine.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\NodeBase\paNodeBase.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\NodeBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior\BehaviorFactory.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior\paBehaviorBase.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\FishInferenceEngine\paFishInferenceEngine.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\FishInferenceEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior\BehaviorBase_Child\paRootBehavior.h">
+      <Filter>Main\MainGame\GameScene\Stage\Fish\FishBehaviorTree\Behavior\BehaviorBase_Child</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
